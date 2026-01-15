@@ -1,0 +1,16 @@
+baseURL = 'rafal-a-bogaczewicz.github.io'
+languageCode = 'pl'
+title = 'Rafał A. Bogaczewicz'
+
+[params]
+  morska_zielen = "#16a085"
+  bio = "Fizyk teoretyk. High Value Man. Tradycyjne wartości."
+
+[[menu.main]]
+    name = "Publikacje / Publications"
+    url = "/publications/"
+    weight = 1
+[[menu.main]]
+    name = "Konferencje / Conferences"
+    url = "/conferences/"
+    weight = 2
