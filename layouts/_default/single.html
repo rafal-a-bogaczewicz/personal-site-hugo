@@ -16,24 +16,24 @@
         {{ if eq .Type "publications" }}
         <div class="publications-list">
             {{ if .Site.Data.pubs }}
+                {{/* Sortujemy listę tak, aby najnowsze daty były pierwsze */}}
                 {{ $pubs := .Site.Data.pubs }}
                 {{ $count := len $pubs }}
-                {{ range $index, $element := $pubs }}
+                {{/* 'reverse' odwraca listę z pubs.yaml (zakładając, że w yaml są chronologicznie) */}}
+                {{ range $index, $element := reverse $pubs }}
                 <div class="pub-item">
+                    {{/* Numeracja malejąca: (4), (3), (2), (1) */}}
                     <span class="pub-number">({{ sub $count $index }})</span>
                     <div class="pub-details">
                         <div class="authors">
-                            {{/* ZMIANA 1 i 2: Podkreślenie imienia/nazwiska i przecinek po współautorach */}}
                             {{ $authorList := $element.authors | replaceRE "R. A. Bogaczewicz" "<span class='my-name'>R. A. Bogaczewicz</span>" }}
                             {{ $authorList | safeHTML }},
                         </div>
                         <div class="title-line">
-                            {{/* ZMIANA 3 i 5: Brak cudzysłowu, przecinek po tytule i po volume */}}
                             <span class="pub-title">{{ $element.title }},</span>
                             <a href="{{ $element.paperurl }}" class="pub-link" target="_blank" rel="noopener">
                                 <i>{{ $element.venue }}</i> 
                                 {{ if $element.volume }}<b>{{ $element.volume }}</b>,{{ end }}
-                                {{/* ZMIANA 6 i 7: Strona i rok bez wytłuszczenia */}}
                                 {{ if $element.pages }} {{ $element.pages }}{{ end }} 
                                 ({{ dateFormat "2006" $element.date }}).
                             </a>
