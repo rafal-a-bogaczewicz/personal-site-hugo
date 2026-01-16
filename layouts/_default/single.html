@@ -103,7 +103,7 @@
         </div>
         {{ end }}
 
-        {{/* SEKCJA DYDAKTYKI - USUNIĘTO NUMEREK, POPRAWIONO RESPONSYWNOŚĆ */}}
+        {{/* SEKCJA DYDAKTYKI - WYRÓWNANIE DO LEWEJ */}}
         {{ if eq .Type "teaching" }}
         <div class="teaching-list">
             {{ if .Site.Data.teaching }}
@@ -116,7 +116,8 @@
                                 {{ if eq $.Language.Lang "pl" }}{{ $element.semester_pl }}{{ else }}{{ $element.semester_en }}{{ end }}
                             </b></span>
                         </div>
-                        <div class="title-line" style="text-align: justify; opacity: 0.9; line-height: 1.6;">
+                        {{/* ZMIANA: text-align: left zamiast justify */}}
+                        <div class="title-line" style="text-align: left; opacity: 0.9; line-height: 1.6;">
                             {{ if eq $.Language.Lang "pl" }}{{ $element.desc_pl | safeHTML }}{{ else }}{{ $element.desc_en }}{{ end }}
                         </div>
                     </div>
