@@ -55,10 +55,8 @@
                     <div class="pub-details">
                         <div class="authors">
                             {{ if $element.title }}
-                                {{/* Tytuł prezentacji jeśli istnieje */}}
                                 <span class="pub-title">{{ $element.title }}</span>
                             {{ else }}
-                                {{/* Jeśli brak tytułu, nazwa konferencji staje się nagłówkiem */}}
                                 <span class="pub-title">
                                     {{ if $element.link }}
                                         <a href="{{ $element.link }}" class="pub-link" target="_blank" rel="noopener"><i>{{ $element.event }}</i></a>
@@ -69,7 +67,6 @@
                             {{ end }}
                         </div>
                         <div class="title-line">
-                            {{/* 1. Tytuł konferencji (linkowany, jeśli był tytuł prezentacji) */}}
                             {{ if $element.title }}
                                 {{ if $element.link }}
                                     <a href="{{ $element.link }}" class="pub-link" target="_blank" rel="noopener"><i>{{ $element.event }}</i></a>,
@@ -78,17 +75,13 @@
                                 {{ end }}
                             {{ end }}
 
-                            {{/* 2. Data od do */}}
                             {{ if $element.end_date }}
                                 {{ dateFormat "02" $element.date }}–{{ dateFormat "02.01.2006" $element.end_date }},
                             {{ else }}
                                 {{ dateFormat "02.01.2006" $element.date }},
                             {{ end }}
 
-                            {{/* 3. Miasto (Kraj) */}}
                             {{ $element.city }} ({{ $element.country }}).
-
-                            {{ if $element.type }}<br><small style="color: var(--gray-quote)">Typ: {{ $element.type }}</small>{{ end }}
                         </div>
                     </div>
                 </div>
