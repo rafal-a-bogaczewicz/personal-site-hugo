@@ -14,7 +14,7 @@ theme = []
     contentDir = 'content/pl'
     weight = 1
     # Spójne i poprawne językowo bio PL
-    bio = "Jestem fizykiem teoretykiem, lubiącym odkrywać świat, pracując zarówno naukowo, jak i podczas wypraw."
+    bio = "Jestem fizykiem teoretykiem lubiącym odkrywać świat – zarówno naukowo, jak i podczas wypraw."
     [languages.pl.menu]
       [[languages.pl.menu.main]]
         name = "Publikacje"
