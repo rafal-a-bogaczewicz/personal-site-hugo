@@ -1,16 +1,22 @@
-baseURL = 'rafal-a-bogaczewicz.github.io'
+baseURL = 'https://rafal-a-bogaczewicz.github.io'
 languageCode = 'pl'
 title = 'Rafał A. Bogaczewicz'
+theme = [] # Budujemy ab initio, więc zostawiamy puste lub usuwamy
 
 [params]
   morska_zielen = "#16a085"
   bio = "Fizyk teoretyk. High Value Man. Tradycyjne wartości."
 
-[[menu.main]]
-    name = "Publikacje / Publications"
+[menu]
+  [[menu.main]]
+    name = "Publikacje"
     url = "/publications/"
     weight = 1
-[[menu.main]]
-    name = "Konferencje / Conferences"
+  [[menu.main]]
+    name = "Konferencje"
     url = "/conferences/"
     weight = 2
+
+[markup]
+  [markup.goldmark.renderer]
+    unsafe = true # Pozwala na używanie HTML w plikach Markdown, jeśli zajdzie potrzeba
