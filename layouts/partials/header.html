@@ -13,7 +13,6 @@
             --bio-color: #1a1a1a;
             --slider-bg: #ccc;
         }
-
         [data-theme="dark"] {
             --gorska-zielen: #769d7c; 
             --bg-color: #1a1a1a;
@@ -21,9 +20,7 @@
             --bio-color: #eeeeee;
             --slider-bg: #444;
         }
-
         html { overflow-y: scroll; }
-
         body { 
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
             max-width: 900px; 
@@ -32,108 +29,28 @@
             color: var(--text-color); 
             background-color: var(--bg-color);
             transition: background-color 0.2s;
-            -webkit-text-size-adjust: none;
         }
-
-        header { 
-            position: relative; 
-            border-bottom: 3px solid var(--gorska-zielen); 
-            padding-bottom: 15px; 
-            margin-bottom: 30px;
-            padding-top: 10px; 
-        }
-
-        .controls-top { 
-            position: absolute;
-            top: 0;
-            right: 0;
-            display: flex; 
-            gap: 20px; 
-            align-items: center; 
-            z-index: 100;
-        }
-
-        .header-top {
-            display: flex;
-            justify-content: flex-start;
-            align-items: flex-start;
-            gap: 30px;
-            padding-right: 120px; 
-        }
-
-        .profile-section { 
-            display: flex; 
-            align-items: flex-start; 
-            gap: 25px; 
-        }
-
-        .profile-img {
-            width: 200px;
-            height: auto;
-            border-radius: 8px;
-            border: 3px solid var(--gorska-zielen);
-            object-fit: cover;
-            flex-shrink: 0;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-
-        .name-bio-box { display: flex; flex-direction: column; }
-
-        h1 { 
-            color: var(--gorska-zielen);
-            margin: 0; 
-            font-size: 1.8rem; 
-            line-height: 1.2; 
-        }
-        
-        .bio { 
-            font-size: 1.1em; 
-            color: var(--bio-color); 
-            margin: 15px 0 0 0; 
-            line-height: 1.5;
-            font-style: italic;
-            max-width: 550px; 
-            text-wrap: balance;     
-            overflow-wrap: anywhere; 
-        }
-
+        header { border-bottom: 3px solid var(--gorska-zielen); padding-bottom: 15px; margin-bottom: 30px; position: relative; }
+        .controls-top { position: absolute; top: 0; right: 0; display: flex; gap: 20px; align-items: center; z-index: 100; }
+        .header-top { display: flex; align-items: flex-start; gap: 30px; }
+        .profile-img { width: 200px; border-radius: 8px; border: 3px solid var(--gorska-zielen); object-fit: cover; }
+        h1 { color: var(--gorska-zielen); margin: 0; font-size: 1.8rem; }
+        .bio { font-size: 1.1em; color: var(--bio-color); margin-top: 10px; font-style: italic; max-width: 550px; }
+        nav { margin-top: 20px; }
+        nav ul { list-style: none; padding: 0; margin: 0; display: flex; gap: 25px; }
+        nav a { text-decoration: none; color: var(--gorska-zielen); font-weight: bold; text-transform: uppercase; font-size: 14px; }
+        .values-header { border-left: 3px solid var(--gorska-zielen); padding-left: 20px; margin-bottom: 40px; }
+        .pub-item { display: flex; align-items: baseline; margin-bottom: 25px; font-size: 0.95em; }
+        .pub-number { color: var(--gorska-zielen); min-width: 40px; font-weight: bold; }
+        .my-name { border-bottom: 1px solid var(--gorska-zielen); }
+        .pub-link { color: var(--gorska-zielen); text-decoration: none; font-weight: 500; }
         .control-group { display: flex; align-items: center; gap: 6px; }
-        .switch { position: relative; display: inline-block; width: 36px; height: 18px; flex-shrink: 0; }
+        .switch { position: relative; display: inline-block; width: 36px; height: 18px; }
         .switch input { opacity: 0; width: 0; height: 0; }
         .slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: var(--slider-bg); transition: .3s; border-radius: 20px; }
         .slider:before { position: absolute; content: ""; height: 12px; width: 12px; left: 3px; bottom: 3px; background-color: white; transition: .3s; border-radius: 50%; }
         input:checked + .slider { background-color: var(--gorska-zielen); }
         input:checked + .slider:before { transform: translateX(18px); }
-        .icon { font-size: 1.2rem; user-select: none; }
-
-        nav { margin-top: 20px; }
-        nav ul { list-style: none; padding: 0; margin: 0; display: flex; gap: 25px; }
-        nav a { text-decoration: none; color: var(--gorska-zielen); font-weight: bold; text-transform: uppercase; font-size: 14px; }
-
-        .values-header {
-            font-size: 0.95em;
-            margin-bottom: 40px;
-            border-left: 3px solid var(--gorska-zielen);
-            padding-left: 20px;
-            line-height: 1.5;
-        }
-        .quote-text { font-style: italic; color: var(--text-color); margin-bottom: 5px; }
-        .quote-ref { font-weight: bold; opacity: 0.6; font-size: 0.85em; }
-
-        .pub-item { display: flex; align-items: baseline; margin-bottom: 25px; font-size: 0.95em; }
-        .pub-number { color: var(--gorska-zielen); min-width: 40px; font-weight: bold; opacity: 0.8; }
-        .my-name { text-decoration: none; border-bottom: 1px solid var(--gorska-zielen); color: var(--text-color); }
-        .pub-link { color: var(--gorska-zielen); text-decoration: none; font-weight: 500; }
-        .pub-link:hover { text-decoration: underline; }
-
-        @media (max-width: 600px) {
-            header { padding-top: 40px; } 
-            .header-top { padding-right: 0; flex-direction: column; align-items: center; text-align: center; }
-            .profile-section { flex-direction: column; align-items: center; gap: 15px; }
-            .controls-top { width: 100%; justify-content: center; }
-            h1 { font-size: 1.5rem; }
-            .bio { max-width: 100%; }
-        }
     </style>
 </head>
 <body>
@@ -156,19 +73,15 @@
                 <span class="icon">🌙</span>
             </div>
         </div>
-
         <div class="header-top">
-            <div class="profile-section">
-                <img src="/images/profil.jpg" alt="Rafał A. Bogaczewicz" class="profile-img">
-                <div class="name-bio-box">
-                    <h1>{{ .Site.Title }}</h1>
-                    <div id="dynamic-bio" class="bio">{{ .Param "bio" | safeHTML }}</div>
-                </div>
+            <img src="/images/profil.jpg" alt="Rafał A. Bogaczewicz" class="profile-img">
+            <div class="name-bio-box">
+                <h1>{{ .Site.Title }}</h1>
+                <div class="bio">{{ .Param "bio" | safeHTML }}</div>
             </div>
         </div>
-
         <nav>
-            <ul id="dynamic-menu">
+            <ul>
                 {{ range .Site.Menus.main }}
                 <li><a href="{{ .URL | relLangURL }}">{{ .Name }}</a></li>
                 {{ end }}
