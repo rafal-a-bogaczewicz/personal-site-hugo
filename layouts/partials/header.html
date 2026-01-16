@@ -1,14 +1,17 @@
 <!DOCTYPE html>
-<html lang="{{ .Language.Lang }}" translate="no">
+{{/* 1. Atrybuty globalne: translate=no oraz jawne wskazanie języka */}}
+<html lang="{{ .Language.Lang }}" class="notranslate" translate="no">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     
-    {{/* Pancerna blokada automatycznego tłumaczenia Google */}}
+    {{/* 2. Komplet meta-tagów dla wszystkich znanych silników (Google, Bing, Yandex, robots) */}}
     <meta name="google" content="notranslate">
-    
-    {{/* Informacja o alternatywnych wersjach językowych */}}
+    <meta name="robots" content="notranslate">
+    <meta name="googlebot" content="notranslate">
+
+    {{/* 3. Linki alternatywne - mówią przeglądarce: "nie tłumacz, inna wersja już istnieje" */}}
     {{ range .AllTranslations }}
     <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}">
     {{ end }}
@@ -67,7 +70,8 @@
         .icon { font-size: 1.2rem; }
     </style>
 </head>
-<body>
+{{/* 4. Klasa notranslate na body + atrybut translate="no" na poziomie kontenera */}}
+<body class="notranslate" translate="no">
     <header>
         <div class="controls-top">
             <div class="control-group">
@@ -91,10 +95,11 @@
             <img src="{{ "/images/profil.jpg" | relURL }}" alt="Rafał A. Bogaczewicz" class="profile-img">
             <div class="name-bio-box">
                 <h1>{{ .Site.Title }}</h1>
-                <div class="bio">{{ .Param "bio" | safeHTML }}</div>
+                {{/* Parametr bio z zabezpieczeniem przed tłumaczeniem na poziomie div */}}
+                <div class="bio" translate="no">{{ .Param "bio" | safeHTML }}</div>
             </div>
         </div>
-        <nav>
+        <nav translate="no">
             <ul>
                 {{ range .Site.Menus.main }}
                 <li><a href="{{ .URL | relLangURL }}">{{ .Name }}</a></li>
