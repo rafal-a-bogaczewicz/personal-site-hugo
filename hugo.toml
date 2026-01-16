@@ -13,7 +13,7 @@ theme = []
     languageName = 'PL'
     contentDir = 'content/pl'
     weight = 1
-    # Nowe bio z akcentem na wyprawy i odkrywanie świata
+    # Spójne i poprawne językowo bio PL
     bio = "Jestem fizykiem teoretykiem, lubiącym odkrywać świat, pracując zarówno naukowo, jak i podczas wypraw."
     [languages.pl.menu]
       [[languages.pl.menu.main]]
@@ -29,8 +29,8 @@ theme = []
     languageName = 'EN'
     contentDir = 'content/en'
     weight = 2
-    # American English translation: "exploring" i "expeditions" brzmią bardziej profesjonalnie i męsko
-    bio = "Theoretical Physicist. Expert in ab initio methods. I enjoy exploring the world through scientific research and wilderness expeditions."
+    # Prestiżowe tłumaczenie American English (High-Value / Action-oriented)
+    bio = "I am a theoretical physicist exploring the world through both scientific research and wilderness expeditions."
     [languages.en.menu]
       [[languages.en.menu.main]]
         name = "Publications"
