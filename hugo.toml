@@ -13,8 +13,8 @@ theme = []
     languageName = 'PL'
     contentDir = 'content/pl'
     weight = 1
-    # Bio z poprawną interpunkcją (pamiętaj o twardych spacjach Alt+0160 przy wpisywaniu)
-    bio = "Pasjonat odkrywania świata – zarówno naukowo, jak i podczas wypraw."
+    # Bio z twardymi spacjami (po spójnikach i przed myślnikiem)
+    bio = "Twórca rzeczywistości\u00A0— odkrywam świat poprzez fizykę teoretyczną i\u00A0kształtuję go poprzez działanie. Niezależny, z\u00A0pasją do\u00A0nauki i\u00A0życia, stale poszerzam horyzonty."
     [languages.pl.menu]
       [[languages.pl.menu.main]]
         name = "Home"
@@ -45,8 +45,7 @@ theme = []
     languageName = 'EN'
     contentDir = 'content/en'
     weight = 2
-    # Prestiżowe tłumaczenie American English
-    bio = "Passionate about discovery – both in research and during exploration."
+    bio = "A creator of reality. I\u00A0discover the world through theoretical physics and\u00A0shape it through action. Independent, passionate about research and\u00A0life, continuously expanding my horizons."
     [languages.en.menu]
       [[languages.en.menu.main]]
         name = "Home"
