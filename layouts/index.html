@@ -5,30 +5,101 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ .Site.Title }}</title>
     <style>
-        :root { --morska-zielen: {{ .Site.Params.morska_zielen }}; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 900px; margin: 40px auto; padding: 0 20px; line-height: 1.6; color: #2c3e50; }
+        /* Zmienne kolorów - Tryb Jasny */
+        :root { 
+            --morska-zielen: {{ .Site.Params.morska_zielen }}; 
+            --bg-color: #ffffff;
+            --text-color: #2c3e50;
+            --bio-color: #7f8c8d;
+        }
+
+        /* Zmienne kolorów - Tryb Ciemny */
+        [data-theme="dark"] {
+            --bg-color: #1a1a1a;
+            --text-color: #ecf0f1;
+            --bio-color: #bdc3c7;
+        }
+
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            max-width: 900px; 
+            margin: 40px auto; 
+            padding: 0 20px; 
+            line-height: 1.6; 
+            color: var(--text-color); 
+            background-color: var(--bg-color);
+            transition: background-color 0.3s, color 0.3s;
+        }
+
         header { border-bottom: 3px solid var(--morska-zielen); padding-bottom: 20px; margin-bottom: 30px; }
         h1 { color: var(--morska-zielen); margin-bottom: 5px; }
-        .bio { font-size: 1.2em; color: #7f8c8d; }
-        nav ul { list-style: none; padding: 0; display: flex; gap: 25px; }
+        .bio { font-size: 1.2em; color: var(--bio-color); }
+        
+        nav ul { list-style: none; padding: 0; display: flex; gap: 25px; align-items: center; }
         nav a { text-decoration: none; color: var(--morska-zielen); font-weight: bold; text-transform: uppercase; }
         nav a:hover { text-decoration: underline; }
+
+        /* Styl przycisku motywu i flag */
+        .theme-toggle { background: none; border: none; cursor: pointer; font-size: 1.4rem; padding: 0; }
+        .lang-link { font-size: 1.2rem; text-decoration: none; }
     </style>
 </head>
 <body>
     <header>
         <h1>{{ .Site.Title }}</h1>
-        <div class="bio">{{ .Site.Params.bio }}</div>
+        <!-- Używamy .Param "bio", aby pobierało bio z sekcji [languages] w hugo.toml -->
+        <div class="bio">{{ .Param "bio" }}</div>
         <nav>
             <ul>
                 {{ range .Site.Menus.main }}
-                <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+                <li><a href="{{ .URL | relLangURL }}">{{ .Name }}</a></li>
                 {{ end }}
+
+                <!-- Flagi języków -->
+                {{ range .AllTranslations }}
+                <li>
+                    <a href="{{ .Permalink }}" class="lang-link" title="{{ .Language.LanguageName }}">
+                        {{ if eq .Language.Lang "pl" }}🇵🇱{{ else if eq .Language.Lang "en" }}🇺🇸{{ end }}
+                    </a>
+                </li>
+                {{ end }}
+
+                <!-- Przełącznik Trybu (Słońce/Księżyc) -->
+                <li>
+                    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">🌙</button>
+                </li>
             </ul>
         </nav>
     </header>
     <main>
+        {{ .Content }}
         <p>Witaj w moim laboratorium cyfrowym. Sekcje publikacji i konferencji są w przygotowaniu.</p>
     </main>
+
+    <script>
+        const btn = document.getElementById("theme-toggle");
+        const currentTheme = localStorage.getItem("theme") || 
+                             (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+
+        // Inicjalizacja motywu
+        if (currentTheme === "dark") {
+            document.documentElement.setAttribute("data-theme", "dark");
+            btn.textContent = "☀️";
+        }
+
+        // Obsługa kliknięcia
+        btn.addEventListener("click", () => {
+            let theme = document.documentElement.getAttribute("data-theme");
+            if (theme === "dark") {
+                document.documentElement.removeAttribute("data-theme");
+                localStorage.setItem("theme", "light");
+                btn.textContent = "🌙";
+            } else {
+                document.documentElement.setAttribute("data-theme", "dark");
+                localStorage.setItem("theme", "dark");
+                btn.textContent = "☀️";
+            }
+        });
+    </script>
 </body>
 </html>
