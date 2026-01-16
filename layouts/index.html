@@ -35,25 +35,31 @@
         h1 { color: var(--morska-zielen); margin-bottom: 5px; }
         .bio { font-size: 1.2em; color: var(--bio-color); margin-bottom: 15px; }
         
-        nav ul { list-style: none; padding: 0; display: flex; gap: 20px; align-items: center; flex-wrap: wrap; }
+        nav ul { list-style: none; padding: 0; display: flex; gap: 25px; align-items: center; flex-wrap: wrap; }
         nav a { text-decoration: none; color: var(--morska-zielen); font-weight: bold; text-transform: uppercase; }
         
-        /* Wspólny styl dla suwaków */
-        .control-group { display: flex; align-items: center; gap: 8px; font-size: 1.2rem; }
-        .switch { position: relative; display: inline-block; width: 40px; height: 20px; }
+        /* Styl Suwaków - Neutralny */
+        .control-group { display: flex; align-items: center; gap: 10px; }
+        .switch { position: relative; display: inline-block; width: 44px; height: 22px; }
         .switch input { opacity: 0; width: 0; height: 0; }
+        
         .slider {
             position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0;
-            background-color: var(--slider-bg); transition: .4s; border-radius: 20px;
+            background-color: var(--slider-bg); /* Neutralne tło */
+            transition: .4s; border-radius: 22px;
+            border: 1px solid var(--morska-zielen);
         }
+        
         .slider:before {
-            position: absolute; content: ""; height: 14px; width: 14px; left: 3px; bottom: 3px;
-            background-color: white; transition: .4s; border-radius: 50%;
+            position: absolute; content: ""; height: 16px; width: 16px; left: 3px; bottom: 2px;
+            background-color: var(--morska-zielen); /* Kropka ma Twój kolor */
+            transition: .4s; border-radius: 50%;
         }
-        input:checked + .slider { background-color: var(--morska-zielen); }
+        
+        /* Przesunięcie kropki, ale TŁO zostaje neutralne */
         input:checked + .slider:before { transform: translateX(20px); }
         
-        .icon { user-select: none; }
+        .icon { font-size: 1.3rem; user-select: none; cursor: pointer; }
     </style>
 </head>
 <body>
@@ -66,17 +72,18 @@
                 <li><a href="{{ .URL | relLangURL }}">{{ .Name }}</a></li>
                 {{ end }}
 
-                <!-- Grupa Językowa: PL [suwak] EN -->
+                <!-- JĘZYK: PL [wajcha] EN -->
                 <li class="control-group">
-                    <span class="icon">🇵🇱</span>
+                    <span class="icon" onclick="location.href='{{ if .IsTranslated }}{{ (index .AllTranslations 0).Permalink }}{{ else }}#{{ end }}'">🇵🇱</span>
                     <label class="switch">
+                        <!-- Ten input musi być zawsze widoczny -->
                         <input type="checkbox" id="lang-toggle" {{ if eq .Language.Lang "en" }}checked{{ end }}>
                         <span class="slider"></span>
                     </label>
-                    <span class="icon">🇺🇸</span>
+                    <span class="icon" onclick="location.href='{{ if .IsTranslated }}{{ (index .AllTranslations 0).Permalink }}{{ else }}#{{ end }}'">🇺🇸</span>
                 </li>
 
-                <!-- Grupa Motywu: ☀️ [suwak] 🌙 -->
+                <!-- MOTYW: ☀️ [wajcha] 🌙 -->
                 <li class="control-group">
                     <span class="icon">☀️</span>
                     <label class="switch">
@@ -100,7 +107,6 @@
         const currentTheme = localStorage.getItem("theme") || 
                              (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
 
-        // Ustawienie początkowe suwaka i atrybutu
         if (currentTheme === "dark") {
             document.documentElement.setAttribute("data-theme", "dark");
             themeToggle.checked = true;
@@ -116,15 +122,12 @@
             }
         });
 
-        // --- LOGIKA JĘZYKA ---
+        // --- LOGIKA JĘZYKA (Stabilna) ---
         const langToggle = document.getElementById("lang-toggle");
         langToggle.addEventListener("change", () => {
-            {{ range .AllTranslations }}
-                if (langToggle.checked && "{{ .Language.Lang }}" === "en") {
-                    window.location.href = "{{ .Permalink }}";
-                } else if (!langToggle.checked && "{{ .Language.Lang }}" === "pl") {
-                    window.location.href = "{{ .Permalink }}";
-                }
+            // Szukamy permalinka do alternatywnej wersji językowej
+            {{ if .IsTranslated }}
+                window.location.href = "{{ (index .AllTranslations 0).Permalink }}";
             {{ end }}
         });
     </script>
