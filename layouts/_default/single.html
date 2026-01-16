@@ -103,23 +103,21 @@
         </div>
         {{ end }}
 
-        {{/* SEKCJA DYDAKTYKI */}}
+        {{/* SEKCJA DYDAKTYKI - USUNIĘTO NUMEREK, POPRAWIONO RESPONSYWNOŚĆ */}}
         {{ if eq .Type "teaching" }}
         <div class="teaching-list">
             {{ if .Site.Data.teaching }}
                 {{ $items := sort .Site.Data.teaching "date" "desc" }}
-                {{ $count := len $items }}
                 {{ range $index, $element := $items }}
-                <div class="pub-item">
-                    <span class="pub-number" style="color: var(--gray-ref);">({{ sub $count $index }})</span>
+                <div class="pub-item" style="display: block; margin-bottom: 30px;">
                     <div class="pub-details">
-                        <div class="authors">
-                            <span class="pub-title"><b>
+                        <div class="authors" style="margin-bottom: 5px;">
+                            <span class="pub-title" style="font-size: 1.1em;"><b>
                                 {{ if eq $.Language.Lang "pl" }}{{ $element.semester_pl }}{{ else }}{{ $element.semester_en }}{{ end }}
                             </b></span>
                         </div>
-                        <div class="title-line" style="text-align: justify; margin-top: 5px; opacity: 0.9;">
-                            {{ if eq $.Language.Lang "pl" }}{{ $element.desc_pl }}{{ else }}{{ $element.desc_en }}{{ end }}
+                        <div class="title-line" style="text-align: justify; opacity: 0.9; line-height: 1.6;">
+                            {{ if eq $.Language.Lang "pl" }}{{ $element.desc_pl | safeHTML }}{{ else }}{{ $element.desc_en }}{{ end }}
                         </div>
                     </div>
                 </div>
