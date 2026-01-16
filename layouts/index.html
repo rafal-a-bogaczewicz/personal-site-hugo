@@ -146,7 +146,7 @@
                 <img src="/images/profil.jpg" alt="Rafał A. Bogaczewicz" class="profile-img">
                 <div class="name-bio-box">
                     <h1>{{ .Site.Title }}</h1>
-                    <div id="dynamic-bio" class="bio">{{ .Param "bio" }}</div>
+                    <div id="dynamic-bio" class="bio">{{ .Param "bio" | safeHTML }}</div>
                 </div>
             </div>
         </div>
