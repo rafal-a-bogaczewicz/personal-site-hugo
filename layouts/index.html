@@ -20,6 +20,9 @@
             --slider-bg: #444;
         }
 
+        /* 1. Stabilizacja przewijania - zapobiega drganiu strony na boki */
+        html { overflow-y: scroll; }
+
         body { 
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
             max-width: 900px; 
@@ -31,33 +34,43 @@
             transition: background-color 0.3s, color 0.3s;
         }
 
-        header { border-bottom: 3px solid var(--morska-zielen); padding-bottom: 20px; margin-bottom: 30px; }
-        h1 { color: var(--morska-zielen); margin-bottom: 5px; }
-        .bio { font-size: 1.2em; color: var(--bio-color); margin-bottom: 15px; }
-        
-        /* STABILNA NAWIGACJA */
-        nav { display: flex; align-items: center; width: 100%; }
-        
-        /* Lewa strona - Menu (Publikacje / Konferencje) */
-        .menu-left { list-style: none; padding: 0; margin: 0; display: flex; gap: 25px; flex-shrink: 0; }
-        .menu-left a { text-decoration: none; color: var(--morska-zielen); font-weight: bold; text-transform: uppercase; }
-        .menu-left a:hover { text-decoration: underline; }
+        /* 2. Stabilizacja nagłówka - stała wysokość dolnego paska */
+        header { 
+            border-bottom: 3px solid var(--morska-zielen); 
+            padding-bottom: 10px; 
+            margin-bottom: 30px; 
+        }
 
-        /* Prawa strona - Suwaki (Zawsze przyklejone do prawej) */
+        h1 { color: var(--morska-zielen); margin-bottom: 5px; }
+        .bio { font-size: 1.2em; color: var(--bio-color); margin-bottom: 15px; height: 1.5em; }
+        
+        /* 3. Stabilizacja nawigacji - wymuszona wysokość zapobiega "puchnięciu" paska */
+        nav { 
+            display: flex; 
+            align-items: center; 
+            width: 100%; 
+            height: 40px; /* Stała wysokość sekcji z linkami i suwakami */
+        }
+        
+        .menu-left { list-style: none; padding: 0; margin: 0; display: flex; gap: 25px; }
+        .menu-left a { 
+            text-decoration: none; 
+            color: var(--morska-zielen); 
+            font-weight: bold; 
+            text-transform: uppercase;
+            display: inline-block;
+            line-height: 40px; /* Centrowanie tekstu w pionie do wysokości nav */
+        }
+
         .controls-right { 
-            margin-left: auto; /* To wypycha kontener maksymalnie w prawo */
+            margin-left: auto; 
             display: flex; 
             gap: 20px; 
             align-items: center; 
+            height: 40px;
         }
         
-        /* Każda grupa suwaka ma stałą szerokość, by ikony nie "pływały" */
-        .control-group { 
-            display: flex; 
-            align-items: center; 
-            gap: 8px; 
-            justify-content: flex-end;
-        }
+        .control-group { display: flex; align-items: center; gap: 8px; }
 
         .switch { position: relative; display: inline-block; width: 40px; height: 20px; flex-shrink: 0; }
         .switch input { opacity: 0; width: 0; height: 0; }
@@ -92,7 +105,6 @@
             </ul>
 
             <div class="controls-right">
-                <!-- Suwak Języka -->
                 <div class="control-group">
                     <span class="icon">🇺🇸</span>
                     <label class="switch">
@@ -102,7 +114,6 @@
                     <span class="icon">🇵🇱</span>
                 </div>
 
-                <!-- Suwak Trybu -->
                 <div class="control-group">
                     <span class="icon">☀️</span>
                     <label class="switch">
@@ -121,7 +132,6 @@
     </main>
 
     <script>
-        // MOTYW
         const themeToggle = document.getElementById("theme-toggle");
         const currentTheme = localStorage.getItem("theme") || 
                              (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
@@ -141,7 +151,6 @@
             }
         });
 
-        // JĘZYK
         const langToggle = document.getElementById("lang-toggle");
         langToggle.addEventListener("change", () => {
             const targetLang = langToggle.checked ? "pl" : "en";
