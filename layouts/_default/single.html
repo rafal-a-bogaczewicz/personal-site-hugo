@@ -1,36 +1,4 @@
-<!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}">
-<head>
-    <!-- Kopiujemy head z index, aby zachować spójność stylu ab initio -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ .Title }} | {{ .Site.Title }}</title>
-    
-    <!-- Stylizacja specyficzna dla treści podstron (Publikacje, Cytaty) -->
-    <style>
-        .values-header {
-            font-size: 0.95em;
-            margin-bottom: 40px;
-            border-left: 3px solid var(--gorska-zielen);
-            padding-left: 20px;
-            line-height: 1.5;
-        }
-        .quote-text { font-style: italic; color: var(--text-color); margin-bottom: 5px; }
-        .quote-ref { font-weight: bold; opacity: 0.6; font-size: 0.85em; }
-
-        .pub-item { display: flex; align-items: baseline; margin-bottom: 25px; font-size: 0.95em; }
-        .pub-number { color: var(--gorska-zielen); min-width: 40px; font-weight: bold; opacity: 0.8; }
-        .my-name { text-decoration: none; border-bottom: 1px solid var(--gorska-zielen); color: var(--text-color); }
-        .pub-link { color: var(--gorska-zielen); text-decoration: none; font-weight: 500; }
-        .pub-link:hover { text-decoration: underline; }
-        
-        .markdown-body { line-height: 1.6; }
-    </style>
-</head>
-
-<!-- Używamy tego samego układu co w index.html -->
-{{ partial "header.html" . }} 
-
+{{ partial "header.html" . }}
 <main id="dynamic-content">
     <div class="page-content">
         <h1>{{ .Title }}</h1>
@@ -63,7 +31,7 @@
                                 <i>{{ .venue }}</i> 
                                 {{ if .volume }}<b>{{ .volume }}</b>{{ end }}
                                 {{ if .pages }}, {{ .pages }}{{ end }} 
-                                ({{ dateFormat "2006" .date }}). <!-- TWOJA KROPKA -->
+                                ({{ dateFormat "2006" .date }}).
                             </a>
                         </div>
                     </div>
@@ -78,6 +46,4 @@
         </div>
     </div>
 </main>
-
 {{ partial "footer.html" . }}
-</html>
