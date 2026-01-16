@@ -61,12 +61,14 @@
         }
 
         .profile-img {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            border: 3px solid var(--gorska-zielen);
+            width: 250px;       /* Wyraźnie większy rozmiar */
+            height: auto;       /* Zachowuje proporcje zdjęcia */
+            max-height: 300px;
+            border-radius: 8px; /* Zamiast koła - eleganckie, lekko zaokrąglone rogi */
+            border: 4px solid var(--gorska-zielen);
             object-fit: cover;
-            background-color: var(--slider-bg);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Delikatny cień dla głębi */
+            flex-shrink: 0;
         }
 
         h1 { color: var(--gorska-zielen); margin: 0; font-size: 1.8rem; white-space: nowrap; }
