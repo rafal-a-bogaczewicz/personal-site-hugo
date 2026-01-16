@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Wymuszenie braku cache dla przeglądarek mobilnych -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <title>{{ .Site.Title }}</title>
     <style>
         :root { 
@@ -20,7 +24,6 @@
             --slider-bg: #444;
         }
 
-        /* Stabilizacja scrolla */
         html { overflow-y: scroll; }
 
         body { 
@@ -31,27 +34,27 @@
             color: var(--text-color); 
             background-color: var(--bg-color);
             transition: background-color 0.2s;
+            -webkit-text-size-adjust: 100%;
         }
 
-        /* NAGŁÓWEK - Imię i Suwaki w jednej linii */
+        /* NAGŁÓWEK - Imię i Suwaki */
         .header-top {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            flex-wrap: nowrap; /* Gwarancja jednej linii na PC */
             margin-bottom: 5px;
+            min-height: 50px;
         }
 
-        h1 { color: var(--morska-zielen); margin: 0; font-size: 2rem; }
+        h1 { color: var(--morska-zielen); margin: 0; font-size: 1.8rem; white-space: nowrap; }
 
-        /* PASEK MENU - Pod linią morską */
         header { 
             border-bottom: 3px solid var(--morska-zielen); 
             padding-bottom: 10px; 
             margin-bottom: 30px; 
         }
 
-        .bio { font-size: 1.1em; color: var(--bio-color); margin-top: 5px; margin-bottom: 15px; }
+        .bio { font-size: 1.1em; color: var(--bio-color); margin: 5px 0 15px 0; min-height: 1.5em; }
 
         nav ul { 
             list-style: none; 
@@ -83,17 +86,18 @@
         
         .icon { font-size: 1.2rem; user-select: none; }
 
-        /* RWD - Smartfony */
         @media (max-width: 600px) {
             .header-top {
                 flex-direction: column;
                 align-items: flex-start;
-                gap: 15px;
+                gap: 10px;
+                min-height: auto;
             }
             .controls-top {
                 width: 100%;
-                justify-content: flex-end; /* Suwaki dociśnięte do prawej na mobile */
+                justify-content: flex-end;
             }
+            h1 { font-size: 1.5rem; }
         }
     </style>
 </head>
@@ -103,7 +107,6 @@
             <h1>{{ .Site.Title }}</h1>
             
             <div class="controls-top">
-                <!-- Język: USA [wajcha] PL -->
                 <div class="control-group">
                     <span class="icon">🇺🇸</span>
                     <label class="switch">
@@ -113,7 +116,6 @@
                     <span class="icon">🇵🇱</span>
                 </div>
 
-                <!-- Motyw: ☀️ [wajcha] 🌙 -->
                 <div class="control-group">
                     <span class="icon">☀️</span>
                     <label class="switch">
@@ -142,22 +144,31 @@
     </main>
 
     <script>
-        // Motyw
+        // MOTYW
         const themeToggle = document.getElementById("theme-toggle");
         const currentTheme = localStorage.getItem("theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
         if (currentTheme === "dark") { document.documentElement.setAttribute("data-theme", "dark"); themeToggle.checked = true; }
         
         themeToggle.addEventListener("change", () => {
-            if (themeToggle.checked) { document.documentElement.setAttribute("data-theme", "dark"); localStorage.setItem("theme", "dark"); }
-            else { document.documentElement.removeAttribute("data-theme"); localStorage.setItem("theme", "light"); }
+            if (themeToggle.checked) { 
+                document.documentElement.setAttribute("data-theme", "dark"); 
+                localStorage.setItem("theme", "dark"); 
+            } else { 
+                document.documentElement.removeAttribute("data-theme"); 
+                localStorage.setItem("theme", "light"); 
+            }
         });
 
-        // Język
+        // JĘZYK - Z DODATKOWYM ODSWIEŻENIEM (Anti-cache)
         const langToggle = document.getElementById("lang-toggle");
         langToggle.addEventListener("change", () => {
             const targetLang = langToggle.checked ? "pl" : "en";
             {{ if .IsTranslated }}{{ range .AllTranslations }}
-            if ("{{ .Language.Lang }}" === targetLang) { window.location.href = "{{ .Permalink }}"; }
+            if ("{{ .Language.Lang }}" === targetLang) { 
+                // Dodajemy timestamp do URL, by oszukać cache smartfona
+                const newUrl = "{{ .Permalink }}" + "?v=" + new Date().getTime();
+                window.location.href = newUrl; 
+            }
             {{ end }}{{ end }}
         });
     </script>
