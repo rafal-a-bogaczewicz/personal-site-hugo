@@ -66,7 +66,6 @@
             transition: background-color 0.2s;
         }
 
-        /* NAGŁÓWEK - USUNIĘTO border-bottom STĄD */
         header { 
             margin-bottom: 30px;
             display: flex;
@@ -86,7 +85,7 @@
             display: flex;
             align-items: flex-start;
             gap: 30px;
-            padding-bottom: 20px; /* Odstęp od nowej linii menu */
+            padding-bottom: 20px;
         }
 
         .profile-img { 
@@ -101,12 +100,11 @@
         h1 { color: var(--gorska-zielen); margin: 0; font-size: 1.8rem; line-height: 1.2; }
         .bio { font-size: 1.1em; color: var(--bio-color); margin-top: 10px; font-style: italic; max-width: 550px; line-height: 1.5; }
         
-        /* MENU Z KRESKĄ NA GÓRZE I NA DOLE */
         nav { 
             margin-top: 10px;
             padding: 15px 0;
-            border-top: 3px solid var(--gorska-zielen);    /* NOWA KRESKA NA GÓRZE */
-            border-bottom: 3px solid var(--gorska-zielen); /* KRESKA NA DOLE */
+            border-top: 3px solid var(--gorska-zielen);
+            border-bottom: 3px solid var(--gorska-zielen);
         }
         nav ul { 
             list-style: none; 
@@ -145,8 +143,8 @@
             .bio { max-width: 100%; }
             nav ul { 
                 justify-content: center; 
-                flex-wrap: wrap; /* To zapewnia dwurzędowe menu */
-                gap: 15px 25px; /* Dodatkowy odstęp między rzędami */
+                flex-wrap: wrap; 
+                gap: 15px 25px;
             }
         }
     </style>
@@ -183,7 +181,12 @@
         <nav translate="no">
             <ul>
                 {{ range .Site.Menus.main }}
-                <li><a href="{{ .URL | relLangURL }}" class="notranslate">{{ .Name }}</a></li>
+                <li>
+                    <a href="{{ .URL | relLangURL }}" class="notranslate">
+                        {{/* Filtr łączący spójniki w menu */}}
+                        {{ .Name | replaceRE " ([iozwuA-Z]) " " $1&nbsp;" | safeHTML }}
+                    </a>
+                </li>
                 {{ end }}
             </ul>
         </nav>
