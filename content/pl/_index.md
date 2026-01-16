@@ -1,4 +1,4 @@
 ---
 title: "Rafał A. Bogaczewicz"
-bio: "Jako fizyk teoretyk lubię odkrywać świat, pracując naukowo oraz podczas wypraw."
+bio: "Jestem fizykiem teoretykiem, lubiącym odkrywać świat, pracując zarówno naukowo, jak i podczas wypraw."
 ---
