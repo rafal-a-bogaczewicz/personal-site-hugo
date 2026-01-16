@@ -7,9 +7,9 @@ theme = []
 
 [params]
   gorska_zielen = "#4a674f"
-  # Parametry globalne dostępne na każdej podstronie
-  bio_pl = "Twórca rzeczywistości\u00A0— odkrywam świat poprzez fizykę teoretyczną i\u00A0kształtuję go poprzez działanie. Niezależny, z\u00A0pasją do\u00A0nauki i\u00A0życia, stale poszerzam horyzonty."
-  bio_en = "A creator of reality. I\u00A0discover the world through theoretical physics and\u00A0shape it through action. Independent, passionate about research and\u00A0life, continuously expanding my horizons."
+  # Twoje oryginalne treści z twardymi spacjami
+  bio_pl = "Pasjonat odkrywania świata\u00A0— zarówno naukowo, jak i\u00A0podczas wypraw."
+  bio_en = "Passionate about discovery\u00A0— both in\u00A0research and during exploration."
 
 [languages]
   [languages.pl]
