@@ -16,13 +16,13 @@
         {{ if eq .Type "publications" }}
         <div class="publications-list">
             {{ if .Site.Data.pubs }}
-                {{/* Sortujemy listę tak, aby najnowsze daty były pierwsze */}}
-                {{ $pubs := .Site.Data.pubs }}
+                {{/* 1. Pobieramy dane i sortujemy je malejąco po dacie */}}
+                {{ $pubs := sort .Site.Data.pubs "date" "desc" }}
                 {{ $count := len $pubs }}
-                {{/* 'reverse' odwraca listę z pubs.yaml (zakładając, że w yaml są chronologicznie) */}}
-                {{ range $index, $element := reverse $pubs }}
+                
+                {{ range $index, $element := $pubs }}
                 <div class="pub-item">
-                    {{/* Numeracja malejąca: (4), (3), (2), (1) */}}
+                    {{/* 2. Numeracja: (4), (3), (2), (1) */}}
                     <span class="pub-number">({{ sub $count $index }})</span>
                     <div class="pub-details">
                         <div class="authors">
