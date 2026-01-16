@@ -14,7 +14,7 @@ theme = []
     contentDir = 'content/pl'
     weight = 1
     # Nowe bio z akcentem na wyprawy i odkrywanie świata
-    bio = "Jako fizyk teoretyk lubię odkrywać świat, pracując naukowo oraz podczas wypraw."
+    bio = "Jestem fizykiem teoretykiem, lubiącym odkrywać świat, pracując zarówno naukowo, jak i podczas wypraw."
     [languages.pl.menu]
       [[languages.pl.menu.main]]
         name = "Publikacje"
