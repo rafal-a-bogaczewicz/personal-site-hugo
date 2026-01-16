@@ -7,7 +7,6 @@
     <title>{{ .Site.Title }}</title>
     <style>
         :root { 
-            /* Używamy nowej nazwy z hugo.toml */
             --gorska-zielen: {{ .Site.Params.gorska_zielen }}; 
             --bg-color: #ffffff;
             --text-color: #2c3e50;
@@ -16,7 +15,6 @@
         }
 
         [data-theme="dark"] {
-            /* Podjaśniona zieleń dla lepszego kontrastu w nocy */
             --gorska-zielen: #769d7c; 
             --bg-color: #1a1a1a;
             --text-color: #ecf0f1;
@@ -35,8 +33,6 @@
             background-color: var(--bg-color);
             transition: background-color 0.2s;
             -webkit-text-size-adjust: none;
-            text-size-adjust: none;
-            touch-action: pan-x pan-y;
         }
 
         header { 
@@ -45,61 +41,71 @@
             margin-bottom: 30px; 
         }
 
+        /* GŁÓWNY KONTENER NAGŁÓWKA */
         .header-top {
             display: flex;
             justify-content: space-between;
-            align-items: center;
-            margin-bottom: 5px;
-            min-height: 50px;
+            align-items: flex-start; /* WYRÓWNANIE DO GÓRNEJ KRAWĘDZI */
+            gap: 30px;
         }
 
-        /* Nowa sekcja profilowa */
-        .profile-section {
-            display: flex;
-            align-items: center;
-            gap: 20px;
+        .profile-section { 
+            display: flex; 
+            align-items: flex-start; /* Imię na wysokości góry zdjęcia */
+            gap: 25px; 
         }
 
         .profile-img {
-            width: 250px;       /* Wyraźnie większy rozmiar */
-            height: auto;       /* Zachowuje proporcje zdjęcia */
-            max-height: 300px;
-            border-radius: 8px; /* Zamiast koła - eleganckie, lekko zaokrąglone rogi */
-            border: 4px solid var(--gorska-zielen);
+            width: 200px; /* Zmniejszone dla balansu */
+            height: auto;
+            border-radius: 8px;
+            border: 3px solid var(--gorska-zielen);
             object-fit: cover;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Delikatny cień dla głębi */
             flex-shrink: 0;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
 
-        h1 { color: var(--gorska-zielen); margin: 0; font-size: 1.8rem; white-space: nowrap; }
-        .bio { font-size: 1.1em; color: var(--bio-color); margin: 5px 0 10px 0; min-height: 1.5em; }
+        .name-bio-box { display: flex; flex-direction: column; }
 
-        nav ul { list-style: none; padding: 0; margin: 0; display: flex; gap: 25px; }
-        nav a { 
-            text-decoration: none; 
+        h1 { 
             color: var(--gorska-zielen); 
-            font-weight: bold; 
-            text-transform: uppercase;
-            font-size: 14px;
+            margin: 0; 
+            font-size: 1.8rem; 
+            line-height: 1.2; /* Zapewnia precyzyjne wyrównanie do góry */
+        }
+        
+        .bio { 
+            font-size: 1.1em; 
+            color: var(--bio-color); 
+            margin: 10px 0 0 0; 
         }
 
-        .controls-top { display: flex; gap: 15px; align-items: center; }
+        /* KONTROLKI - WYRÓWNANE DO GÓRY */
+        .controls-top { 
+            display: flex; 
+            gap: 20px; 
+            align-items: center; 
+            padding-top: 5px; /* Delikatna korekta by ikony były w osi z tekstem H1 */
+        }
+        
         .control-group { display: flex; align-items: center; gap: 6px; }
 
         .switch { position: relative; display: inline-block; width: 36px; height: 18px; flex-shrink: 0; }
         .switch input { opacity: 0; width: 0; height: 0; }
         .slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: var(--slider-bg); transition: .3s; border-radius: 20px; }
         .slider:before { position: absolute; content: ""; height: 12px; width: 12px; left: 3px; bottom: 3px; background-color: white; transition: .3s; border-radius: 50%; }
-        
         input:checked + .slider { background-color: var(--gorska-zielen); }
         input:checked + .slider:before { transform: translateX(18px); }
-        
         .icon { font-size: 1.2rem; user-select: none; }
 
+        nav { margin-top: 20px; }
+        nav ul { list-style: none; padding: 0; margin: 0; display: flex; gap: 25px; }
+        nav a { text-decoration: none; color: var(--gorska-zielen); font-weight: bold; text-transform: uppercase; font-size: 14px; }
+
         @media (max-width: 600px) {
-            .header-top { flex-direction: column; align-items: center; text-align: center; gap: 15px; min-height: auto; }
-            .profile-section { flex-direction: column; gap: 10px; }
-            .controls-top { width: 100%; justify-content: center; }
+            .header-top { flex-direction: column; align-items: center; text-align: center; }
+            .profile-section { flex-direction: column; align-items: center; gap: 15px; }
+            .controls-top { width: 100%; justify-content: center; margin-top: 10px; }
             h1 { font-size: 1.5rem; }
         }
     </style>
@@ -108,9 +114,8 @@
     <header>
         <div class="header-top">
             <div class="profile-section">
-                <!-- Zdjęcie musi być w static/images/profil.jpg -->
                 <img src="/images/profil.jpg" alt="Rafał A. Bogaczewicz" class="profile-img">
-                <div>
+                <div class="name-bio-box">
                     <h1>{{ .Site.Title }}</h1>
                     <div id="dynamic-bio" class="bio">{{ .Param "bio" }}</div>
                 </div>
@@ -151,7 +156,7 @@
     </main>
 
     <script>
-        // 1. OBSŁUGA MOTYWU
+        // MOTYW
         const themeToggle = document.getElementById("theme-toggle");
         const currentTheme = localStorage.getItem("theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
         if (currentTheme === "dark") { document.documentElement.setAttribute("data-theme", "dark"); themeToggle.checked = true; }
@@ -161,7 +166,7 @@
             localStorage.setItem("theme", newMode);
         });
 
-        // 2. OBSŁUGA JĘZYKA - PODMIANA TREŚCI (OCHRONA ZOOMU)
+        // JĘZYK - PODMIANA TREŚCI
         const langToggle = document.getElementById("lang-toggle");
         const translations = {
             {{ range .AllTranslations }} "{{ .Language.Lang }}": "{{ .Permalink }}", {{ end }}
@@ -172,17 +177,14 @@
             const targetLang = langToggle.checked ? "pl" : "en";
             const url = translations[targetLang];
             if (!url) return;
-
             try {
                 const response = await fetch(url);
                 const htmlText = await response.text();
                 const parser = new DOMParser();
                 const newDoc = parser.parseFromString(htmlText, 'text/html');
-
                 document.getElementById('dynamic-bio').innerHTML = newDoc.getElementById('dynamic-bio').innerHTML;
                 document.getElementById('dynamic-content').innerHTML = newDoc.getElementById('dynamic-content').innerHTML;
                 document.getElementById('dynamic-menu').innerHTML = newDoc.getElementById('dynamic-menu').innerHTML;
-                
                 window.history.pushState({}, '', url);
                 document.documentElement.lang = targetLang;
             } catch (err) {
