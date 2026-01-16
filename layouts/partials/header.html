@@ -7,7 +7,7 @@
     <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
     <style>
         :root { 
-            --gorska-zielen: {{ .Site.Params.gorska_zielen }}; 
+            --gorska-zielen: {{ .Site.Params.gorska_zielen | default "#4a674f" }}; 
             --bg-color: #ffffff;
             --text-color: #000000;
             --bio-color: #1a1a1a;
@@ -35,15 +35,10 @@
         .header-top { display: flex; align-items: flex-start; gap: 30px; }
         .profile-img { width: 200px; border-radius: 8px; border: 3px solid var(--gorska-zielen); object-fit: cover; }
         h1 { color: var(--gorska-zielen); margin: 0; font-size: 1.8rem; }
-        .bio { font-size: 1.1em; color: var(--bio-color); margin-top: 10px; font-style: italic; max-width: 550px; }
+        .bio { font-size: 1.1em; color: var(--bio-color); margin-top: 10px; font-style: italic; max-width: 550px; line-height: 1.4; }
         nav { margin-top: 20px; }
         nav ul { list-style: none; padding: 0; margin: 0; display: flex; gap: 25px; }
         nav a { text-decoration: none; color: var(--gorska-zielen); font-weight: bold; text-transform: uppercase; font-size: 14px; }
-        .values-header { border-left: 3px solid var(--gorska-zielen); padding-left: 20px; margin-bottom: 40px; }
-        .pub-item { display: flex; align-items: baseline; margin-bottom: 25px; font-size: 0.95em; }
-        .pub-number { color: var(--gorska-zielen); min-width: 40px; font-weight: bold; }
-        .my-name { border-bottom: 1px solid var(--gorska-zielen); }
-        .pub-link { color: var(--gorska-zielen); text-decoration: none; font-weight: 500; }
         .control-group { display: flex; align-items: center; gap: 6px; }
         .switch { position: relative; display: inline-block; width: 36px; height: 18px; }
         .switch input { opacity: 0; width: 0; height: 0; }
@@ -77,7 +72,9 @@
             <img src="/images/profil.jpg" alt="Rafał A. Bogaczewicz" class="profile-img">
             <div class="name-bio-box">
                 <h1>{{ .Site.Title }}</h1>
-                <div class="bio">{{ .Param "bio" | safeHTML }}</div>
+                {{/* Szukamy bio najpierw w parametrach strony, potem w konfiguracji Site */}}
+                {{ $bio := .Param "bio" }}
+                <div class="bio">{{ $bio | safeHTML }}</div>
             </div>
         </div>
         <nav>
