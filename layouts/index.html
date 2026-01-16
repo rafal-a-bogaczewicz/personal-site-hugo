@@ -3,10 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Wymuszenie braku cache dla przeglądarek mobilnych -->
+    <!-- Meta tagi optymalizujące ładowanie w 2026 roku -->
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
     <title>{{ .Site.Title }}</title>
     <style>
         :root { 
@@ -24,6 +22,7 @@
             --slider-bg: #444;
         }
 
+        /* Stabilizacja przewijania */
         html { overflow-y: scroll; }
 
         body { 
@@ -34,7 +33,10 @@
             color: var(--text-color); 
             background-color: var(--bg-color);
             transition: background-color 0.2s;
-            -webkit-text-size-adjust: 100%;
+            /* Stabilizacja zoomu i tekstu na mobile */
+            -webkit-text-size-adjust: none;
+            text-size-adjust: none;
+            touch-action: pan-x pan-y;
         }
 
         /* NAGŁÓWEK - Imię i Suwaki */
@@ -107,6 +109,7 @@
             <h1>{{ .Site.Title }}</h1>
             
             <div class="controls-top">
+                <!-- Patriotyczny suwak Języka: USA [wajcha] PL -->
                 <div class="control-group">
                     <span class="icon">🇺🇸</span>
                     <label class="switch">
@@ -116,6 +119,7 @@
                     <span class="icon">🇵🇱</span>
                 </div>
 
+                <!-- Suwak Motywu: Słońce [wajcha] Księżyc -->
                 <div class="control-group">
                     <span class="icon">☀️</span>
                     <label class="switch">
@@ -144,10 +148,14 @@
     </main>
 
     <script>
-        // MOTYW
+        // LOGIKA MOTYWU
         const themeToggle = document.getElementById("theme-toggle");
         const currentTheme = localStorage.getItem("theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
-        if (currentTheme === "dark") { document.documentElement.setAttribute("data-theme", "dark"); themeToggle.checked = true; }
+        
+        if (currentTheme === "dark") { 
+            document.documentElement.setAttribute("data-theme", "dark"); 
+            themeToggle.checked = true; 
+        }
         
         themeToggle.addEventListener("change", () => {
             if (themeToggle.checked) { 
@@ -159,15 +167,14 @@
             }
         });
 
-        // JĘZYK - Z DODATKOWYM ODSWIEŻENIEM (Anti-cache)
+        // LOGIKA JĘZYKA (Bez wymuszania resetu zoomu)
         const langToggle = document.getElementById("lang-toggle");
         langToggle.addEventListener("change", () => {
             const targetLang = langToggle.checked ? "pl" : "en";
             {{ if .IsTranslated }}{{ range .AllTranslations }}
             if ("{{ .Language.Lang }}" === targetLang) { 
-                // Dodajemy timestamp do URL, by oszukać cache smartfona
-                const newUrl = "{{ .Permalink }}" + "?v=" + new Date().getTime();
-                window.location.href = newUrl; 
+                // Używamy czystego linku, aby przeglądarka mobilna mogła spróbować zachować stan zoomu
+                window.location.href = "{{ .Permalink }}"; 
             }
             {{ end }}{{ end }}
         });
