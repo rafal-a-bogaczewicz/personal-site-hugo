@@ -43,7 +43,7 @@
         </div>
         {{ end }}
 
-        {{/* SEKCJA KONFERENCJI - PRECYZYJNA DATA */}}
+        {{/* SEKCJA KONFERENCJI - NAZWY MIESIĘCY I KRAJE */}}
         {{ if eq .Type "conferences" }}
         <div class="conferences-list">
             {{ if .Site.Data.confs }}
@@ -75,15 +75,18 @@
                                 {{ end }}
                             {{ end }}
 
-                            {{/* Format: Dzień bez zera, Miesiąc z zerem */}}
+                            {{/* LOGIKA DATY Z NAZWAMI MIESIĘCY */}}
+                            {{- $m_pl := index (slice "" "stycznia" "lutego" "marca" "kwietnia" "maja" "czerwca" "lipca" "sierpnia" "września" "października" "listopada" "grudnia") (printf "%d" (int (dateFormat "1" $element.date))) -}}
+                            {{- $m_en := dateFormat "January" $element.date -}}
+                            
                             {{- if $element.end_date -}}
-                                {{ dateFormat "2" $element.date }}–{{ dateFormat "2.01.2006" $element.end_date }}
+                                {{ dateFormat "2" $element.date }}–{{ dateFormat "2" $element.end_date }} {{ if eq $.Language.Lang "pl" }}{{ $m_pl }}{{ else }}{{ $m_en }}{{ end }} {{ dateFormat "2006" $element.end_date }}
                             {{- else -}}
-                                {{ dateFormat "2.01.2006" $element.date }}
+                                {{ dateFormat "2" $element.date }} {{ if eq $.Language.Lang "pl" }}{{ $m_pl }}{{ else }}{{ $m_en }}{{ end }} {{ dateFormat "2006" $element.date }}
                             {{- end -}},
 
                             {{- if $element.city -}}
-                                &nbsp;{{ $element.city }} ({{ $element.country }})
+                                &nbsp;{{ $element.city }} ({{ if eq $.Language.Lang "pl" }}{{ $element.country_pl }}{{ else }}{{ $element.country_en }}{{ end }})
                             {{- end -}}
 
                             {{- if $element.online -}}
