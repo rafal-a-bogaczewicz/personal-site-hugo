@@ -28,7 +28,6 @@
                             {{ $authorList | safeHTML }},
                         </div>
                         <div class="title-line">
-                            {{/* ZMIANA: Tytuł wytłuszczony I kursywa */}}
                             <span class="pub-title"><b><i>{{ $element.title }}</i>,</b></span>
                             <a href="{{ $element.paperurl }}" class="pub-link" target="_blank" rel="noopener">
                                 <i>{{ $element.venue }}</i> 
@@ -76,20 +75,23 @@
                                 {{ end }}
                             {{ end }}
 
-                            {{ if $element.end_date }}
+                            {{/* Data i natychmiastowy przecinek */}}
+                            {{- if $element.end_date -}}
                                 {{ dateFormat "02" $element.date }}–{{ dateFormat "02.01.2006" $element.end_date }}
-                            {{ else }}
+                            {{- else -}}
                                 {{ dateFormat "02.01.2006" $element.date }}
-                            {{ end }}
+                            {{- end -}},
 
-                            {{ if $element.city }}
-                                , {{ $element.city }} ({{ $element.country }})
-                            {{ end }}
+                            {{- if $element.city -}}
+                                &nbsp;{{ $element.city }} ({{ $element.country }})
+                            {{- end -}}
 
-                            {{/* ZMIANA: Online po przecinku, bez nawiasu */}}
-                            {{ if $element.online }}
+                            {{/* Logika on-line/kropka bez zbędnych spacji */}}
+                            {{- if $element.online -}}
                                 {{ if eq $.Language.Lang "pl" }}, on-line.{{ else }}, held on-line.{{ end }}
-                            {{ else }}.{{ end }}
+                            {{- else -}}
+                                .
+                            {{- end -}}
                         </div>
                     </div>
                 </div>
