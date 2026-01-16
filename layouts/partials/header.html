@@ -35,24 +35,19 @@
         .header-top { display: flex; align-items: flex-start; gap: 30px; }
         .profile-img { width: 200px; height: auto; border-radius: 8px; border: 3px solid var(--gorska-zielen); object-fit: cover; flex-shrink: 0; }
         h1 { color: var(--gorska-zielen); margin: 0; font-size: 1.8rem; line-height: 1.2; }
-        
-        /* Bio Style */
         .bio { font-size: 1.1em; color: var(--bio-color); margin-top: 10px; font-style: italic; max-width: 550px; line-height: 1.5; }
         
         nav { margin-top: 20px; }
         nav ul { list-style: none; padding: 0; margin: 0; display: flex; gap: 25px; }
         nav a { text-decoration: none; color: var(--gorska-zielen); font-weight: bold; text-transform: uppercase; font-size: 14px; }
         
-        /* Publikacje i cytaty - Pancerne Style */
-        .values-header { border-left: 3px solid var(--gorska-zielen); padding-left: 20px; margin-bottom: 40px; margin-top: 20px; }
-        .pub-item { display: flex; align-items: baseline; margin-bottom: 25px; font-size: 0.95em; line-height: 1.4; }
+        /* Style publikacji */
+        .values-header { border-left: 3px solid var(--gorska-zielen); padding-left: 20px; margin-bottom: 40px; }
+        .pub-item { display: flex; align-items: baseline; margin-bottom: 25px; font-size: 0.95em; }
         .pub-number { color: var(--gorska-zielen); min-width: 40px; font-weight: bold; flex-shrink: 0; }
-        .my-name { border-bottom: 1px solid var(--gorska-zielen); font-weight: 500; }
+        .my-name { border-bottom: 1px solid var(--gorska-zielen); }
         .pub-link { color: var(--gorska-zielen); text-decoration: none; font-weight: 500; }
-        .pub-link:hover { text-decoration: underline; }
-        .pub-title { font-weight: normal; color: var(--text-color); }
 
-        /* Przełączniki */
         .control-group { display: flex; align-items: center; gap: 6px; }
         .switch { position: relative; display: inline-block; width: 36px; height: 18px; }
         .switch input { opacity: 0; width: 0; height: 0; }
@@ -61,12 +56,6 @@
         input:checked + .slider { background-color: var(--gorska-zielen); }
         input:checked + .slider:before { transform: translateX(18px); }
         .icon { font-size: 1.2rem; }
-
-        @media (max-width: 600px) {
-            .header-top { flex-direction: column; align-items: center; text-align: center; }
-            .profile-img { width: 150px; }
-            .controls-top { position: relative; justify-content: center; margin-bottom: 20px; }
-        }
     </style>
 </head>
 <body>
@@ -93,14 +82,8 @@
             <img src="{{ "/images/profil.jpg" | relURL }}" alt="Rafał A. Bogaczewicz" class="profile-img">
             <div class="name-bio-box">
                 <h1>{{ .Site.Title }}</h1>
-                {{/* Kluczowa zmiana: pobieranie bio z konkretnego języka */}}
-                <div class="bio">
-                    {{ if eq .Language.Lang "pl" }}
-                        {{ .Site.Languages.pl.Params.bio | safeHTML }}
-                    {{ else }}
-                        {{ .Site.Languages.en.Params.bio | safeHTML }}
-                    {{ end }}
-                </div>
+                {{/* Użycie .Param "bio" wyciągnie bio z hugo.toml dla aktualnego języka */}}
+                <div class="bio">{{ .Param "bio" | safeHTML }}</div>
             </div>
         </div>
         <nav>
