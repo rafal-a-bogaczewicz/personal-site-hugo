@@ -19,7 +19,7 @@
   </div>
   {{ end }}
 
-  {{ if or (eq .Type "publications") (eq .File.BaseFileName "publications") }}
+  {{ if in .RelPermalink "publications" }}
   <div class="publications-list">
     {{ if .Site.Data.pubs }}
         {{ $pubs := .Site.Data.pubs }}
