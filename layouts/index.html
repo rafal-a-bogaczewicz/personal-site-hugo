@@ -9,16 +9,16 @@
         :root { 
             --gorska-zielen: {{ .Site.Params.gorska_zielen }}; 
             --bg-color: #ffffff;
-            --text-color: #2c3e50;
-            --bio-color: #7f8c8d;
+            --text-color: #000000; /* Czysta czerń dla imienia i nazwiska */
+            --bio-color: #1a1a1a;  /* Bardzo ciemny szary dla bio */
             --slider-bg: #ccc;
         }
 
         [data-theme="dark"] {
             --gorska-zielen: #769d7c; 
             --bg-color: #1a1a1a;
-            --text-color: #ecf0f1;
-            --bio-color: #bdc3c7;
+            --text-color: #ffffff; /* Czysta biel w trybie ciemnym */
+            --bio-color: #eeeeee;  /* Jasny szary dla bio w nocy */
             --slider-bg: #444;
         }
 
@@ -41,22 +41,21 @@
             margin-bottom: 30px; 
         }
 
-        /* GŁÓWNY KONTENER NAGŁÓWKA */
         .header-top {
             display: flex;
             justify-content: space-between;
-            align-items: flex-start; /* WYRÓWNANIE DO GÓRNEJ KRAWĘDZI */
+            align-items: flex-start;
             gap: 30px;
         }
 
         .profile-section { 
             display: flex; 
-            align-items: flex-start; /* Imię na wysokości góry zdjęcia */
+            align-items: flex-start; 
             gap: 25px; 
         }
 
         .profile-img {
-            width: 200px; /* Zmniejszone dla balansu */
+            width: 200px;
             height: auto;
             border-radius: 8px;
             border: 3px solid var(--gorska-zielen);
@@ -68,24 +67,26 @@
         .name-bio-box { display: flex; flex-direction: column; }
 
         h1 { 
-            color: var(--gorska-zielen); 
+            color: var(--gorska-zielen); /* Imię i nazwisko w Twojej zieleni górskiej */
             margin: 0; 
             font-size: 1.8rem; 
-            line-height: 1.2; /* Zapewnia precyzyjne wyrównanie do góry */
+            line-height: 1.2; 
         }
         
         .bio { 
             font-size: 1.1em; 
             color: var(--bio-color); 
-            margin: 10px 0 0 0; 
+            margin: 15px 0 0 0; 
+            line-height: 1.5;
+            font-style: italic; /* Kursywa dla zaciekawienia "wybranki" */
+            max-width: 500px;   /* Ograniczenie szerokości dla lepszej struktury tekstu */
         }
 
-        /* KONTROLKI - WYRÓWNANE DO GÓRY */
         .controls-top { 
             display: flex; 
             gap: 20px; 
             align-items: center; 
-            padding-top: 5px; /* Delikatna korekta by ikony były w osi z tekstem H1 */
+            padding-top: 5px; 
         }
         
         .control-group { display: flex; align-items: center; gap: 6px; }
@@ -107,6 +108,7 @@
             .profile-section { flex-direction: column; align-items: center; gap: 15px; }
             .controls-top { width: 100%; justify-content: center; margin-top: 10px; }
             h1 { font-size: 1.5rem; }
+            .bio { max-width: 100%; }
         }
     </style>
 </head>
@@ -117,6 +119,7 @@
                 <img src="/images/profil.jpg" alt="Rafał A. Bogaczewicz" class="profile-img">
                 <div class="name-bio-box">
                     <h1>{{ .Site.Title }}</h1>
+                    <!-- Ten kontener wyświetli Twój nowy napis z hugo.toml -->
                     <div id="dynamic-bio" class="bio">{{ .Param "bio" }}</div>
                 </div>
             </div>
@@ -159,14 +162,20 @@
         // MOTYW
         const themeToggle = document.getElementById("theme-toggle");
         const currentTheme = localStorage.getItem("theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
-        if (currentTheme === "dark") { document.documentElement.setAttribute("data-theme", "dark"); themeToggle.checked = true; }
+        
+        // Inicjalizacja stanu suwaka motywu
+        if (currentTheme === "dark") { 
+            document.documentElement.setAttribute("data-theme", "dark"); 
+            themeToggle.checked = true; 
+        }
+
         themeToggle.addEventListener("change", () => {
             const newMode = themeToggle.checked ? "dark" : "light";
             document.documentElement.setAttribute("data-theme", newMode);
             localStorage.setItem("theme", newMode);
         });
 
-        // JĘZYK - PODMIANA TREŚCI
+        // JĘZYK - PODMIANA TREŚCI (BEZ RESETU ZOOMU)
         const langToggle = document.getElementById("lang-toggle");
         const translations = {
             {{ range .AllTranslations }} "{{ .Language.Lang }}": "{{ .Permalink }}", {{ end }}
@@ -182,9 +191,12 @@
                 const htmlText = await response.text();
                 const parser = new DOMParser();
                 const newDoc = parser.parseFromString(htmlText, 'text/html');
+                
+                // Kluczowa podmiana tekstu Bio
                 document.getElementById('dynamic-bio').innerHTML = newDoc.getElementById('dynamic-bio').innerHTML;
                 document.getElementById('dynamic-content').innerHTML = newDoc.getElementById('dynamic-content').innerHTML;
                 document.getElementById('dynamic-menu').innerHTML = newDoc.getElementById('dynamic-menu').innerHTML;
+                
                 window.history.pushState({}, '', url);
                 document.documentElement.lang = targetLang;
             } catch (err) {
