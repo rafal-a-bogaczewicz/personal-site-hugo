@@ -1,22 +1,45 @@
 baseURL = 'https://rafal-a-bogaczewicz.github.io'
-languageCode = 'pl'
+defaultContentLanguage = 'pl'
 title = 'Rafał A. Bogaczewicz'
 
+# Budujemy ab initio - brak zewnętrznego motywu
 theme = []
 
 [params]
   morska_zielen = "#16a085"
-  bio = "Fizyk teoretyk. Specjalista w zakresie metod ab initio i modelowania kwantowego."
 
-[menu]
-  [[menu.main]]
-    name = "Publikacje"
-    url = "/publications/"
+[languages]
+  [languages.pl]
+    languageName = 'PL'
+    contentDir = 'content/pl'
     weight = 1
-  [[menu.main]]
-    name = "Konferencje"
-    url = "/conferences/"
+    # Bio specyficzne dla języka
+    bio = "Fizyk teoretyk. Specjalista w zakresie metod ab initio i modelowania kwantowego."
+    [languages.pl.menu]
+      [[languages.pl.menu.main]]
+        name = "Publikacje"
+        url = "/publications/"
+        weight = 1
+      [[languages.pl.menu.main]]
+        name = "Konferencje"
+        url = "/conferences/"
+        weight = 2
+
+  [languages.en]
+    languageName = 'EN'
+    contentDir = 'content/en'
     weight = 2
+    # Bio specyficzne dla języka
+    bio = "Theoretical Physicist. Expert in ab initio methods and quantum modeling."
+    [languages.en.menu]
+      [[languages.en.menu.main]]
+        name = "Publications"
+        url = "/publications/"
+        weight = 1
+      [[languages.en.menu.main]]
+        name = "Conferences"
+        url = "/conferences/"
+        weight = 2
 
 [markup]
   [markup.goldmark.renderer]
