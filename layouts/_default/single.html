@@ -1,6 +1,5 @@
 <div id="dynamic-content">
 <style>
-  /* Stylizacja cytatu - High Value & Values */
   .values-header {
     font-size: 0.95em;
     margin-bottom: 40px;
@@ -8,48 +7,21 @@
     padding-left: 20px;
     line-height: 1.5;
   }
-  
   .quote-pl { font-style: italic; color: var(--text-color); margin-bottom: 5px; }
   .quote-en { font-style: italic; opacity: 0.7; font-size: 0.9em; margin-bottom: 8px; }
   .quote-ref { font-weight: bold; opacity: 0.6; font-size: 0.85em; }
 
-  /* Lista publikacji */
-  .pub-item {
-    display: flex;
-    align-items: baseline;
-    margin-bottom: 25px;
-    font-size: 0.95em;
-    line-height: 1.4;
-  }
-
-  .pub-number {
-    color: var(--gorska-zielen);
-    min-width: 40px;
-    font-weight: bold;
-    opacity: 0.8;
-  }
-
-  /* Atomowe podkreślenie nazwiska - styl High-Value */
-  .my-name {
-    text-decoration: none;
-    border-bottom: 1px solid var(--gorska-zielen);
-    color: var(--text-color);
-  }
-
-  .pub-link {
-    color: var(--gorska-zielen);
-    text-decoration: none;
-    font-weight: 500;
-  }
-  .pub-link:hover {
-    text-decoration: underline;
-  }
+  .pub-item { display: flex; align-items: baseline; margin-bottom: 25px; font-size: 0.95em; }
+  .pub-number { color: var(--gorska-zielen); min-width: 40px; font-weight: bold; opacity: 0.8; }
+  .my-name { text-decoration: none; border-bottom: 1px solid var(--gorska-zielen); color: var(--text-color); }
+  .pub-link { color: var(--gorska-zielen); text-decoration: none; font-weight: 500; }
+  .pub-link:hover { text-decoration: underline; }
 </style>
 
 <div class="page-content">
   <h1>{{ .Title }}</h1>
 
-  <!-- Sekcja cytatu - wyświetla się tylko jeśli zdefiniujesz quote_pl w pliku .md -->
+  <!-- Cytat (wyświetli się jeśli zdefiniowany w MD) -->
   {{ if .Params.quote_pl }}
   <div class="values-header">
     <div class="quote-pl">{{ .Params.quote_pl }}</div>
@@ -58,40 +30,38 @@
   </div>
   {{ end }}
 
-  <!-- Wyświetla listę publikacji TYLKO w zakładce Publikacje -->
-  {{ if eq .Type "publications" }}
+  <!-- LISTA PUBLIKACJI - WARUNEK ROZSZERZONY -->
+  {{ if or (eq .Type "publications") (eq .File.BaseFileName "publications") }}
   <div class="publications-list">
-    {{ $pubs := .Site.Data.pubs }}
-    {{ $count := len $pubs }}
-    
-    {{ range $index, $element := $pubs }}
-      <div class="pub-item">
-        <span class="pub-number">({{ sub $count $index }})</span>
-        
-        <div class="pub-details">
-          <div class="authors">
-            {{ $authors := .authors }}
-            {{ $authors := replace $authors "R. A. Bogaczewicz" "<span class='my-name'>R. A. Bogaczewicz</span>" }}
-            {{ $authors := replace $authors "T. Bogaczewicz" "<span class='my-name'>T. Bogaczewicz</span>" }}
-            {{ $authors | safeHTML }}
+    {{ if .Site.Data.pubs }}
+        {{ $pubs := .Site.Data.pubs }}
+        {{ $count := len $pubs }}
+        {{ range $index, $element := $pubs }}
+          <div class="pub-item">
+            <span class="pub-number">({{ sub $count $index }})</span>
+            <div class="pub-details">
+              <div class="authors">
+                {{ $authors := .authors | replace "R. A. Bogaczewicz" "<span class='my-name'>R. A. Bogaczewicz</span>" | replace "T. Bogaczewicz" "<span class='my-name'>T. Bogaczewicz</span>" }}
+                {{ $authors | safeHTML }}
+              </div>
+              <div class="title-line">
+                {{ .title }},
+                <a href="{{ .paperurl }}" class="pub-link" target="_blank" rel="noopener">
+                  <i>{{ .venue }}</i> 
+                  {{ if .volume }}<b>{{ .volume }}</b>{{ end }}
+                  {{ if .pages }}, {{ .pages }}{{ end }} 
+                  ({{ dateFormat "2006" .date }})
+                </a>
+              </div>
+            </div>
           </div>
-
-          <div class="title-line">
-            <span class="pub-title">{{ .title }},</span>
-            <a href="{{ .paperurl }}" class="pub-link" target="_blank" rel="noopener">
-              <i>{{ .venue }}</i> 
-              {{ if .volume }}<b>{{ .volume }}</b>{{ end }}
-              {{ if .pages }}, {{ .pages }}{{ end }} 
-              ({{ dateFormat "2006" .date }})
-            </a>
-          </div>
-        </div>
-      </div>
+        {{ end }}
+    {{ else }}
+        <p>Brak danych w data/pubs.yaml</p>
     {{ end }}
   </div>
   {{ end }}
 
-  <!-- Tutaj Hugo wstawi resztę tekstu z Twoich plików .md -->
   <div class="markdown-body">
     {{ .Content }}
   </div>
