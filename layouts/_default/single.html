@@ -1,19 +1,13 @@
-{{/* 1. Pobieramy bio przed wejściem w jakikolwiek inny kontekst */}}
-{{ $currentLang := .Language.Lang }}
-{{ $home := .Site.GetPage (printf "/%s" $currentLang) }}
-{{ $bio := $home.Params.bio }}
-
 {{ partial "header.html" . }}
 
 <main id="dynamic-content">
     <div class="page-content">
-        {{/* USUNIĘTO SKRYPT JS, KTÓRY POWODOWAŁ BŁĘDY */}}
-
         <h1>{{ .Title }}</h1>
 
         {{ if .Params.quote }}
         <div class="values-header">
-            <div class="quote-text">{{ .Params.quote | safeHTML }}</div>
+            {{/* Łączenie spójników w cytatach */}}
+            <div class="quote-text">{{ .Params.quote | replaceRE " ([iozwuA-Z]) " " $1&nbsp;" | safeHTML }}</div>
             {{ if .Params.quote_ref }}<div class="quote-ref">— {{ .Params.quote_ref }}</div>{{ end }}
         </div>
         {{ end }}
@@ -48,7 +42,8 @@
         {{ end }}
 
         <div class="markdown-body">
-            {{ .Content }}
+            {{/* Ostateczny szlif typograficzny dla całej treści Markdown */}}
+            {{ .Content | replaceRE " ([iozwuA-Z]) " " $1&nbsp;" | safeHTML }}
         </div>
     </div>
 </main>
