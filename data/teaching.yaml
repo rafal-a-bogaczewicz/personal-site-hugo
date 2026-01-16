@@ -1,0 +1,6 @@
+- semester_pl: "Semestr zimowy 2025/2026"
+  semester_en: "Winter semester 2025/2026"
+  date: "2025-10-01"
+  # Jeśli description jest puste, Hugo wyświetli informację o przerwie badawczej
+  desc_pl: "Przerwa dydaktyczna w związku z intensywną realizacją projektów naukowych i pracą badawczą."
+  desc_en: "Teaching break due to intensive implementation of research projects and scientific work."
