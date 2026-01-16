@@ -120,6 +120,7 @@
         }
         nav a { text-decoration: none; color: var(--gorska-zielen); font-weight: bold; text-transform: uppercase; font-size: 14px; }
 
+        /* --- STYLE PUBLIKACJI --- */
         .values-header { border-left: 3px solid var(--gorska-zielen); padding-left: 20px; margin-bottom: 40px; }
         .pub-item { display: flex; align-items: baseline; margin-bottom: 25px; font-size: 0.95em; line-height: 1.6; }
         .pub-number { color: var(--gorska-zielen); min-width: 40px; font-weight: bold; flex-shrink: 0; }
@@ -193,8 +194,9 @@
             <div class="name-bio-box">
                 <h1 class="notranslate" translate="no">{{ .Site.Title }}</h1>
                 <div class="bio" translate="no">
-                    {{/* METODA ATOMOWA: Odwołanie bezpośrednio do parametrów aktualnego języka */}}
-                    {{ .Language.Params.bio | replaceRE " — " "&nbsp;— " | replaceRE " ([iozwuA-Z]) " " $1&nbsp;" | safeHTML }}
+                    {{/* OSTATECZNE ROZWIĄZANIE: Pobieramy bio bezpośrednio ze strony głównej aktualnego języka */}}
+                    {{ $bio := .Site.Home.Params.bio }}
+                    {{ $bio | replaceRE " — " "&nbsp;— " | replaceRE " ([iozwuA-Z]) " " $1&nbsp;" | safeHTML }}
                 </div>
             </div>
         </div>
