@@ -6,7 +6,7 @@ title = 'Rafał A. Bogaczewicz'
 theme = []
 
 [params]
-  morska_zielen = "#16a085"
+  gorska_zielen = "#4a674f"
 
 [languages]
   [languages.pl]
