@@ -1,4 +1,4 @@
 ---
 title: "Rafał A. Bogaczewicz"
-bio: "Passionate about discovery\u00a0– both in research and during exploration."
+bio: "Passionate about discovery – both in research and during exploration."
 ---
