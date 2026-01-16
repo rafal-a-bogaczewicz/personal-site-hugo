@@ -13,33 +13,65 @@ theme = []
     languageName = 'PL'
     contentDir = 'content/pl'
     weight = 1
-    # Spójne i poprawne językowo bio PL
+    # Bio z poprawną interpunkcją (pamiętaj o twardych spacjach Alt+0160 przy wpisywaniu)
     bio = "Pasjonat odkrywania świata – zarówno naukowo, jak i podczas wypraw."
     [languages.pl.menu]
       [[languages.pl.menu.main]]
+        name = "Home"
+        url = "/"
+        weight = 1
+      [[languages.pl.menu.main]]
         name = "Publikacje"
         url = "/publications/"
-        weight = 1
+        weight = 2
       [[languages.pl.menu.main]]
         name = "Konferencje"
         url = "/conferences/"
-        weight = 2
+        weight = 3
+      [[languages.pl.menu.main]]
+        name = "Dydaktyka"
+        url = "/teaching/"
+        weight = 4
+      [[languages.pl.menu.main]]
+        name = "O mnie / CV"
+        url = "/about/"
+        weight = 5
+      [[languages.pl.menu.main]]
+        name = "Pasje"
+        url = "/passions/"
+        weight = 6
 
   [languages.en]
     languageName = 'EN'
     contentDir = 'content/en'
     weight = 2
-    # Prestiżowe tłumaczenie American English (High-Value / Action-oriented)
+    # Prestiżowe tłumaczenie American English
     bio = "Passionate about discovery – both in research and during exploration."
     [languages.en.menu]
       [[languages.en.menu.main]]
+        name = "Home"
+        url = "/"
+        weight = 1
+      [[languages.en.menu.main]]
         name = "Publications"
         url = "/publications/"
-        weight = 1
+        weight = 2
       [[languages.en.menu.main]]
         name = "Conferences"
         url = "/conferences/"
-        weight = 2
+        weight = 3
+      [[languages.en.menu.main]]
+        name = "Teaching"
+        url = "/teaching/"
+        weight = 4
+      [[languages.en.menu.main]]
+        name = "About Me"
+        url = "/about/"
+        weight = 5
+      [[languages.en.menu.main]]
+        name = "Passions"
+        url = "/passions/"
+        weight = 6
 
 [markup]
   [markup.goldmark.renderer]
