@@ -1,6 +1,6 @@
-{{ define "main" }}
+<div id="dynamic-content">
 <style>
-  /* Stylizacja cytatu Mdr 7,9 - High Value & Values */
+  /* Stylizacja cytatu - High Value & Values */
   .values-header {
     font-size: 0.95em;
     margin-bottom: 40px;
@@ -46,27 +46,29 @@
   }
 </style>
 
-<div class="page-publications">
+<div class="page-content">
   <h1>{{ .Title }}</h1>
 
-  <!-- Sekcja cytatu biblijnego -->
+  <!-- Sekcja cytatu - wyświetla się tylko jeśli zdefiniujesz quote_pl w pliku .md -->
+  {{ if .Params.quote_pl }}
   <div class="values-header">
     <div class="quote-pl">{{ .Params.quote_pl }}</div>
-    <div class="quote-en">{{ .Params.quote_en }}</div>
+    {{ if .Params.quote_en }}<div class="quote-en">{{ .Params.quote_en }}</div>{{ end }}
     <div class="quote-ref">— {{ .Params.quote_ref }}</div>
   </div>
+  {{ end }}
 
+  <!-- Wyświetla listę publikacji TYLKO w zakładce Publikacje -->
+  {{ if eq .Type "publications" }}
   <div class="publications-list">
     {{ $pubs := .Site.Data.pubs }}
     {{ $count := len $pubs }}
     
     {{ range $index, $element := $pubs }}
       <div class="pub-item">
-        <!-- Numeracja malejąca -->
         <span class="pub-number">({{ sub $count $index }})</span>
         
         <div class="pub-details">
-          <!-- Autorzy z podkreśleniem Twojego nazwiska -->
           <div class="authors">
             {{ $authors := .authors }}
             {{ $authors := replace $authors "R. A. Bogaczewicz" "<span class='my-name'>R. A. Bogaczewicz</span>" }}
@@ -74,7 +76,6 @@
             {{ $authors | safeHTML }}
           </div>
 
-          <!-- Tytuł i dane bibliograficzne -->
           <div class="title-line">
             <span class="pub-title">{{ .title }},</span>
             <a href="{{ .paperurl }}" class="pub-link" target="_blank" rel="noopener">
@@ -88,5 +89,11 @@
       </div>
     {{ end }}
   </div>
+  {{ end }}
+
+  <!-- Tutaj Hugo wstawi resztę tekstu z Twoich plików .md -->
+  <div class="markdown-body">
+    {{ .Content }}
+  </div>
 </div>
-{{ end }}
+</div>
