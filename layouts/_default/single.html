@@ -1,17 +1,18 @@
-{{/* Najpierw pobieramy bio ze strony głównej danego języka i zapisujemy w zmiennej */}}
-{{ $home := .Site.GetPage (printf "/%s" .Language.Lang) }}
-{{ $currentBio := $home.Params.bio }}
+{{/* 1. Pobieramy bio przed wejściem w jakikolwiek inny kontekst */}}
+{{ $currentLang := .Language.Lang }}
+{{ $home := .Site.GetPage (printf "/%s" $currentLang) }}
+{{ $bio := $home.Params.bio }}
 
 {{ partial "header.html" . }}
 
 <main id="dynamic-content">
     <div class="page-content">
-        {{/* Dynamiczne wstrzyknięcie biogramu, jeśli header go nie wyświetlił */}}
+        {{/* Skrypt naprawczy dla biogramu w nagłówku */}}
         <script>
             document.addEventListener("DOMContentLoaded", function() {
-                const bioContainer = document.querySelector('.bio');
-                if (bioContainer && bioContainer.innerHTML.trim() === "") {
-                    bioContainer.innerHTML = {{ $currentBio | safeHTML }};
+                const bioElement = document.querySelector('.bio');
+                if (bioElement && bioElement.innerText.trim() === "") {
+                    bioElement.innerHTML = {{ $bio | safeHTML }};
                 }
             });
         </script>
@@ -35,17 +36,17 @@
                     <span class="pub-number">({{ sub $count $index }})</span>
                     <div class="pub-details">
                         <div class="authors">
-                            {{/* Precyzyjne wyciąganie autorów z pliku YAML */}}
-                            {{ $authors := .authors | replace "R. A. Bogaczewicz" "<span class='my-name'>R. A. Bogaczewicz</span>" }}
-                            {{ $authors | safeHTML }}
+                            {{/* Odwołujemy się bezpośrednio do zmiennej elementu pętli */}}
+                            {{ $authorList := $element.authors | replace "R. A. Bogaczewicz" "<span class='my-name'>R. A. Bogaczewicz</span>" }}
+                            {{ $authorList | safeHTML }}
                         </div>
                         <div class="title-line">
-                            <span class="pub-title">"{{ .title }}",</span>
-                            <a href="{{ .paperurl }}" class="pub-link" target="_blank" rel="noopener">
-                                <i>{{ .venue }}</i> 
-                                {{ if .volume }}<b>{{ .volume }}</b>{{ end }}
-                                {{ if .pages }}, {{ .pages }}{{ end }} 
-                                ({{ dateFormat "2006" .date }}).
+                            <span class="pub-title">"{{ $element.title }}",</span>
+                            <a href="{{ $element.paperurl }}" class="pub-link" target="_blank" rel="noopener">
+                                <i>{{ $element.venue }}</i> 
+                                {{ if $element.volume }}<b>{{ $element.volume }}</b>{{ end }}
+                                {{ if $element.pages }}, {{ $element.pages }}{{ end }} 
+                                ({{ dateFormat "2006" $element.date }}).
                             </a>
                         </div>
                     </div>
