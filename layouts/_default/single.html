@@ -13,7 +13,7 @@
         </div>
         {{ end }}
 
-        {{/* SEKCJA PUBLIKACJI */}}
+        {{/* SEKCJA PUBLIKACJI (Bez zmian) */}}
         {{ if eq .Type "publications" }}
         <div class="publications-list">
             {{ if .Site.Data.pubs }}
@@ -43,12 +43,16 @@
         </div>
         {{ end }}
 
-        {{/* SEKCJA KONFERENCJI - NAZWY MIESIĘCY I KRAJE */}}
+        {{/* SEKCJA KONFERENCJI - POPRAWIONA LOGIKA DATY I KRAJU */}}
         {{ if eq .Type "conferences" }}
         <div class="conferences-list">
             {{ if .Site.Data.confs }}
+                {{/* Definiujemy nazwy miesięcy raz, aby uniknąć błędów w pętli */}}
+                {{ $polishMonths := dict "1" "stycznia" "2" "lutego" "3" "marca" "4" "kwietnia" "5" "maja" "6" "czerwca" "7" "lipca" "8" "sierpnia" "9" "września" "10" "października" "11" "listopada" "12" "grudnia" }}
+                
                 {{ $confs := sort .Site.Data.confs "date" "desc" }}
                 {{ $count := len $confs }}
+                
                 {{ range $index, $element := $confs }}
                 <div class="pub-item">
                     <span class="pub-number" style="color: var(--gray-ref);">({{ sub $count $index }})</span>
@@ -75,14 +79,20 @@
                                 {{ end }}
                             {{ end }}
 
-                            {{/* LOGIKA DATY Z NAZWAMI MIESIĘCY */}}
-                            {{- $m_pl := index (slice "" "stycznia" "lutego" "marca" "kwietnia" "maja" "czerwca" "lipca" "sierpnia" "września" "października" "listopada" "grudnia") (printf "%d" (int (dateFormat "1" $element.date))) -}}
-                            {{- $m_en := dateFormat "January" $element.date -}}
-                            
+                            {{/* Wyliczanie miesiąca */}}
+                            {{ $m_num := dateFormat "1" $element.date }}
+                            {{ $month_display := "" }}
+                            {{ if eq $.Language.Lang "pl" }}
+                                {{ $month_display = index $polishMonths $m_num }}
+                            {{ else }}
+                                {{ $month_display = dateFormat "January" $element.date }}
+                            {{ end }}
+
+                            {{/* Wyświetlanie daty */}}
                             {{- if $element.end_date -}}
-                                {{ dateFormat "2" $element.date }}–{{ dateFormat "2" $element.end_date }} {{ if eq $.Language.Lang "pl" }}{{ $m_pl }}{{ else }}{{ $m_en }}{{ end }} {{ dateFormat "2006" $element.end_date }}
+                                {{ dateFormat "2" $element.date }}–{{ dateFormat "2" $element.end_date }} {{ $month_display }} {{ dateFormat "2006" $element.end_date }}
                             {{- else -}}
-                                {{ dateFormat "2" $element.date }} {{ if eq $.Language.Lang "pl" }}{{ $m_pl }}{{ else }}{{ $m_en }}{{ end }} {{ dateFormat "2006" $element.date }}
+                                {{ dateFormat "2" $element.date }} {{ $month_display }} {{ dateFormat "2006" $element.date }}
                             {{- end -}},
 
                             {{- if $element.city -}}
