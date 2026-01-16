@@ -142,7 +142,13 @@
         }
 
         .pub-item { display: flex; align-items: baseline; margin-bottom: 25px; font-size: 0.95em; line-height: 1.6; }
-        .pub-number { color: var(--gorska-zielen); min-width: 40px; font-weight: bold; flex-shrink: 0; }
+        .pub-number { 
+            color: var(--gorska-zielen); 
+            min-width: 50px; /* Zwiększone z 40px, by obsłużyć liczby dwucyfrowe */
+            font-weight: bold; 
+            flex-shrink: 0; 
+            margin-right: 10px; /* Dodatkowy gwarantowany odstęp */
+        }
         
         /* ZMIANA 1: Brak wytłuszczenia, linia w kolorze tekstu */
         .my-name { 
