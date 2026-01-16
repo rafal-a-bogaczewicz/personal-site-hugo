@@ -75,9 +75,6 @@
             display: flex;
             flex-direction: column;
             width: 100%;
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
         }
 
         .controls-top { 
@@ -124,7 +121,6 @@
         }
         nav a { text-decoration: none; color: var(--gorska-zielen); font-weight: bold; text-transform: uppercase; font-size: 14px; }
 
-        /* LINIA I CYTAT */
         .values-header { 
             border-left: 3px solid var(--gorska-zielen); 
             padding-left: 20px; 
@@ -147,12 +143,18 @@
 
         .pub-item { display: flex; align-items: baseline; margin-bottom: 25px; font-size: 0.95em; line-height: 1.6; }
         .pub-number { color: var(--gorska-zielen); min-width: 40px; font-weight: bold; flex-shrink: 0; }
-        .my-name { border-bottom: 2px solid var(--gorska-zielen); font-weight: 600; }
         
+        /* ZMIANA 1: Brak wytłuszczenia, linia w kolorze tekstu */
+        .my-name { 
+            border-bottom: 1px solid var(--text-color); 
+            font-weight: normal; 
+        }
+        
+        /* ZMIANA 4, 6, 7: Brak wytłuszczenia w linku publikacji */
         .pub-link { 
             color: var(--gorska-zielen); 
             text-decoration: none; 
-            font-weight: 600; 
+            font-weight: normal; 
             transition: opacity 0.2s;
         }
         .pub-link:hover {
@@ -160,7 +162,8 @@
             opacity: 0.8;
         }
         .authors { margin-bottom: 4px; color: var(--text-color); }
-        .pub-title { font-weight: 500; }
+        /* ZMIANA 3: Tytuł bez wytłuszczenia */
+        .pub-title { font-weight: normal; }
         
         .control-group { display: flex; align-items: center; gap: 6px; }
         .switch { position: relative; display: inline-block; width: 36px; height: 18px; }
@@ -213,25 +216,19 @@
         </div>
 
         <div class="header-main-box">
-            <img src="{{ "/images/profile.jpg" | relURL }}" alt="Rafał A. Bogaczewicz" class="profile-img">
+            <img src="{{ "images/profile.jpg" | absURL }}" alt="Rafał A. Bogaczewicz" class="profile-img">
             <div class="name-bio-box">
                 <h1 class="notranslate" translate="no">{{ .Site.Title }}</h1>
                 <div class="bio" translate="no">
-                    {{ $bio := "" }}
-                    {{ if eq .Language.Lang "pl" }}
-                        {{ $bio = .Site.Params.bio_pl }}
-                    {{ else }}
-                        {{ $bio = .Site.Params.bio_en }}
-                    {{ end }}
-                    {{ $bio | replaceRE " — " "&nbsp;— " | replaceRE " ([iozwuA-Z]) " " $1&nbsp;" | safeHTML }}
+                    {{ if eq .Language.Lang "pl" }}{{ .Site.Params.bio_pl }}{{ else }}{{ .Site.Params.bio_en }}{{ end }}
                 </div>
             </div>
         </div>
 
-        <nav translate="no">
+        <nav>
             <ul>
                 {{ range .Site.Menus.main }}
-                <li><a href="{{ .URL | relLangURL }}" class="notranslate">{{ .Name }}</a></li>
+                <li><a href="{{ .URL | relLangURL }}">{{ .Name }}</a></li>
                 {{ end }}
             </ul>
         </nav>
