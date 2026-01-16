@@ -1,44 +1,32 @@
     <footer>
-        <p style="text-align: center; margin-top: 50px; font-size: 0.85em; opacity: 0.7; color: var(--text-color);">
-            &copy; {{ now.Format "2006" }} {{ .Site.Title }} | Fizyka Teoretyczna
+        <p style="text-align: center; margin-top: 50px; font-size: 0.85em; opacity: 0.7;">
+            &copy; {{ now.Format "2006" }} {{ .Site.Title }}
         </p>
     </footer>
-
     <script>
-        // MOTYW (DARK MODE)
+        // MOTYW
         const themeToggle = document.getElementById("theme-toggle");
         const currentTheme = localStorage.getItem("theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
-        
         if (currentTheme === "dark") { 
             document.documentElement.setAttribute("data-theme", "dark"); 
             themeToggle.checked = true; 
         }
-
         themeToggle.addEventListener("change", () => {
             const newMode = themeToggle.checked ? "dark" : "light";
             document.documentElement.setAttribute("data-theme", newMode);
             localStorage.setItem("theme", newMode);
         });
 
-        // JĘZYK - Pancerne przełączanie między podstronami
+        // JĘZYK
         const langToggle = document.getElementById("lang-toggle");
-        
-        // Mapa linków do tłumaczeń DLA TEJ KONKRETNEJ PODSTRONY
         const translations = {
-            {{ range .AllTranslations }}
-            "{{ .Language.Lang }}": "{{ .Permalink }}",
-            {{ end }}
+            {{ range .AllTranslations }}"{{ .Language.Lang }}": "{{ .Permalink }}",{{ end }}
             "{{ .Language.Lang }}": "{{ .Permalink }}"
         };
-
         langToggle.addEventListener("change", () => {
-            const targetLang = langToggle.checked ? "pl" : "en";
-            
-            // Jeśli istnieje bezpośredni link do tej podstrony w drugim języku, użyj go.
-            // W przeciwnym razie wróć do strony głównej wybranego języka.
-            const fallback = targetLang === "pl" ? "/" : "/en/";
-            const targetURL = translations[targetLang] || fallback;
-            
+            const isChecked = langToggle.checked; // true = PL, false = EN
+            const targetLang = isChecked ? "pl" : "en";
+            const targetURL = translations[targetLang] || (targetLang === "pl" ? "/" : "/en/");
             window.location.href = targetURL;
         });
     </script>
