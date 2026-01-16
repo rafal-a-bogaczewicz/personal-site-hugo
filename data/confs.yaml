@@ -1,129 +1,113 @@
-
-
 - event: "AGH International Student Conference - Knowledge, Technology and Society"
   link: "https://perspektywy.pl/portal/index.php?option=com_content&view=article&id=3847&catid=22&Itemid=119"
   date: "2018-10-10"
   end_date: "2018-10-12"
   city: "Kraków"
-  country: "Poland"
-  lat: 50.0647
-  lon: 19.9450
-
+  country_pl: "Polska"
+  country_en: "Poland"
+  
 - event: "6th International Workshop on the Optical Properties of Nanostructures (OPON 2020)"
   link: "http://opon.fuw.edu.pl/"
   date: "2020-02-12"
   end_date: "2020-02-14"
   city: "Warsaw"
-  country: "Poland"
-  lat: 52.2297 
-  lon: 21.0122
-
+  country_pl: "Polska"
+  country_en: "Poland"
+  
 - event: "15th International Conference on Nonlinear Optics and Excitation Kinetics in Semiconductors (NOEKS 15)"
   link: "https://www.uni-muenster.de/NOEKS15/"
   date: "2020-09-13"
   end_date: "2020-09-17"
   city: "Münster"
-  country: "Germany"
+  country_pl: "Niemcy"
+  country_en: "Germany"
   online: true  # To aktywuje dopisek (on-line) / (held on-line)
-  lat: 51.9607
-  lon: 7.6261
 
 - event: "49th International School & Conference on the Physics of Semiconductors (Jaszowiec 2021)"
   link: "https://www.jaszowiec.edu.pl/2021/"
   date: "2021-09-01"
   end_date: "2021-09-10"
   city: "Szczyrk"
-  country: "Poland"
+  country_pl: "Polska"
+  country_en: "Poland"
   online: true  # To aktywuje dopisek (on-line) / (held on-line)
-  lat: 49.7167
-  lon: 19.0167
-
+  
 - event: "Nanophotonics in Toruń"
   link: "https://nanophotonics.faj.org.pl/"
   date: "2022-09-18"
   end_date: "2022-09-21"
   city: "Toruń"
-  country: "Poland"
-  lat: 53.0138
-  lon: 18.5984
-
+  country_pl: "Polska"
+  country_en: "Poland"
+  
 - event: "51st International School & Conference on the Physics of Semiconductors (Jaszowiec 2023)"
   link: "https://www.jaszowiec.edu.pl/2023/"
   date: "2023-06-17"
   end_date: "2023-06-23"
   city: "Szczyrk"
-  country: "Poland"
-  lat: 49.7167
-  lon: 19.0167
+  country_pl: "Polska"
+  country_en: "Poland"
   
 - event: "22nd International Conference on Electron Dynamics in Semiconductors, Optoelectronics and Nanostructures (EDISON 22)"
   link: "https://www.uni-muenster.de/EDISON22/"
   date: "2023-08-14"
   end_date: "2023-08-18"
   city: "Münster"
-  country: "Germany"
-  lat: 51.9607
-  lon: 7.6261
-
+  country_pl: "Niemcy"
+  country_en: "Germany"
+  
 - event: "7th International Workshop on the Optical Properties of Nanostructures (OPON 2024)"
   link: "https://opon2024.pwr.edu.pl/"
   date: "2024-02-14"
   end_date: "2024-02-16"
   city: "Wrocław"
-  country: "Poland"
-  lat: 51.1079
-  lon: 17.0385
+  country_pl: "Polska"
+  country_en: "Poland"
   
 - event: "Nanotechnology meets Quantum Information (NanoQI 2024)"
   link: "https://nanoqi-2024.dipc.org/"
   date: "2024-07-22"
   end_date: "2024-07-25"
   city: "Donostia - San Sebastián"
-  country: "Spain"
-  lat: 43.3183
-  lon: -1.9812
-
+  country_pl: "Hiszpania"
+  country_en: "Spain"
+  
 - event: "8th International Workshop on the Optical Properties of Nanostructures (OPON 2025)"
   link: "https://www.uni-muenster.de/Physik.FT/opon2025/"
   date: "2025-02-12"
   end_date: "2025-02-14"
   city: "Münster"
-  country: "Germany"
-  lat: 51.9607
-  lon: 7.6261
-
+  country_pl: "Niemcy"
+  country_en: "Germany"
+  
 - event: "53rd International School & Conference on the Physics of Semiconductors (Jaszowiec 2025)"
   link: "https://www.jaszowiec.edu.pl/2025/"
   date: "2025-06-07"
   end_date: "2025-06-13"
   city: "Szczyrk"
-  country: "Poland"
-  lat: 49.7167
-  lon: 19.0167
+  country_pl: "Polska"
+  country_en: "Poland"
   
 - event: "Quantum Optics XI"
   link: "https://quantumoptics11.confer.uj.edu.pl/"
   date: "2025-09-01"
   end_date: "2025-09-05"
   city: "Kraków"
-  country: "Poland"
-  lat: 50.0647
-  lon: 19.9450
+  country_pl: "Polska"
+  country_en: "Poland"
 
 - event: "17th International Conference on Nonlinear Optics and Excitation Kinetics in Semiconductors (NOEKS 17)"
   link: "https://www.uni-marburg.de/en/fb13/semiconductor-photonics/prfolder/copy_of_news/noeks-17"
   date: "2025-09-08"
   end_date: "2025-09-12"
   city: "Marburg"
-  country: "Germany"
-  lat: 50.8090
-  lon: 8.7707
-
+  country_pl: "Niemcy"
+  country_en: "Germany"
+  
 - event: "Nanophotonics of 2D Materials"
   link: "https://n2d-2025.faj.org.pl/"
   date: "2025-10-06"
   end_date: "2025-10-09"
   city: "Toruń"
-  country: "Poland"
-  lat: 53.0138
-  lon: 18.5984
+  country_pl: "Polska"
+  country_en: "Poland"
