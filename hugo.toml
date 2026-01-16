@@ -7,14 +7,15 @@ theme = []
 
 [params]
   gorska_zielen = "#4a674f"
+  # Parametry globalne dostępne na każdej podstronie
+  bio_pl = "Twórca rzeczywistości\u00A0— odkrywam świat poprzez fizykę teoretyczną i\u00A0kształtuję go poprzez działanie. Niezależny, z\u00A0pasją do\u00A0nauki i\u00A0życia, stale poszerzam horyzonty."
+  bio_en = "A creator of reality. I\u00A0discover the world through theoretical physics and\u00A0shape it through action. Independent, passionate about research and\u00A0life, continuously expanding my horizons."
 
 [languages]
   [languages.pl]
     languageName = 'PL'
     contentDir = 'content/pl'
     weight = 1
-    # Bio z twardymi spacjami (\u00A0) po spójnikach i przed myślnikiem
-    bio = "Twórca rzeczywistości\u00A0— odkrywam świat poprzez fizykę teoretyczną i\u00A0kształtuję go poprzez działanie. Niezależny, z\u00A0pasją do\u00A0nauki i\u00A0życia, stale poszerzam horyzonty."
     [languages.pl.menu]
       [[languages.pl.menu.main]]
         name = "Home"
@@ -45,8 +46,6 @@ theme = []
     languageName = 'EN'
     contentDir = 'content/en'
     weight = 2
-    # Bio EN z twardymi spacjami dla spójników
-    bio = "A creator of reality. I\u00A0discover the world through theoretical physics and\u00A0shape it through action. Independent, passionate about research and\u00A0life, continuously expanding my horizons."
     [languages.en.menu]
       [[languages.en.menu.main]]
         name = "Home"
