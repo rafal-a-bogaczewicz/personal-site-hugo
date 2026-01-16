@@ -43,14 +43,19 @@
         </div>
         {{ end }}
 
-        {{/* SEKCJA KONFERENCJI */}}
+        {{/* SEKCJA KONFERENCJI Z GLOBUSEM/MAPĄ */}}
         {{ if eq .Type "conferences" }}
+        
+        {{/* Kontener mapy - minimalistyczna szara ramka */}}
+        <div id="conference-map" style="height: 400px; margin-bottom: 30px; border: 1px solid var(--gray-quote); border-radius: 8px; z-index: 1;"></div>
+
         <div class="conferences-list">
             {{ if .Site.Data.confs }}
                 {{ $confs := sort .Site.Data.confs "date" "desc" }}
                 {{ $count := len $confs }}
                 {{ range $index, $element := $confs }}
-                <div class="pub-item">
+                {{/* Dodano ID conf-X dla funkcji przewijania z mapy */}}
+                <div class="pub-item" id="conf-{{ sub $count $index }}">
                     <span class="pub-number">({{ sub $count $index }})</span>
                     <div class="pub-details">
                         <div class="authors">
@@ -75,7 +80,6 @@
                                 {{ end }}
                             {{ end }}
 
-                            {{/* Data i natychmiastowy przecinek */}}
                             {{- if $element.end_date -}}
                                 {{ dateFormat "02" $element.date }}–{{ dateFormat "02.01.2006" $element.end_date }}
                             {{- else -}}
@@ -86,7 +90,6 @@
                                 &nbsp;{{ $element.city }} ({{ $element.country }})
                             {{- end -}}
 
-                            {{/* Logika on-line/kropka bez zbędnych spacji */}}
                             {{- if $element.online -}}
                                 {{ if eq $.Language.Lang "pl" }}, on-line.{{ else }}, held on-line.{{ end }}
                             {{- else -}}
@@ -98,6 +101,73 @@
                 {{ end }}
             {{ end }}
         </div>
+
+        {{/* Zasoby Leaflet.js */}}
+        <link rel="stylesheet" href="https://unpkg.com" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/pLAAGjC8PA9ePbLwc=" crossorigin=""/>
+        <script src="https://unpkg.com" integrity="sha256-20n6fxKCNcT52Eo+3C6Q5lsX4yV+ueDtSYkzhPOaQBo=" crossorigin=""></script>
+
+        <script>
+            function initializeMap() {
+                const mapElement = document.getElementById('conference-map');
+                if (!mapElement) return;
+
+                const map = L.map('conference-map').setView([50.0, 10.0], 5);
+
+                L.tileLayer('https://{s}://{z}/{x}/{y}{r}.png', {
+                    attribution: '&copy; OpenStreetMap &copy; CARTO'
+                }).addTo(map);
+
+                const groups = {};
+                {{ range $index, $element := sort .Site.Data.confs "date" "desc" }}
+                    {{ $num := sub (len $.Site.Data.confs) $index }}
+                    {{ if and $element.lat $element.lon }}
+                        {
+                            const key = '{{ $element.lat }},{{ $element.lon }}';
+                            if (!groups[key]) {
+                                groups[key] = {
+                                    lat: {{ $element.lat }},
+                                    lon: {{ $element.lon }},
+                                    city: '{{ $element.city }}',
+                                    events: []
+                                };
+                            }
+                            groups[key].events.push({ number: {{ $num }}, name: '{{ $element.event }}' });
+                        }
+                    {{ end }}
+                {{ end }}
+
+                const markerList = [];
+                for (const key in groups) {
+                    const group = groups[key];
+                    const marker = L.marker([group.lat, group.lon]).addTo(map);
+                    
+                    let popupContent = `<div style="font-family: sans-serif; min-width: 180px;">`;
+                    popupContent += `<b style="color: #4a674f; font-size: 14px;">${group.city}</b><br>`;
+                    popupContent += `<ul style="list-style: none; padding: 0; margin: 5px 0 0 0;">`;
+                    group.events.forEach(ev => {
+                        popupContent += `<li style="margin-bottom: 5px; font-size: 12px; line-height: 1.3;"><b>(${ev.number})</b> ${ev.name}</li>`;
+                    });
+                    popupContent += `</ul></div>`;
+                    
+                    marker.bindPopup(popupContent);
+                    
+                    marker.on('click', function() {
+                        // Przewija do najnowszego wydarzenia w tym mieście
+                        const targetId = 'conf-' + group.events[0].number;
+                        const el = document.getElementById(targetId);
+                        if(el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    });
+
+                    markerList.push([group.lat, group.lon]);
+                }
+
+                if (markerList.length > 0) {
+                    const bounds = new L.LatLngBounds(markerList);
+                    map.fitBounds(bounds, { padding: [30, 30] });
+                }
+            }
+            window.addEventListener('load', initializeMap);
+        </script>
         {{ end }}
 
         <div class="markdown-body">
