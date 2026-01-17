@@ -166,8 +166,8 @@ title: "About Me"
 <strong>languages:</strong>
 <ul class="cv-list">
   <li>Polish: native</li>
-  <li>English: C1 level (ACERT certificate)</li>
-  <li>German: B1.1 level</li>
+  <li>English: <span class="no-wrap">C1 level (ACERT certificate)</span></li>
+  <li>German: <span class="no-wrap">B1.1 level</span></li>
 </ul>
 </div>
 </div>
