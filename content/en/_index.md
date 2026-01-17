@@ -78,9 +78,9 @@ title: ""
 
 <span class="cv-style-header" style="display: block; border-bottom: 1px solid var(--gorska-zielen); margin-top: 35px; margin-bottom: 15px; font-size: 1.1em; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px;">Scientific interests</span>
 
-*   Solid-state quantum optics
-*   Decoherence and phonon dynamics in quantum systems
-*   Open quantum systems
+*   solid-state quantum optics
+*   decoherence and phonon dynamics in quantum systems
+*   open quantum systems
 
 <span class="cv-style-header" style="display: block; border-bottom: 1px solid var(--gorska-zielen); margin-top: 35px; margin-bottom: 15px; font-size: 1.1em; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px;">Contact and scientific profiles</span>
 
