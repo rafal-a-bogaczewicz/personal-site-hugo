@@ -3,7 +3,6 @@ title: ""
 ---
 
 <style>
-  /* Kontener główny - rządek (desktop), kolumna (mobile) */
   .intro-container {
     display: flex;
     flex-direction: row;
@@ -12,7 +11,6 @@ title: ""
     margin-bottom: 20px;
   }
 
-  /* Logotypy z lewej strony, nie kurczą się */
   .uni-logos {
     display: flex;
     gap: 20px;
@@ -20,26 +18,35 @@ title: ""
     flex-shrink: 0;
   }
 
-  /* Tekst zajmuje resztę miejsca z prawej */
   .intro-text {
     flex: 1;
   }
 
-  /* Wysokość dopasowana do ok. 2 linii tekstu */
   .uni-logo-img {
     height: 55px; 
     width: auto;
-    transition: filter 0.3s ease;
+    transition: all 0.3s ease;
   }
 
-  [data-theme="dark"] .uni-logo-img {
-    filter: invert(1) brightness(2);
+  /* LOGO IFT: Dodajemy poświatę (cień), żeby białe elementy były widoczne na jasnym tle */
+  .logo-ift {
+    filter: drop-shadow(0px 0px 2px rgba(0,0,0,0.5));
   }
 
-  /* RWD: Na smartfonie i przy zawijaniu - logotypy NAD tekstem */
+  /* TRYB CIEMNY */
+  /* Logo PWR zostaje bez zmian (oryginalne barwy) */
+  [data-theme="dark"] .logo-pwr {
+    filter: none;
+  }
+
+  /* Logo IFT w trybie ciemnym - podbijamy jasność, by kropka i "I" były czytelne, ale nie odwracamy kolorów */
+  [data-theme="dark"] .logo-ift {
+    filter: drop-shadow(0px 0px 2px rgba(255,255,255,0.3)) brightness(1.2);
+  }
+
   @media (max-width: 800px) {
     .intro-container {
-      flex-direction: column; /* Standardowa kolumna: logotypy (pierwszy div) będą nad tekstem (drugi div) */
+      flex-direction: column;
       align-items: center;
       text-align: center;
     }
@@ -53,17 +60,15 @@ title: ""
 </style>
 
 <div class="intro-container">
-  <!-- DIV z logotypami pierwszy w kodzie = z lewej na PC -->
   <div class="uni-logos">
     <a href="https://pwr.edu.pl" target="_blank">
-        <img src="/images/logopwr.png" alt="Logo PWr" class="uni-logo-img">
+        <img src="/images/logopwr.png" alt="Logo PWr" class="uni-logo-img logo-pwr">
     </a>
     <a href="https://www.kft.pwr.edu.pl" target="_blank">
-        <img src="/images/logoift.png" alt="Logo IFT" class="uni-logo-img">
+        <img src="/images/logoift.png" alt="Logo IFT" class="uni-logo-img logo-ift">
     </a>
   </div>
 
-  <!-- DIV z tekstem drugi w kodzie = z prawej na PC -->
   <div class="intro-text">
     Cześć, jestem fizykiem teoretykiem, doktorantem w&nbsp;<a href="https://www.kft.pwr.edu.pl" class="pub-link" target="_blank">Instytucie Fizyki Teoretycznej PWr</a>.
     <br><br>
