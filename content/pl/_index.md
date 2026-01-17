@@ -27,7 +27,7 @@ title: ""
 
   /* Wysokość */
   .uni-logo-img {
-    height: 75px; 
+    height: 70px; 
     width: auto;
     transition: all 0.3s ease;
   }
