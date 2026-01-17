@@ -123,7 +123,7 @@ title: "About Me"
 </ul>
 
 <div class="flex-row">
-  <a href="https://www.ift.pwr.edu.pl" class="pub-link" target="_blank"><strong>Institute of Theoretical Physics, WUST</strong></a> <span class="no-wrap">| March 2019 – present</span>
+  <a href="https://www.ift.pwr.edu.pl" class="pub-link" target="_blank"><strong>Institute of Theoretical Physics (WUST)</strong></a> <span class="no-wrap">| March 2019 – present</span>
 </div>
 <ul class="cv-list">
   <li>research collaboration with <strong>prof. Paweł Machnikowski</strong> in the field of solid-state quantum optics</li>
