@@ -3,7 +3,6 @@ title: "O mnie"
 ---
 
 <style>
-  /* Kompletna naprawa odstępów i list */
   .cv-wrapper { margin-top: 10px; }
   
   .cv-style-header {
@@ -18,7 +17,6 @@ title: "O mnie"
     color: var(--gorska-zielen);
   }
 
-  /* Pancerne pudełko - usunięte ryzykowne spacje dla filtra replaceRE */
   .flex-row {
     display: flex !important;
     flex-wrap: wrap;
@@ -29,7 +27,6 @@ title: "O mnie"
   
   .no-wrap { white-space: nowrap; }
 
-  /* Styl dla list, aby nie były rozstrzelone */
   .cv-list {
     list-style-type: disc;
     padding-left: 20px;
@@ -70,7 +67,7 @@ title: "O mnie"
     </div>
   </li>
   <li>7 stycznia 2026 r. — <a href="https://bip.pwr.edu.pl" class="cv-link" target="_blank">złożenie rozprawy doktorskiej</a></li>
-  <li>tytuł pracy: *Rezonansowa fluorescencja emitera kwantowego w&nbsp;ciele stałym z&nbsp;fluktuacjami energii przejścia*</li>
+  <li>tytuł pracy: <em>Rezonansowa fluorescencja emitera kwantowego w&nbsp;ciele stałym z&nbsp;fluktuacjami energii przejścia</em></li>
   <li>promotor: <a href="https://pm.kft.pwr.edu.pl" class="cv-link" target="_blank"><strong>prof. dr hab. inż. Paweł Machnikowski</strong></a></li>
 </ul>
 
@@ -84,8 +81,8 @@ title: "O mnie"
       <a href="https://wppt.pwr.edu.pl" class="cv-link" target="_blank">Wydział Podstawowych Problemów Techniki</a> <span class="no-wrap">| Politechnika Wrocławska</span>
     </div>
   </li>
-  <li>tytuł pracy: *Rezonansowa fluorescencja układów z&nbsp;szumem*</li>
-  <li>promotor: **prof. dr hab. inż. Paweł Machnikowski**</li>
+  <li>tytuł pracy: <em>Rezonansowa fluorescencja układów z&nbsp;szumem</em></li>
+  <li>promotor: <strong>prof. dr hab. inż. Paweł Machnikowski</strong></li>
 </ul>
 
 <div class="flex-row">
@@ -98,8 +95,8 @@ title: "O mnie"
       <a href="https://wppt.pwr.edu.pl" class="cv-link" target="_blank">Wydział Podstawowych Problemów Techniki</a> <span class="no-wrap">| Politechnika Wrocławska</span>
     </div>
   </li>
-  <li>tytuł pracy: *Wpływ szumu ładunkowego na&nbsp;widmo rezonansowej fluorescencji z&nbsp;kropki kwantowej*</li>
-  <li>promotor: **prof. dr hab. inż. Paweł Machnikowski**</li>
+  <li>tytuł pracy: <em>Wpływ szumu ładunkowego na&nbsp;widmo rezonansowej fluorescencji z&nbsp;kropki kwantowej</em></li>
+  <li>promotor: <strong>prof. dr hab. inż. Paweł Machnikowski</strong></li>
 </ul>
 
 <div class="flex-row">
@@ -112,7 +109,7 @@ title: "O mnie"
       <a href="https://wefim.pwr.edu.pl" class="cv-link" target="_blank">Wydział Elektroniki Mikrosystemów i Fotoniki</a> <span class="no-wrap">| Politechnika Wrocławska</span>
     </div>
   </li>
-  <li>tytuł pracy: *Wyznaczanie diagramów pasmowych heterostruktur półprzewodnikowych do&nbsp;zastosowań w&nbsp;fotowoltaice*</li>
+  <li>tytuł pracy: <em>Wyznaczanie diagramów pasmowych heterostruktur półprzewodnikowych do&nbsp;zastosowań w&nbsp;fotowoltaice</em></li>
   <li>promotor: <a href="https://www.popko.wppt.pwr.edu.pl" class="cv-link" target="_blank"><strong>prof. dr hab. Ewa Płaczek-Popko</strong></a></li>
 </ul>
 
@@ -130,7 +127,7 @@ title: "O mnie"
   <a href="https://www.ift.pwr.edu.pl" class="cv-link" target="_blank"><strong>Instytut Fizyki Teoretycznej PWr</strong></a> <span class="no-wrap">| marzec 2019 – obecnie</span>
 </div>
 <ul class="cv-list">
-  <li>współpraca badawcza z&nbsp;**prof. Pawłem Machnikowskim** (optyka kwantowa ciała stałego)</li>
+  <li>współpraca badawcza z <strong>prof. Pawłem Machnikowskim</strong> (optyka kwantowa ciała stałego)</li>
 </ul>
 
 <span class="cv-style-header">Granty</span>
@@ -139,21 +136,21 @@ title: "O mnie"
   <strong>Grant NCN Maestro</strong> <span class="no-wrap">| 1 listopada 2024 – obecnie</span>
 </div>
 <ul class="cv-list">
-  <li>stypendysta w projekcie pt. <a href="https://projekty.ncn.gov.pl" class="cv-link" target="_blank">*Akustooptyka kwantowa nanoukładów hybrydowych*</a></li>
+  <li>stypendysta w projekcie pt. <a href="https://projekty.ncn.gov.pl" class="cv-link" target="_blank"><em>Akustooptyka kwantowa nanoukładów hybrydowych</em></a></li>
 </ul>
 
 <div class="flex-row">
   <strong>Alexander von Humboldt Grant</strong> <span class="no-wrap">| 1 lipca 2023 – 31 grudnia 2025</span>
 </div>
 <ul class="cv-list">
-  <li>wykonawca w projekcie pt. *Light-matter-sound interaction and quantum optomechanical control*</li>
+  <li>wykonawca w projekcie pt. <em>Light-matter-sound interaction and quantum optomechanical control</em></li>
 </ul>
 
 <div class="flex-row">
   <strong>Grant NCN Beethoven</strong> <span class="no-wrap">| 1 maja 2020 – 30 września 2021</span>
 </div>
 <ul class="cv-list">
-  <li>stypendysta w projekcie pt. *Kubity spinowe w sztucznych molekułach*</li>
+  <li>stypendysta w projekcie pt. <em>Kubity spinowe w sztucznych molekułach</em></li>
 </ul>
 
 <span class="cv-style-header">Umiejętności</span>
