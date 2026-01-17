@@ -56,7 +56,7 @@ title: "About me"
 <span class="cv-style-header">Education</span>
 
 <div class="flex-row">
-  <strong>PhD Candidate</strong> <span class="no-wrap">| 1 October 2021 – present</span>
+  <strong>PhD Candidate</strong> <span class="no-wrap">| 1 October 2021 – Present</span>
 </div>
 <ul class="cv-list">
   <li>discipline: physical sciences</li>
@@ -66,8 +66,8 @@ title: "About me"
     </div>
   </li>
   <li>7 January 2026 — <a href="https://bip.pwr.edu.pl" class="pub-link" target="_blank">doctoral dissertation submitted</a></li>
-  <li>thesis title: <strong><em>Resonance fluorescence of a&nbsp;solid-state quantum emitter with fluctuating transition energy</em></strong></li>
-  <li>supervisor: <a href="https://pm.kft.pwr.edu.pl" class="pub-link" target="_blank"><strong>prof. Paweł Machnikowski</strong></a></li>
+  <li>thesis title: <strong><em>Resonance fluorescence of a&nbsp;solid-state quantum emitter with transition energy fluctuations</em></strong></li>
+  <li>supervisor: <a href="https://pm.kft.pwr.edu.pl" class="pub-link" target="_blank"><strong>Prof. Paweł Machnikowski</strong></a></li>
 </ul>
 
 <div class="flex-row">
@@ -80,8 +80,8 @@ title: "About me"
       <a href="https://wppt.pwr.edu.pl" class="pub-link" target="_blank">Faculty of Fundamental Problems of Technology</a> <span class="no-wrap">| Wrocław University of Science and Technology</span>
     </div>
   </li>
-  <li>thesis title: <strong><em>Resonance fluorescence of noisy systems</em></strong></li>
-  <li>supervisor: <strong>prof. Paweł Machnikowski</strong></li>
+  <li>thesis title: <strong><em>Resonance fluorescence of systems with noise</em></strong></li>
+  <li>supervisor: <strong>Prof. Paweł Machnikowski</strong></li>
 </ul>
 
 <div class="flex-row">
@@ -95,7 +95,7 @@ title: "About me"
     </div>
   </li>
   <li>thesis title: <strong><em>Charge noise influence on the resonance fluorescence spectrum from a&nbsp;quantum dot</em></strong></li>
-  <li>supervisor: <strong>prof. Paweł Machnikowski</strong></li>
+  <li>supervisor: <strong>Prof. Paweł Machnikowski</strong></li>
 </ul>
 
 <div class="flex-row">
@@ -108,8 +108,8 @@ title: "About me"
       <a href="https://wefim.pwr.edu.pl" class="pub-link" target="_blank">Faculty of Electronics, Photonics and Microsystems</a> <span class="no-wrap">| Wrocław University of Science and Technology</span>
     </div>
   </li>
-  <li>thesis title: <strong><em>Determination of the band structure diagram of semiconductor heterostructures applied in photovoltaics</em></strong></li>
-  <li>Supervisor: <a href="https://www.popko.wppt.pwr.edu.pl" class="pub-link" target="_blank"><strong>Prof. Ewa Płaczek-Popko</strong></a></li>
+  <li>thesis title: <strong><em>Determination of band diagrams of semiconductor heterostructures for photovoltaic applications</em></strong></li>
+  <li>supervisor: <a href="https://www.popko.wppt.pwr.edu.pl" class="pub-link" target="_blank"><strong>Prof. Ewa Płaczek-Popko</strong></a></li>
 </ul>
 
 <span class="cv-style-header">Experience</span>
@@ -118,15 +118,15 @@ title: "About me"
   <a href="https://www.cft.edu.pl" class="pub-link" target="_blank"><strong>Center for Theoretical Physics, Polish Academy of Sciences</strong></a> <span class="no-wrap">| 2 September 2019 – 27 September 2019</span>
 </div>
 <ul class="cv-list">
-  <li>Research Internship — theoretical studies on quantum entanglement</li>
-  <li>Mentor: <a href="https://raugusiak.weebly.com" class="pub-link" target="_blank"><strong>Prof. Remigiusz Augusiak</strong></a></li>
+  <li>research internship — theoretical studies on quantum entanglement</li>
+  <li>mentor: <a href="https://raugusiak.weebly.com" class="pub-link" target="_blank"><strong>Prof. Remigiusz Augusiak</strong></a></li>
 </ul>
 
 <div class="flex-row">
   <a href="https://www.ift.pwr.edu.pl" class="pub-link" target="_blank"><strong>Institute of Theoretical Physics, WUST</strong></a> <span class="no-wrap">| March 2019 – Present</span>
 </div>
 <ul class="cv-list">
-  <li>Research Collaboration with <strong>Prof. Paweł Machnikowski</strong> in the field of solid-state quantum optics</li>
+  <li>research collaboration with <strong>Prof. Paweł Machnikowski</strong> in the field of solid-state quantum optics</li>
 </ul>
 
 <span class="cv-style-header">Grants & Funding</span>
@@ -135,39 +135,39 @@ title: "About me"
   <strong>NCN <em>Maestro</em> Grant</strong> <span class="no-wrap">| 1 November 2024 – Present</span>
 </div>
 <ul class="cv-list">
-  <li>Scholarship recipient in the NCN project: <a href="https://projekty.ncn.gov.pl" class="pub-link" target="_blank"><strong><em>Quantum acousto-optics of hybrid nanosystems</em></strong></a></li>
+  <li>scholarship recipient in the NCN project: <a href="https://projekty.ncn.gov.pl" class="pub-link" target="_blank"><strong><em>Quantum acousto-optics of hybrid nanosystems</em></strong></a></li>
 </ul>
 
 <div class="flex-row">
   <strong>Alexander von Humboldt Research Group Linkage Grant</strong> <span class="no-wrap">| 1 July 2023 – 31 December 2025</span>
 </div>
 <ul class="cv-list">
-  <li>Researcher in the project: <a href="https://pm.kft.pwr.edu.pl" class="pub-link" target="_blank"><strong><em>Light-matter-sound interaction and quantum optomechanical control of nanosystems</em></strong></a></li>
+  <li>researcher in the project: <a href="https://pm.kft.pwr.edu.pl" class="pub-link" target="_blank"><strong><em>Light-matter-sound interaction and quantum optomechanical control of nanosystems</em></strong></a></li>
 </ul>
 
 <div class="flex-row">
   <strong>NCN <em>Beethoven</em> Grant</strong> <span class="no-wrap">| 1 May 2020 – 30 September 2021</span>
 </div>
 <ul class="cv-list">
-  <li>Scholarship recipient & Researcher in the NCN project: <a href="https://projekty.ncn.gov.pl" class="pub-link" target="_blank"><strong><em>Spin qubits in artificial molecules</em></strong></a></li>
+  <li>scholarship recipient & researcher in the NCN project: <a href="https://projekty.ncn.gov.pl" class="pub-link" target="_blank"><strong><em>Spin qubits in artificial molecules</em></strong></a></li>
 </ul>
 
 <span class="cv-style-header">Skills</span>
 
 <div class="skills-grid">
 <div>
-<strong>Tools & Technologies:</strong>
+<strong>tools & technologies:</strong>
 <ul class="cv-list">
-  <li>Programming: <span class="no-wrap">C++ (+Armadillo library)</span></li>
-  <li>Scientific Typesetting: <span class="no-wrap">LaTeX (Overleaf)</span></li>
+  <li>programming: <span class="no-wrap">C++ (+Armadillo library)</span></li>
+  <li>scientific typesetting: <span class="no-wrap">LaTeX (Overleaf)</span></li>
 </ul>
 </div>
 <div>
-<strong>Languages:</strong>
+<strong>languages:</strong>
 <ul class="cv-list">
-  <li>Polish: Native</li>
-  <li>English: C1 Level (ACERT Certificate)</li>
-  <li>German: B1.1 Level</li>
+  <li>Polish: native</li>
+  <li>English: C1 level (ACERT certificate)</li>
+  <li>German: B1.1 level</li>
 </ul>
 </div>
 </div>
