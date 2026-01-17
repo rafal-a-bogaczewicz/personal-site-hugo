@@ -60,11 +60,11 @@ title: "O mnie"
 
 <span class="cv-style-header">Doświadczenie</span>
 
-**Centrum Fizyki Teoretycznej Polskiej Akademii Nauk** | 2 września 2019 – 27 września 2019
+<a href="https://www.cft.edu.pl/" class="pub-link" target="_blank"> **Centrum Fizyki Teoretycznej Polskiej Akademii Nauk**</a> | 2 września 2019 – 27 września 2019
 *   staż naukowy — teoretyczne badania nad splątaniem kwantowym 
 *   opiekun: <a href="https://raugusiak.weebly.com" class="pub-link" target="_blank"> **dr hab. inż. Remigiusz Augusiak, prof. CFT PAN**</a>
 
-**Instytut Fizyki Teoretycznej PWr** | marzec 2019 - obecnie
+<a href="https://www.ift.pwr.edu.pl" class="pub-link" target="_blank"> **Instytut Fizyki Teoretycznej Politechniki Wrocławskiej**</a> | marzec 2019 - obecnie
 *   współpraca badawcza z&nbsp;**prof. drem hab. inż. Pawłem Machnikowskim** w&nbsp;zakresie optyki kwantowej ciała stałego
 
 <span class="cv-style-header">Granty</span>
