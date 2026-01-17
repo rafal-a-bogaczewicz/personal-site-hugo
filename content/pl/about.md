@@ -166,8 +166,8 @@ title: "O mnie"
 <strong>języki obce:</strong>
 <ul class="cv-list">
   <li>język polski: ojczysty</li>
-  <li>język angielski: poziom C1 (ACERT)</li>
-  <li>język niemiecki: poziom B1.1</li>
+  <li>język angielski: <span class="no-wrap">poziom C1 (ACERT)</span></li>
+  <li>język niemiecki: <span class="no-wrap">poziom B1.1</span></li>
 </ul>
 </div>
 </div>
