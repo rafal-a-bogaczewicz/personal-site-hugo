@@ -44,23 +44,23 @@ title: "O mnie"
 
 <span class="cv-style-header">Doświadczenie</span>
 
-**Centrum Fizyki Teoretycznej Polskiej Akademii Nauk (Warszawa)** | 2 września 2019 – 27 września 2019
+**Centrum Fizyki Teoretycznej PAN (Warszawa)** | 2 września 2019 – 27 września 2019
 *   praktyka studencka - teoretyczne badania nad splątaniem kwantowym 
 *   opiekun: <a href="https://raugusiak.weebly.com/" class="pub-link" target="_blank"> dr hab. inż. Remigiusz Augusiak, prof. CFT PAN</a>
 
-**Instytut Fizyki Teoretycznej PWr** | od marca 2019
+**Instytut Fizyki Teoretycznej PWr** | marzec 2019 - obecnie
 *   współpraca badawcza z&nbsp;**prof. Pawłem Machnikowskim** w&nbsp;zakresie optyki kwantowej ciała stałego
 
 <span class="cv-style-header">Granty</span>
 
-**Grant NCN MAESTRO** | 1 października 2021 – obecnie (do 31 marca 2026)
-*   udział w projekcie Narodowego Centrum Nauki prowadzonym przez prof. Pawła Machnikowskiego
+**Grant NCN Maestro** | 1 listopada 2024 – obecnie (do 31 marca 2026)
+*   stypendysta w projekcie Narodowego Centrum Nauki pt. *Akustooptyka kwantowa nanoukładów hybrydowych*
 
 **Alexander von Humboldt Research Group Linkage Grant** | 1 lipca 2023 – 31 grudnia 2025
 *   udział w międzynarodowym projekcie badawczym pt. *Light-matter-sound interaction and quantum optomechanical control of nanosystems*
 
 **Grant NCN Beethoven** | 1 maja 2020 – 30 września 2021
-*   stypendysta w projekcie Narodowego Centrum Nauki pt. *Spin Qubits in Artificial Molecules*
+*   wykonawca - stypendysta w projekcie Narodowego Centrum Nauki pt. <a href="https://projekty.ncn.gov.pl/index.php?projekt_id=357111" class="pub-link" target="_blank">*Kubity spinowe w sztucznych molekułach*</a>
 
 <span class="cv-style-header">Umiejętności</span>
 
