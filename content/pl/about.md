@@ -35,7 +35,6 @@ title: "O mnie"
 *   <a href="https://wppt.pwr.edu.pl/" class="pub-link" target="_blank">Wydział Podstawowych Problemów Techniki</a> | Politechnika Wrocławska
 *   tytuł pracy: ***Wpływ szumu ładunkowego na&nbsp;widmo rezonansowej fluorescencji z&nbsp;kropki kwantowej***
 *   promotor: **prof. dr. hab. inż. Paweł Machnikowski**
-*   ukończenie pełnego toku studiów w&nbsp;czasie skróconym (status wolnego słuchacza w&nbsp;latach poprzednich)
 
 **Studia inżynierskie** | 1 października 2014 – 2 lutego 2018
 *   kierunek: elektronika i telekomunikacja
@@ -45,12 +44,12 @@ title: "O mnie"
 
 <span class="cv-style-header">Doświadczenie</span>
 
-**Centrum Fizyki Teoretycznej Polskiej Akademii Nauk** | 2 września 2019 – 27 września 2019
-*   staż naukowy (Warszawa)
-*   teoretyczne badania nad splątaniem kwantowym pod opieką prof. Remigiusza Augusiaka
+**Centrum Fizyki Teoretycznej Polskiej Akademii Nauk (Warszawa)** | 2 września 2019 – 27 września 2019
+*   praktyka studencka - teoretyczne badania nad splątaniem kwantowym 
+*   opiekun: <a href="https://raugusiak.weebly.com/" class="pub-link" target="_blank"> dr hab. inż. Remigiusz Augusiak, prof. CFT PAN</a>
 
 **Instytut Fizyki Teoretycznej PWr** | od marca 2019
-*   współpraca badawcza z&nbsp;**prof. Pawłem Machnikowskim** w&nbsp;zakresie optyki kwantowej ciała stałego oraz dynamiki układów otwartych
+*   współpraca badawcza z&nbsp;**prof. Pawłem Machnikowskim** w&nbsp;zakresie optyki kwantowej ciała stałego
 
 <span class="cv-style-header">Granty</span>
 
