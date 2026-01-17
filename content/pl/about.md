@@ -56,13 +56,13 @@ title: "O mnie"
 *   kierunek: elektronika i telekomunikacja
 *   <a href="https://wefim.pwr.edu.pl" class="pub-link" target="_blank">Wydział Elektroniki Mikrosystemów i Fotoniki</a> | Politechnika Wrocławska
 *   tytuł pracy: ***Wyznaczanie diagramów pasmowych heterostruktur półprzewodnikowych do&nbsp;zastosowań w&nbsp;fotowoltaice***
-*   promotor: <a href="https://www.popko.wppt.pwr.edu.pl" class="pub-link" target="_blank">**prof. dr hab. Ewa Popko**</a>
+*   promotor: <a href="https://www.popko.wppt.pwr.edu.pl" class="pub-link" target="_blank">**prof. dr hab. Ewa Płaczek - Popko**</a>
 
 <span class="cv-style-header">Doświadczenie</span>
 
 **Centrum Fizyki Teoretycznej PAN (Warszawa)** | 2 września 2019 – 27 września 2019
 *   staż naukowy — teoretyczne badania nad splątaniem kwantowym 
-*   opiekun: <a href="https://raugusiak.weebly.com" class="pub-link" target="_blank"> dr hab. inż. Remigiusz Augusiak, prof. CFT PAN</a>
+*   opiekun: <a href="https://raugusiak.weebly.com" class="pub-link" target="_blank"> **dr hab. inż. Remigiusz Augusiak, prof. CFT PAN**</a>
 
 **Instytut Fizyki Teoretycznej PWr** | marzec 2019 - obecnie
 *   współpraca badawcza z&nbsp;**prof. Pawłem Machnikowskim** w&nbsp;zakresie optyki kwantowej ciała stałego oraz dynamiki układów otwartych
