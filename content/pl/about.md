@@ -65,7 +65,7 @@ title: "O mnie"
 *   opiekun: <a href="https://raugusiak.weebly.com" class="pub-link" target="_blank"> **dr hab. inż. Remigiusz Augusiak, prof. CFT PAN**</a>
 
 **Instytut Fizyki Teoretycznej PWr** | marzec 2019 - obecnie
-*   współpraca badawcza z&nbsp;**prof. Pawłem Machnikowskim** w&nbsp;zakresie optyki kwantowej ciała stałego oraz dynamiki układów otwartych
+*   współpraca badawcza z&nbsp;**prof. Pawłem Machnikowskim** w&nbsp;zakresie optyki kwantowej ciała stałego
 
 <span class="cv-style-header">Granty</span>
 
