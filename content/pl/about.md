@@ -13,53 +13,156 @@ title: "O mnie"
     text-transform: uppercase;
     letter-spacing: 0.5px;
   }
+
+  /* Pancerny system łamania linii */
+  .flex-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0 10px;
+  }
+  
+  .no-wrap {
+    white-space: nowrap;
+  }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 10px;
+  }
+
+  @media (max-width: 600px) {
+    .skills-grid {
+      grid-template-columns: 1fr;
+      gap: 0px;
+    }
+  }
 </style>
 
 <span class="cv-style-header">Wykształcenie</span>
 
-**Studia doktoranckie** | 1&nbsp;października 2021&nbsp;–&nbsp;obecnie
+<div class="flex-row">
+
+**Studia doktoranckie** <span class="no-wrap">| 1 października 2021 – obecnie</span>
+
+</div>
+
 *   dyscyplina: nauki fizyczne
-*   <a href="https://www.ift.pwr.edu.pl" class="pub-link" target="_blank">Instytut Fizyki Teoretycznej</a> | Politechnika Wrocławska
+<div class="flex-row">
+
+<a href="https://www.ift.pwr.edu.pl" class="pub-link" target="_blank">Instytut Fizyki Teoretycznej</a> <span class="no-wrap">| Politechnika Wrocławska</span>
+
+</div>
+
 *   7 stycznia 2026 r. — <a href="https://bip.pwr.edu.pl" class="pub-link" target="_blank">złożenie rozprawy doktorskiej</a> 
 *   tytuł pracy: ***Rezonansowa fluorescencja emitera kwantowego w&nbsp;ciele stałym z&nbsp;fluktuacjami energii przejścia***
 *   promotor: <a href="https://pm.kft.pwr.edu.pl" class="pub-link" target="_blank">**prof. dr hab. inż. Paweł Machnikowski**</a>
 
-**Studia magisterskie** | 26&nbsp;lutego 2020&nbsp;–&nbsp;16&nbsp;lipca 2021
+<br>
+
+<div class="flex-row">
+
+**Studia magisterskie** <span class="no-wrap">| 26 lutego 2020 – 16 lipca 2021</span>
+
+</div>
+
 *   kierunek: inżynieria kwantowa
-*   <a href="https://wppt.pwr.edu.pl" class="pub-link" target="_blank">Wydział Podstawowych Problemów Techniki</a> | Politechnika Wrocławska
+<div class="flex-row">
+
+<a href="https://wppt.pwr.edu.pl" class="pub-link" target="_blank">Wydział Podstawowych Problemów Techniki</a> <span class="no-wrap">| Politechnika Wrocławska</span>
+
+</div>
+
 *   tytuł pracy: ***Rezonansowa fluorescencja układów z&nbsp;szumem***
 *   promotor: **prof. dr hab. inż. Paweł Machnikowski**
 
-**Studia inżynierskie** | 1&nbsp;października 2017&nbsp;–&nbsp;7&nbsp;lutego 2020
+<br>
+
+<div class="flex-row">
+
+**Studia inżynierskie** <span class="no-wrap">| 1 października 2017 – 7 lutego 2020</span>
+
+</div>
+
 *   kierunek: inżynieria kwantowa
-*   <a href="https://wppt.pwr.edu.pl" class="pub-link" target="_blank">Wydział Podstawowych Problemów Techniki</a> | Politechnika Wrocławska
+<div class="flex-row">
+
+<a href="https://wppt.pwr.edu.pl" class="pub-link" target="_blank">Wydział Podstawowych Problemów Techniki</a> <span class="no-wrap">| Politechnika Wrocławska</span>
+
+</div>
+
 *   tytuł pracy: ***Wpływ szumu ładunkowego na&nbsp;widmo rezonansowej fluorescencji z&nbsp;kropki kwantowej***
 *   promotor: **prof. dr hab. inż. Paweł Machnikowski**
 
-**Studia inżynierskie** | 1&nbsp;października 2014&nbsp;–&nbsp;2&nbsp;lutego 2018
+<br>
+
+<div class="flex-row">
+
+**Studia inżynierskie** <span class="no-wrap">| 1 października 2014 – 2 lutego 2018</span>
+
+</div>
+
 *   kierunek: elektronika i telekomunikacja
-*   <a href="https://wefim.pwr.edu.pl" class="pub-link" target="_blank">Wydział Elektroniki Mikrosystemów i Fotoniki</a> | Politechnika Wrocławska
+<div class="flex-row">
+
+<a href="https://wefim.pwr.edu.pl" class="pub-link" target="_blank">Wydział Elektroniki Mikrosystemów i Fotoniki</a> <span class="no-wrap">| Politechnika Wrocławska</span>
+
+</div>
+
 *   tytuł pracy: ***Wyznaczanie diagramów pasmowych heterostruktur półprzewodnikowych do&nbsp;zastosowań w&nbsp;fotowoltaice***
 *   promotor: <a href="https://www.popko.wppt.pwr.edu.pl" class="pub-link" target="_blank">**prof. dr hab. Ewa Płaczek - Popko**</a>
 
 <span class="cv-style-header">Doświadczenie</span>
 
-**Centrum Fizyki Teoretycznej Polskiej Akademii Nauk** | 2&nbsp;września 2019&nbsp;–&nbsp;27&nbsp;września 2019
-*   staż naukowy — teoretyczne badania nad splątaniem kwantowym 
-*   opiekun: <a href="https://raugusiak.weebly.com" class="pub-link" target="_blank">**dr hab. inż. Remigiusz Augusiak, prof. CFT PAN**</a>
+<div class="flex-row">
 
-**Instytut Fizyki Teoretycznej Politechniki Wrocławskiej** | marzec 2019&nbsp;–&nbsp;obecnie
+<a href="https://www.cft.edu.pl" class="pub-link" target="_blank"> **Centrum Fizyki Teoretycznej Polskiej Akademii Nauk**</a> <span class="no-wrap">| 2 września 2019 – 27 września 2019</span>
+
+</div>
+
+*   staż naukowy — teoretyczne badania nad splątaniem kwantowym 
+*   opiekun: <a href="https://raugusiak.weebly.com" class="pub-link" target="_blank"> **dr hab. inż. Remigiusz Augusiak, prof. CFT PAN**</a>
+
+<br>
+
+<div class="flex-row">
+
+<a href="https://www.ift.pwr.edu.pl" class="pub-link" target="_blank"> **Instytut Fizyki Teoretycznej Politechniki Wrocławskiej**</a> <span class="no-wrap">| marzec 2019 – obecnie</span>
+
+</div>
+
 *   współpraca badawcza z&nbsp;**prof. drem hab. inż. Pawłem Machnikowskim** w&nbsp;zakresie optyki kwantowej ciała stałego
 
 <span class="cv-style-header">Granty</span>
 
-**Grant Narodowego Centrum Nauki *Maestro*** | 1&nbsp;listopada 2024&nbsp;–&nbsp;obecnie
+<div class="flex-row">
+
+**Grant Narodowego Centrum Nauki *Maestro*** <span class="no-wrap">| 1 listopada 2024 – obecnie</span>
+
+</div>
+
 *   stypendysta w projekcie NCN pt. <a href="https://projekty.ncn.gov.pl" class="pub-link" target="_blank">*Akustooptyka kwantowa nanoukładów hybrydowych*</a>
 
-**Alexander von Humboldt Research Group Linkage Grant** | 1&nbsp;lipca 2023&nbsp;–&nbsp;31&nbsp;grudnia 2025
+<br>
+
+<div class="flex-row">
+
+**Alexander von Humboldt Research Group Linkage Grant** <span class="no-wrap">| 1 lipca 2023 – 31 grudnia 2025</span>
+
+</div>
+
 *   wykonawca w projekcie pt. <a href="https://pm.kft.pwr.edu.pl" class="pub-link" target="_blank">*Light-matter-sound interaction and quantum optomechanical control of nanosystems*</a>
 
-**Grant Narodowego Centrum Nauki *Beethoven*** | 1&nbsp;maja 2020&nbsp;–&nbsp;30&nbsp;września 2021
+<br>
+
+<div class="flex-row">
+
+**Grant Narodowego Centrum Nauki *Beethoven*** <span class="no-wrap">| 1 maja 2020 – 30 września 2021</span>
+
+</div>
+
 *   stypendysta – wykonawca w projekcie NCN pt. <a href="https://projekty.ncn.gov.pl" class="pub-link" target="_blank">*Kubity spinowe w sztucznych molekułach*</a>
 
 <span class="cv-style-header">Umiejętności</span>
@@ -68,8 +171,8 @@ title: "O mnie"
 <div>
 
 **narzędzia i technologie:**
-*   język programowania: C++ (+Armadillo)
-*   skład naukowy: LaTeX (Overleaf)
+*   <span class="flex-row">język programowania: <span class="no-wrap">C++ (+Armadillo)</span></span>
+*   <span class="flex-row">skład naukowy: <span class="no-wrap">LaTeX (Overleaf)</span></span>
 
 </div>
 <div>
