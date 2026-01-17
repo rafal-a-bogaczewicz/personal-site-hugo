@@ -70,7 +70,7 @@ title: ""
   </div>
 
   <div class="intro-text">
-    Hi, I am a theoretical physicist, a PhD student at the <a href="https://www.kft.pwr.edu.pl" class="pub-link" target="_blank">Institute of Theoretical Physics (WUST)</a>.
+    Hey! I am a theoretical physicist, a PhD student at the <a href="https://www.kft.pwr.edu.pl" class="pub-link" target="_blank">Institute of Theoretical Physics (WUST)</a>.
     <br><br>
     I work in the scientific group of <a href="https://pm.kft.pwr.edu.pl" class="pub-link" target="_blank">prof.&nbsp;Paweł Machnikowski</a>.
   </div>
