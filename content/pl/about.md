@@ -61,7 +61,7 @@ title: "O mnie"
     </div>
   </li>
   <li>7 stycznia 2026 r. — <a href="https://bip.pwr.edu.pl" class="pub-link" target="_blank">złożenie rozprawy doktorskiej</a></li>
-  <li>tytuł pracy: <em>Rezonansowa fluorescencja emitera kwantowego w&nbsp;ciele stałym z&nbsp;fluktuacjami energii przejścia</em></li>
+  <li>tytuł pracy: <strong><em>Rezonansowa fluorescencja emitera kwantowego w&nbsp;ciele stałym z&nbsp;fluktuacjami energii przejścia</em></strong></li>
   <li>promotor: <a href="https://pm.kft.pwr.edu.pl" class="pub-link" target="_blank"><strong>prof. dr hab. inż. Paweł Machnikowski</strong></a></li>
 </ul>
 
@@ -75,7 +75,7 @@ title: "O mnie"
       <a href="https://wppt.pwr.edu.pl" class="pub-link" target="_blank">Wydział Podstawowych Problemów Techniki</a> <span class="no-wrap">| Politechnika Wrocławska</span>
     </div>
   </li>
-  <li>tytuł pracy: <em>Rezonansowa fluorescencja układów z&nbsp;szumem</em></li>
+  <li>tytuł pracy: <strong><em>Rezonansowa fluorescencja układów z&nbsp;szumem</em></strong></li>
   <li>promotor: <strong>prof. dr hab. inż. Paweł Machnikowski</strong></li>
 </ul>
 
@@ -89,7 +89,7 @@ title: "O mnie"
       <a href="https://wppt.pwr.edu.pl" class="pub-link" target="_blank">Wydział Podstawowych Problemów Techniki</a> <span class="no-wrap">| Politechnika Wrocławska</span>
     </div>
   </li>
-  <li>tytuł pracy: <em>Wpływ szumu ładunkowego na&nbsp;widmo rezonansowej fluorescencji z&nbsp;kropki kwantowej</em></li>
+  <li>tytuł pracy: <strong><em>Wpływ szumu ładunkowego na&nbsp;widmo rezonansowej fluorescencji z&nbsp;kropki kwantowej</em></strong></li>
   <li>promotor: <strong>prof. dr hab. inż. Paweł Machnikowski</strong></li>
 </ul>
 
@@ -103,7 +103,7 @@ title: "O mnie"
       <a href="https://wefim.pwr.edu.pl" class="pub-link" target="_blank">Wydział Elektroniki Mikrosystemów i Fotoniki</a> <span class="no-wrap">| Politechnika Wrocławska</span>
     </div>
   </li>
-  <li>tytuł pracy: <em>Wyznaczanie diagramów pasmowych heterostruktur półprzewodnikowych do&nbsp;zastosowań w&nbsp;fotowoltaice</em></li>
+  <li>tytuł pracy: <strong><em>Wyznaczanie diagramów pasmowych heterostruktur półprzewodnikowych do&nbsp;zastosowań w&nbsp;fotowoltaice</em></strong></li>
   <li>promotor: <a href="https://www.popko.wppt.pwr.edu.pl" class="pub-link" target="_blank"><strong>prof. dr hab. Ewa Płaczek-Popko</strong></a></li>
 </ul>
 
@@ -130,21 +130,21 @@ title: "O mnie"
   <strong>Grant NCN Maestro</strong> <span class="no-wrap">| 1 listopada 2024 – obecnie</span>
 </div>
 <ul class="cv-list">
-  <li>stypendysta w projekcie pt. <a href="https://projekty.ncn.gov.pl" class="pub-link" target="_blank"><em>Akustooptyka kwantowa nanoukładów hybrydowych</em></a></li>
+  <li>stypendysta w projekcie pt. <a href="https://projekty.ncn.gov.pl" class="pub-link" target="_blank"><strong><em>Akustooptyka kwantowa nanoukładów hybrydowych</em></strong></a></li>
 </ul>
 
 <div class="flex-row">
   <strong>Alexander von Humboldt Grant</strong> <span class="no-wrap">| 1 lipca 2023 – 31 grudnia 2025</span>
 </div>
 <ul class="cv-list">
-  <li>wykonawca w projekcie pt. <a href="https://pm.kft.pwr.edu.pl" class="pub-link" target="_blank"><em>Light-matter-sound interaction and quantum optomechanical control</em></a></li>
+  <li>wykonawca w projekcie pt. <a href="https://pm.kft.pwr.edu.pl" class="pub-link" target="_blank"><strong><em>Light-matter-sound interaction and quantum optomechanical control</em></strong></a></li>
 </ul>
 
 <div class="flex-row">
   <strong>Grant NCN Beethoven</strong> <span class="no-wrap">| 1 maja 2020 – 30 września 2021</span>
 </div>
 <ul class="cv-list">
-  <li>stypendysta w projekcie pt. <em>Kubity spinowe w sztucznych molekułach</em></li>
+  <li>stypendysta w projekcie pt. <strong><em>Kubity spinowe w sztucznych molekułach</em></strong></li>
 </ul>
 
 <span class="cv-style-header">Umiejętności</span>
