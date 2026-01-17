@@ -20,7 +20,7 @@ title: "O mnie"
 **Studia doktoranckie** | 1 października 2021 – obecnie
 *   dyscyplina naukowa: nauki fizyczne
 *   <a href="https://wppt.pwr.edu.pl" class="pub-link" target="_blank">Instytut Fizyki Teoretycznej</a> | Politechnika Wrocławska
-*   **7 stycznia 2026 r. — złożenie rozprawy doktorskiej**
+*   **7 stycznia 2026 r. — ** <a href="https://bip.pwr.edu.pl/strona-glowna/postepowania-o-nadanie-stopnia-doktora---publikowane-od-2023-r/rafal-bogaczewicz" class="pub-link" target="_blank">**złożenie rozprawy doktorskiej**</a> 
 *   tytuł pracy: ***Rezonansowa fluorescencja emitera kwantowego w&nbsp;ciele stałym z&nbsp;fluktuacjami energii przejścia***
 *   promotor: <a href="https://pm.kft.pwr.edu.pl/" class="pub-link" target="_blank">**prof. dr. hab. inż. Paweł Machnikowski**</a>
 
