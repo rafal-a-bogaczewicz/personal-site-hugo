@@ -78,9 +78,9 @@ title: ""
 
 <span class="cv-style-header" style="display: block; border-bottom: 1px solid var(--gorska-zielen); margin-top: 35px; margin-bottom: 15px; font-size: 1.1em; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px;">Zainteresowania naukowe</span>
 
-*   Optyka kwantowa ciała stałego
-*   Dekoherencja i&nbsp;dynamika fononowa w&nbsp;układach kwantowych
-*   Kwantowe układy otwarte
+*   optyka kwantowa ciała stałego
+*   dekoherencja i&nbsp;dynamika fononowa w&nbsp;układach kwantowych
+*   kwantowe układy otwarte
 
 <span class="cv-style-header" style="display: block; border-bottom: 1px solid var(--gorska-zielen); margin-top: 35px; margin-bottom: 15px; font-size: 1.1em; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px;">Kontakt i profile naukowe</span>
 
