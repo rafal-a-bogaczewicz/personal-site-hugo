@@ -109,7 +109,7 @@ title: "About Me"
     </div>
   </li>
   <li>thesis title: <strong><em>Determination of band diagrams of semiconductor heterostructures for photovoltaic applications</em></strong></li>
-  <li>supervisor: <a href="https://www.popko.wppt.pwr.edu.pl" class="pub-link" target="_blank"><strong>Prof. Ewa Płaczek-Popko</strong></a></li>
+  <li>supervisor: <a href="https://www.popko.wppt.pwr.edu.pl" class="pub-link" target="_blank"><strong>prof. Ewa Płaczek-Popko</strong></a></li>
 </ul>
 
 <span class="cv-style-header">Experience</span>
@@ -123,7 +123,7 @@ title: "About Me"
 </ul>
 
 <div class="flex-row">
-  <a href="https://www.ift.pwr.edu.pl" class="pub-link" target="_blank"><strong>Institute of Theoretical Physics, WUST</strong></a> <span class="no-wrap">| March 2019 – Present</span>
+  <a href="https://www.ift.pwr.edu.pl" class="pub-link" target="_blank"><strong>Institute of Theoretical Physics, WUST</strong></a> <span class="no-wrap">| March 2019 – present</span>
 </div>
 <ul class="cv-list">
   <li>research collaboration with <strong>Prof. Paweł Machnikowski</strong> in the field of solid-state quantum optics</li>
@@ -132,7 +132,7 @@ title: "About Me"
 <span class="cv-style-header">Grants & Funding</span>
 
 <div class="flex-row">
-  <strong>NCN <em>Maestro</em> Grant</strong> <span class="no-wrap">| 1 November 2024 – Present</span>
+  <strong>NCN <em>Maestro</em> Grant</strong> <span class="no-wrap">| 1 November 2024 – present</span>
 </div>
 <ul class="cv-list">
   <li>scholarship recipient in the NCN project: <a href="https://projekty.ncn.gov.pl" class="pub-link" target="_blank"><strong><em>Quantum acousto-optics of hybrid nanosystems</em></strong></a></li>
