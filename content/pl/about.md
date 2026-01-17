@@ -44,7 +44,7 @@ title: "O mnie"
 **Studia doktoranckie** <span class="mobile-break"><br></span>| 1 października 2021 – obecnie
 *   dyscyplina: nauki fizyczne
 *   <a href="https://www.ift.pwr.edu.pl" class="pub-link" target="_blank">Instytut Fizyki Teoretycznej</a> <span class="mobile-break"><br></span>| Politechnika Wrocławska
-*   7 stycznia 2026 r. — <a href="https://bip.pwr.edu.pl" class="pub-link" target="_blank">złożenie rozprawy doktorskiej</a> 
+*   7 stycznia 2026 r. — <a href="https://bip.pwr.edu.pl/strona-glowna/postepowania-o-nadanie-stopnia-doktora---publikowane-od-2023-r/rafal-bogaczewicz" class="pub-link" target="_blank">złożenie rozprawy doktorskiej</a> 
 *   tytuł pracy: ***Rezonansowa fluorescencja emitera kwantowego w&nbsp;ciele stałym z&nbsp;fluktuacjami energii przejścia***
 *   promotor: <a href="https://pm.kft.pwr.edu.pl" class="pub-link" target="_blank">**prof. dr hab. inż. Paweł Machnikowski**</a>
 
@@ -78,13 +78,13 @@ title: "O mnie"
 <span class="cv-style-header">Granty</span>
 
 **Grant Narodowego Centrum Nauki *Maestro*** <span class="mobile-break"><br></span>| 1 listopada 2024 – obecnie (do 31 marca 2026)
-*   stypendysta w projekcie NCN pt. <a href="https://projekty.ncn.gov.pl" class="pub-link" target="_blank">*Akustooptyka kwantowa nanoukładów hybrydowych*</a>
+*   stypendysta w projekcie NCN pt. <a href="https://projekty.ncn.gov.pl/index.php?projekt_id=596578" class="pub-link" target="_blank">*Akustooptyka kwantowa nanoukładów hybrydowych*</a>
 
 **Alexander von Humboldt Research Group Linkage Grant** <span class="mobile-break"><br></span>| 1 lipca 2023 – 31 grudnia 2025
 *   wykonawca w projekcie pt. <a href="https://pm.kft.pwr.edu.pl" class="pub-link" target="_blank">*Light-matter-sound interaction and quantum optomechanical control of nanosystems*</a>
 
 **Grant Narodowego Centrum Nauki *Beethoven*** <span class="mobile-break"><br></span>| 1 maja 2020 – 30 września 2021
-*   stypendysta – wykonawca w projekcie NCN pt. <a href="https://projekty.ncn.gov.pl" class="pub-link" target="_blank">*Kubity spinowe w sztucznych molekułach*</a>
+*   stypendysta – wykonawca w projekcie NCN pt. <a href="https://projekty.ncn.gov.pl/index.php?projekt_id=357111" class="pub-link" target="_blank">*Kubity spinowe w sztucznych molekułach*</a>
 
 <span class="cv-style-header">Umiejętności</span>
 
