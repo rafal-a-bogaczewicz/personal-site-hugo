@@ -1,5 +1,5 @@
 ---
-title: "About me"
+title: "About Me"
 ---
 
 <style>
@@ -65,8 +65,8 @@ title: "About me"
       <a href="https://www.ift.pwr.edu.pl" class="pub-link" target="_blank">Institute of Theoretical Physics</a> <span class="no-wrap">| Wrocław University of Science and Technology</span>
     </div>
   </li>
-  <li>7 January 2026 — <a href="https://bip.pwr.edu.pl" class="pub-link" target="_blank">doctoral dissertation submitted</a></li>
-  <li>thesis title: <strong><em>Resonance fluorescence of a&nbsp;solid-state quantum emitter with transition energy fluctuations</em></strong></li>
+  <li>7 January 2026 — <a href="https://bip.pwr.edu.pl/strona-glowna/postepowania-o-nadanie-stopnia-doktora---publikowane-od-2023-r/rafal-bogaczewicz" class="pub-link" target="_blank">doctoral dissertation submitted</a></li>
+  <li>thesis title: <strong><em>Resonance fluorescence of a&nbsp;solid-state quantum emitter with fluctuating transition energy</em></strong></li>
   <li>supervisor: <a href="https://pm.kft.pwr.edu.pl" class="pub-link" target="_blank"><strong>Prof. Paweł Machnikowski</strong></a></li>
 </ul>
 
