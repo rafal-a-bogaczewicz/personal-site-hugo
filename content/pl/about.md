@@ -38,7 +38,7 @@ title: "O mnie"
 
 **Studia inżynierskie** | 1 października 2014 – 2 lutego 2018
 *   kierunek: elektronika i telekomunikacja
-*   <a href="https://wefim.pwr.edu.pl" class="pub-link" target="_blank">Wydział Elektroniki, Fotoniki i Mikrosystemów</a> | Politechnika Wrocławska
+*   <a href="https://wefim.pwr.edu.pl" class="pub-link" target="_blank">Wydział Elektroniki Mikrosystemów i Fotoniki</a> | Politechnika Wrocławska
 *   tytuł pracy: ***Wyznaczanie diagramów pasmowych heterostruktur półprzewodnikowych do&nbsp;zastosowań w&nbsp;fotowoltaice***
 *   promotor: <a href="https://www.popko.wppt.pwr.edu.pl/" class="pub-link" target="_blank">**prof. dr hab. Ewa Popko**</a>
 
