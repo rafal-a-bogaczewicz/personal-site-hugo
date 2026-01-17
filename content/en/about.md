@@ -56,7 +56,7 @@ title: "About me"
 <span class="cv-style-header">Education</span>
 
 <div class="flex-row">
-  <strong>PhD Candidate</strong> <span class="no-wrap">| 1 Oct 2021 – Present</span>
+  <strong>PhD Candidate</strong> <span class="no-wrap">| 1 October 2021 – Present</span>
 </div>
 <ul class="cv-list">
   <li>Discipline: Physical Sciences</li>
@@ -65,13 +65,13 @@ title: "About me"
       <a href="https://www.ift.pwr.edu.pl" class="pub-link" target="_blank">Institute of Theoretical Physics</a> <span class="no-wrap">| Wrocław University of Science and Technology</span>
     </div>
   </li>
-  <li>7 Jan 2026 — <a href="https://bip.pwr.edu.pl" class="pub-link" target="_blank">Doctoral dissertation submitted</a></li>
+  <li>7 January 2026 — <a href="https://bip.pwr.edu.pl" class="pub-link" target="_blank">Doctoral dissertation submitted</a></li>
   <li>Thesis title: <strong><em>Resonance fluorescence of a&nbsp;solid-state quantum emitter with transition energy fluctuations</em></strong></li>
   <li>Supervisor: <a href="https://pm.kft.pwr.edu.pl" class="pub-link" target="_blank"><strong>Prof. Paweł Machnikowski</strong></a></li>
 </ul>
 
 <div class="flex-row">
-  <strong>Master of Science (MSc)</strong> <span class="no-wrap">| 26 Feb 2020 – 16 Jul 2021</span>
+  <strong>Master of Science (MSc)</strong> <span class="no-wrap">| 26 February 2020 – 16 July 2021</span>
 </div>
 <ul class="cv-list">
   <li>Major: Quantum Engineering</li>
@@ -85,7 +85,7 @@ title: "About me"
 </ul>
 
 <div class="flex-row">
-  <strong>Bachelor of Science (BSc)</strong> <span class="no-wrap">| 1 Oct 2017 – 7 Feb 2020</span>
+  <strong>Bachelor of Science (BSc)</strong> <span class="no-wrap">| 1 October 2017 – 7 February 2020</span>
 </div>
 <ul class="cv-list">
   <li>Major: Quantum Engineering</li>
@@ -99,7 +99,7 @@ title: "About me"
 </ul>
 
 <div class="flex-row">
-  <strong>Bachelor of Science (BSc)</strong> <span class="no-wrap">| 1 Oct 2014 – 2 Feb 2018</span>
+  <strong>Bachelor of Science (BSc)</strong> <span class="no-wrap">| 1 October 2014 – 2 February 2018</span>
 </div>
 <ul class="cv-list">
   <li>Major: Electronics and Telecommunications</li>
@@ -115,7 +115,7 @@ title: "About me"
 <span class="cv-style-header">Experience</span>
 
 <div class="flex-row">
-  <a href="https://www.cft.edu.pl" class="pub-link" target="_blank"><strong>Center for Theoretical Physics, Polish Academy of Sciences</strong></a> <span class="no-wrap">| 2 Sept 2019 – 27 Sept 2019</span>
+  <a href="https://www.cft.edu.pl" class="pub-link" target="_blank"><strong>Center for Theoretical Physics, Polish Academy of Sciences</strong></a> <span class="no-wrap">| 2 September 2019 – 27 September 2019</span>
 </div>
 <ul class="cv-list">
   <li>Research Internship — theoretical studies on quantum entanglement</li>
@@ -123,7 +123,7 @@ title: "About me"
 </ul>
 
 <div class="flex-row">
-  <a href="https://www.ift.pwr.edu.pl" class="pub-link" target="_blank"><strong>Institute of Theoretical Physics, WUST</strong></a> <span class="no-wrap">| Mar 2019 – Present</span>
+  <a href="https://www.ift.pwr.edu.pl" class="pub-link" target="_blank"><strong>Institute of Theoretical Physics, WUST</strong></a> <span class="no-wrap">| March 2019 – Present</span>
 </div>
 <ul class="cv-list">
   <li>Research Collaboration with <strong>Prof. Paweł Machnikowski</strong> in the field of solid-state quantum optics</li>
@@ -132,21 +132,21 @@ title: "About me"
 <span class="cv-style-header">Grants & Funding</span>
 
 <div class="flex-row">
-  <strong>NCN <em>Maestro</em> Grant</strong> <span class="no-wrap">| 1 Nov 2024 – Present</span>
+  <strong>NCN <em>Maestro</em> Grant</strong> <span class="no-wrap">| 1 November 2024 – Present</span>
 </div>
 <ul class="cv-list">
   <li>Scholarship recipient in the NCN project: <a href="https://projekty.ncn.gov.pl" class="pub-link" target="_blank"><strong><em>Quantum acousto-optics of hybrid nanosystems</em></strong></a></li>
 </ul>
 
 <div class="flex-row">
-  <strong>Alexander von Humboldt Research Group Linkage Grant</strong> <span class="no-wrap">| 1 Jul 2023 – 31 Dec 2025</span>
+  <strong>Alexander von Humboldt Research Group Linkage Grant</strong> <span class="no-wrap">| 1 July 2023 – 31 December 2025</span>
 </div>
 <ul class="cv-list">
   <li>Researcher in the project: <a href="https://pm.kft.pwr.edu.pl" class="pub-link" target="_blank"><strong><em>Light-matter-sound interaction and quantum optomechanical control of nanosystems</em></strong></a></li>
 </ul>
 
 <div class="flex-row">
-  <strong>NCN <em>Beethoven</em> Grant</strong> <span class="no-wrap">| 1 May 2020 – 30 Sept 2021</span>
+  <strong>NCN <em>Beethoven</em> Grant</strong> <span class="no-wrap">| 1 May 2020 – 30 September 2021</span>
 </div>
 <ul class="cv-list">
   <li>Scholarship recipient & Researcher in the NCN project: <a href="https://projekty.ncn.gov.pl" class="pub-link" target="_blank"><strong><em>Spin qubits in artificial molecules</em></strong></a></li>
