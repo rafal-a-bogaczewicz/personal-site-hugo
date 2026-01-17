@@ -70,5 +70,5 @@ title: "O mnie"
 
 **języki obce:**
 *   język polski: ojczysty
-*   język angielski: poziom C1
+*   język angielski: poziom C1 (certyfikat ACERT)
 *   język niemiecki: poziom B1.1
