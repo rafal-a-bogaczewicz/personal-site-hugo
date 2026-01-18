@@ -11,11 +11,11 @@ slug: "passions"
 <h3 class="section-title">PODRÓŻE I ZWIEDZANIE CIEKAWYCH MIEJSC</h3>
 
 <div class="values-header" style="margin-top: 10px; margin-bottom: 25px;">
-    <div class="quote-text">„Kto podróżował, pełen jest zaradności, a kto ma wielkie doświadczenie, mądrze przemawiać będzie.”</div>
-    <div class="quote-ref"><b>Syr 34, 9</b></div>
+    <div class="quote-text">Kto podróżował, pełen jest zaradności, a kto ma wielkie doświadczenie, mądrze przemawiać będzie.</div>
+    <div class="quote-ref">— <b>Syr 34, 9</b></div>
 </div>
 
-<!-- SEKCJA FOTO: RESPONSYWNY GRID -->
+<!-- SEKCJA FOTO: RESPONSYWNY GRID POD CYTATEM -->
 <div class="passions-grid">
     <div class="passion-item">
         <img src="/images/sansebastian.webp" alt="San Sebastian o zmierzchu" class="img-responsive">
@@ -54,26 +54,28 @@ slug: "passions"
     </div>
 </div>
 
-### Oczarowanie tajemnicą
+<h3 class="section-title">OCZAROWANIE TAJEMNICĄ</h3>
 
-Mam też inne pasje, ale...
+<p>Mam też inne pasje, ale...</p>
 
-<div class="values-header" style="margin-top: 30px;">
-    <div class="quote-text">„Najpiękniejszą rzeczą, jakiej możemy doświadczyć, jest oczarowanie tajemnicą.”</div>
-    <div class="quote-ref"><b>Albert Einstein</b></div>
+<div class="values-header" style="margin-top: 30px; margin-bottom: 50px;">
+    <div class="quote-text">Najpiękniejszą rzeczą, jakiej możemy doświadczyć, jest oczarowanie tajemnicą.</div>
+    <div class="quote-ref">— <b>Albert Einstein</b></div>
 </div>
 
 <style>
-    /* Nowa klasa dla tytułów sekcji z zieloną linią */
+    /* Adaptacyjny nagłówek sekcji: czarny w Light Mode, biały w Dark Mode */
     .section-title {
-        color: var(--gorska-zielen);
-        border-bottom: 3px solid var(--gorska-zielen);
-        padding-bottom: 5px;
-        margin-top: 40px;
-        margin-bottom: 20px;
+        color: var(--text-color);
+        border-bottom: 4px solid var(--gorska-zielen);
+        padding-bottom: 8px;
+        margin-top: 50px;
+        margin-bottom: 25px;
         text-transform: uppercase;
-        font-size: 1.2rem;
-        letter-spacing: 1px;
+        font-size: 1.25rem;
+        letter-spacing: 1.5px;
+        display: block;
+        font-weight: bold;
     }
 
     .passions-grid {
@@ -99,6 +101,7 @@ Mam też inne pasje, ale...
         text-align: center;
     }
 
+    /* Responsywność dla urządzeń mobilnych */
     @media (max-width: 600px) {
         .passions-grid, .passions-grid-alt {
             grid-template-columns: 1fr !important;
