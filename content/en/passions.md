@@ -34,8 +34,8 @@
   <div>
     <span class="cv-style-header" style="margin-top: 0;">Mountains</span>
     <p>The Tatra trails and high-altitude peaks provide the perfect space to organize my thoughts and build character.</p>
-    <img src="/images/koscielec.webp" alt="Rafał on Kościeliec" class="img-responsive">
-    <p class="img-caption">The view from Kościeliec towards Kozi Wierch. A throwback to my university days.</p>
+    <img src="/images/koscielec.webp" alt="Rafał on Kościelec" class="img-responsive">
+    <p class="img-caption">The view from Kościelec towards Kozi Wierch. A throwback to my university days.</p>
   </div>
 </div>
 
