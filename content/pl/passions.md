@@ -59,7 +59,7 @@ slug: "passions"
   }
 </style>
 
-<!-- Scalone zdanie wyrównane do lewej -->
+<!-- Wprowadzenie -->
 <p style="text-align: left; font-size: 1.1em; margin-bottom: 40px; color: var(--text-color);">
     Nie samą fizyką kwantową żyje <i>pasjonat odkrywania świata</i> — poniższe zainteresowania to inne ścieżki zgłębiania rzeczywistości i&nbsp;zachwytu nad&nbsp;jej pięknem.
 </p>
@@ -112,7 +112,7 @@ slug: "passions"
 <div class="passions-grid">
     <div class="passion-item">
         <img src="/images/lawica_skala.webp" alt="Ławica ryb przy skale" class="img-responsive">
-        <p class="img-caption">Dynamika układów złożonych — ławica ryb przy pionowej ścianie skalnej.</p>
+        <p class="img-caption">Dynamika układów złożonych — ławica ryb przy pionowej ścianie skalnej i&nbsp;dnie.</p>
     </div>
     <div class="passion-item">
         <img src="/images/rozgwiazda_reka.webp" alt="Czerwona rozgwiazda na dłoni" class="img-responsive">
