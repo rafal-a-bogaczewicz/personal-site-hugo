@@ -111,7 +111,7 @@ slug: "passions"
     <span class="cv-style-header" style="margin-top: 0;">Góry</span>
     <p>Tatrzańskie szlaki i&nbsp;wysokie partie gór to przestrzeń do porządkowania myśli i&nbsp;budowania charakteru.</p>
     <img src="/images/koscielec.webp" alt="Rafał na Kościelcu" class="img-responsive">
-    <p class="img-caption">Podejście na Kościelec z czasów studenckich.</p>
+    <p class="img-caption">Widok z Kościelca na Kozi Wierch. Zdjęcie z czasów studenckich.</p>
   </div>
 </div>
 
