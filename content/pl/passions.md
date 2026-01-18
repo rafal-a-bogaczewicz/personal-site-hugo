@@ -90,9 +90,9 @@ slug: "passions"
 <div class="passion-split-grid">
   <div>
     <span class="cv-style-header" style="margin-top: 0;">Rower</span>
-    <p>Długie dystanse w&nbsp;dolinie Odry oraz trasy przez dolnośląskie niziny to dla mnie trening rytmu i&nbsp;wytrzymałości.</p>
+    <p>Długie trasy przez dolnośląskie niziny to trening samodyscypliny.</p>
     <img src="/images/rower.jpg" alt="Wyprawa rowerowa - tabliczka Węgry" class="img-responsive">
-    <p class="img-caption">Odkrywanie świata tuż obok — wyprawa na Węgry (dolnośląskie).</p>
+    <p class="img-caption">Wyprawa rowerowa na Węgry (dolnośląskie).</p>
   </div>
   <div>
     <span class="cv-style-header" style="margin-top: 0;">Góry</span>
