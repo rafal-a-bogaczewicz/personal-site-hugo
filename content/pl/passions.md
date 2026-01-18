@@ -10,7 +10,7 @@ slug: "passions"
 
 <!-- PANORAMA 16:9 -->
 <div style="margin-bottom: 40px;">
-    <img src="/images/san_sebastian_mota.webp" alt="San Sebastian o zmierzchu" style="width: 100%; border-radius: 8px; border: 3px solid var(--gorska-zielen);">
+    <img src="/images/sansebastian.webp" alt="San Sebastian o zmierzchu" style="width: 100%; border-radius: 8px; border: 3px solid var(--gorska-zielen);">
     <p style="font-size: 0.9em; font-style: italic; margin-top: 10px; color: var(--gray-quote); text-align: right;">
         San Sebastian o zmierzchu — widok na port i miasto po dniu konferencji naukowej.
     </p>
