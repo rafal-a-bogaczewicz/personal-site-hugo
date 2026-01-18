@@ -15,10 +15,10 @@ slug: "passions"
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    color: var(--text-color); /* Adaptacja do trybu Dark/Light */
+    color: var(--text-color);
   }
 
-  /* Układ siatki dla zdjęć */
+  /* Układ siatki dla sekcji Podróże */
   .passions-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -26,10 +26,11 @@ slug: "passions"
     margin-bottom: 30px;
   }
   
-  .passions-grid-alt {
+  /* Układ dwukolumnowy: ROWER | GÓRY */
+  .passion-split-grid {
     display: grid;
-    gap: 30px;
-    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
     margin-bottom: 40px;
     margin-top: 20px;
   }
@@ -51,16 +52,15 @@ slug: "passions"
   }
 
   /* Responsywność dla urządzeń mobilnych */
-  @media (max-width: 600px) {
-    .passions-grid, .passions-grid-alt {
+  @media (max-width: 800px) {
+    .passions-grid, .passion-split-grid {
       grid-template-columns: 1fr !important;
+      gap: 30px;
     }
-    .passions-grid-alt img { order: 2; }
-    .passions-grid-alt div { order: 1; }
   }
 </style>
 
-<!-- Scalone zdanie wyrównane do lewej, odniesienie do biogramu kursywą -->
+<!-- Scalone zdanie wyrównane do lewej -->
 <p style="text-align: left; font-size: 1.1em; margin-bottom: 40px; color: var(--text-color);">
     Nie samą fizyką kwantową żyje <i>pasjonat odkrywania świata</i> — poniższe zainteresowania to inne ścieżki zgłębiania rzeczywistości i&nbsp;zachwytu nad&nbsp;jej pięknem.
 </p>
@@ -74,33 +74,38 @@ slug: "passions"
 
 <div class="passions-grid">
     <div class="passion-item">
-        <img src="/images/sansebastian.webp" alt="San Sebastián" class="img-responsive">
+        <img src="/images/sansebastian.webp" alt="San Sebastián o zmierzchu" class="img-responsive">
         <p class="img-caption">
             Zwiedzanie San Sebastián po 
             <a href="/conferences/#conf-2024-07-22" class="pub-link">konferencji</a>.
         </p>
     </div>
     <div class="passion-item">
-        <img src="/images/lot.webp" alt="Zatoka Biskajska" class="img-responsive">
+        <img src="/images/lot.webp" alt="Widok na Zatokę Biskajską z lotu ptaka" class="img-responsive">
         <p class="img-caption">Widok na Zatokę Biskajską w drodze powrotnej.</p>
     </div>
 </div>
 
-<span class="cv-style-header">Rower i góry</span>
-<p>Trening charakteru, samodyscypliny i&nbsp;pokory wobec sił natury. Cisza szczytów to przestrzeń niezbędna do&nbsp;pracy intelektualnej.</p>
-
-<div class="passions-grid-alt" style="grid-template-columns: 1fr 1.2fr;">
-    <div>
-        <h4 style="color: var(--gorska-zielen); margin-top: 0;">Ląd i wytrzymałość</h4>
-        <p>Rower oraz góry to droga do&nbsp;samokontroli i&nbsp;budowania wewnętrznej dyscypliny.</p>
-    </div>
-    <img src="/images/gory.jpg" alt="Góry" class="img-responsive">
+<!-- Sekcja dwukolumnowa: ROWER | GÓRY -->
+<div class="passion-split-grid">
+  <div>
+    <span class="cv-style-header" style="margin-top: 0;">Rower</span>
+    <p>Długie dystanse w&nbsp;dolinie Odry oraz trasy przez dolnośląskie niziny to dla mnie trening rytmu i&nbsp;wytrzymałości.</p>
+    <img src="/images/rower.jpg" alt="Wyprawa rowerowa - tabliczka Węgry" class="img-responsive">
+    <p class="img-caption">Odkrywanie świata tuż obok — wyprawa na Węgry (dolnośląskie).</p>
+  </div>
+  <div>
+    <span class="cv-style-header" style="margin-top: 0;">Góry</span>
+    <p>Beskidzkie szlaki i&nbsp;cisza szczytów to przestrzeń niezbędna do&nbsp;pracy intelektualnej i&nbsp;budowania charakteru.</p>
+    <img src="/images/gory.jpg" alt="Beskidy" class="img-responsive">
+    <p class="img-caption">Moment kontemplacji na&nbsp;szlaku.</p>
+  </div>
 </div>
 
 <span class="cv-style-header">Pływanie i snorkeling</span>
 <p>Odkrywanie złożoności podwodnego świata i&nbsp;zachwyt nad&nbsp;precyzją stworzenia.</p>
 
-<div class="passions-grid-alt" style="grid-template-columns: 1.2fr 1fr;">
+<div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 30px; align-items: center; margin-bottom: 40px; margin-top: 20px;">
     <img src="/images/rafa.jpg" alt="Rafa koralowa" class="img-responsive">
     <div>
         <h4 style="color: var(--gorska-zielen); margin-top: 0;">Uważność i detal</h4>
@@ -109,7 +114,6 @@ slug: "passions"
 </div>
 
 <span class="cv-style-header">Oczarowanie tajemnicą</span>
-
 <p>Mam też inne pasje, ale...</p>
 
 <div class="values-header" style="margin-top: 30px; margin-bottom: 50px;">
