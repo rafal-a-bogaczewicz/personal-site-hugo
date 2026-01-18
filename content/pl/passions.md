@@ -1,6 +1,5 @@
 ---
 title: "Pasje"
-date: 2026-01-18
 slug: "passions"
 ---
 
