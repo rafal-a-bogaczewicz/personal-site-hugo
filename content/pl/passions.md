@@ -58,6 +58,11 @@ slug: "passions"
     color: var(--gray-quote);
     text-align: center;
   }
+  
+  /* Styl dla odwróconej kursywy (nazwy łacińskie) */
+  .roman {
+      font-style: normal !important; 
+  }
 
   /* Responsywność dla urządzeń mobilnych */
   @media (max-width: 800px) {
@@ -85,7 +90,7 @@ slug: "passions"
         <img src="/images/sansebastian.webp" alt="San Sebastián o zmierzchu" class="img-responsive">
         <p class="img-caption">
             Zwiedzanie San Sebastián po 
-            <a href="https://nanoqi-2024.dipc.org/" class="pub-link" target="_blank" rel="noopener">konferencji</a>.
+            <a href="https://nanoqi-2024.dipc.org" class="pub-link" target="_blank" rel="noopener">konferencji</a>.
         </p>
     </div>
     <div class="passion-item">
@@ -120,11 +125,11 @@ slug: "passions"
     </div>
     <div class="passion-item">
         <img src="/images/ryby.webp" alt="Ławica ryb" class="img-responsive">
-        <p class="img-caption">Ławica ryb <i>Chromis chromis</i> jako przykład układu złożonego.</p>
+        <p class="img-caption">Ławica ryb <span class="roman">Chromis chromis</span> jako przykład układu złożonego.</p>
     </div>
     <div class="passion-item">
         <img src="/images/rozgwiazda.webp" alt="Rozgwiazda na dłoni" class="img-responsive">
-        <p class="img-caption">Spotkanie z&nbsp;rozgwiazdą <i>Echinaster sepositus</i>.</p>
+        <p class="img-caption">Spotkanie z&nbsp;rozgwiazdą <span class="roman">Echinaster sepositus</span>.</p>
     </div>
 </div>
 
