@@ -5,21 +5,20 @@ slug: "passions"
 ---
 
 <style>
-  /* PRESTIŻOWY STYL ADAPTACYJNY */
-  .passions-header {
+  /* STYL SPÓJNY Z HOME ORAZ ABOUT */
+  .cv-style-header {
     display: block;
     border-bottom: 1px solid var(--gorska-zielen);
-    margin-top: 40px;
-    margin-bottom: 20px;
-    font-size: 1.15em;
+    margin-top: 35px;
+    margin-bottom: 15px;
+    font-size: 1.1em;
     font-weight: bold;
     text-transform: uppercase;
-    letter-spacing: 1.5px; /* Zwiększony odstęp dla efektu premium */
-    
-    /* KLUCZ: W trybie jasnym czarny, w ciemnym biały */
-    color: var(--text-color); 
+    letter-spacing: 0.5px;
+    color: var(--gorska-zielen);
   }
 
+  /* Układ siatki dla zdjęć */
   .passions-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -29,10 +28,10 @@ slug: "passions"
   
   .passions-grid-alt {
     display: grid;
-    gap: 35px;
+    gap: 30px;
     align-items: center;
-    margin-bottom: 45px;
-    margin-top: 25px;
+    margin-bottom: 40px;
+    margin-top: 20px;
   }
 
   .img-responsive {
@@ -41,22 +40,17 @@ slug: "passions"
     border-radius: 8px;
     border: 1px solid var(--gorska-zielen);
     display: block;
-    transition: transform 0.3s ease;
-  }
-
-  /* Subtelny efekt przy najechaniu - High Value Detail */
-  .img-responsive:hover {
-    transform: scale(1.02);
   }
 
   .img-caption {
     font-size: 0.85em;
     font-style: italic;
-    margin-top: 10px;
+    margin-top: 8px;
     color: var(--gray-quote);
     text-align: center;
   }
 
+  /* Responsywność dla urządzeń mobilnych */
   @media (max-width: 600px) {
     .passions-grid, .passions-grid-alt {
       grid-template-columns: 1fr !important;
@@ -66,15 +60,15 @@ slug: "passions"
   }
 </style>
 
-<p style="text-align: center; font-size: 1.1em; margin-bottom: 20px; color: var(--text-color);">
-    Nie samą fizyką teoretyczną żyje <i>pasjonat odkrywania świata</i>. 
+<p style="text-align: center; font-size: 1.1em; margin-bottom: 15px; color: var(--text-color);">
+    Nie samą fizyką kwantową żyje <i>pasjonat odkrywania świata</i>. 
 </p>
 
 <p style="text-align: center; font-size: 1.05em; margin-bottom: 40px; color: var(--gray-quote); font-style: italic;">
-    Poniższe pasje mają wspólny mianownik — to inne drogi poznawania rzeczywistości, zachwytu nad jej złożonością i pięknem.
+    Poniższe zainteresowania to inne ścieżki zgłębiania rzeczywistości i&nbsp;zachwytu nad&nbsp;jej pięknem.
 </p>
 
-<span class="passions-header">Podróże i zwiedzanie ciekawych miejsc</span>
+<span class="cv-style-header">Podróże i zwiedzanie ciekawych miejsc</span>
 
 <div class="values-header" style="margin-top: 10px; margin-bottom: 25px;">
     <div class="quote-text">Kto podróżował, pełen jest zaradności, a kto ma wielkie doświadczenie, mądrze przemawiać będzie.</div>
@@ -95,29 +89,29 @@ slug: "passions"
     </div>
 </div>
 
-<span class="passions-header">Rower i góry</span>
-<p>Trening charakteru, samodyscypliny i pokory wobec sił natury. Cisza szczytów to przestrzeń niezbędna do pracy intelektualnej.</p>
+<span class="cv-style-header">Rower i góry</span>
+<p>Trening charakteru, samodyscypliny i&nbsp;pokory wobec sił natury. Cisza szczytów to przestrzeń niezbędna do&nbsp;pracy intelektualnej.</p>
 
 <div class="passions-grid-alt" style="grid-template-columns: 1fr 1.2fr;">
     <div>
         <h4 style="color: var(--gorska-zielen); margin-top: 0;">Ląd i wytrzymałość</h4>
-        <p>Rower oraz góry to droga do samokontroli i budowania wewnętrznej dyscypliny.</p>
+        <p>Rower oraz góry to droga do&nbsp;samokontroli i&nbsp;budowania wewnętrznej dyscypliny.</p>
     </div>
     <img src="/images/gory.jpg" alt="Góry" class="img-responsive">
 </div>
 
-<span class="passions-header">Pływanie i snorkeling</span>
-<p>Odkrywanie złożoności podwodnego świata i zachwyt nad precyzją stworzenia.</p>
+<span class="cv-style-header">Pływanie i snorkeling</span>
+<p>Odkrywanie złożoności podwodnego świata i&nbsp;zachwyt nad&nbsp;precyzją stworzenia.</p>
 
 <div class="passions-grid-alt" style="grid-template-columns: 1.2fr 1fr;">
     <img src="/images/rafa.jpg" alt="Rafa koralowa" class="img-responsive">
     <div>
         <h4 style="color: var(--gorska-zielen); margin-top: 0;">Uważność i detal</h4>
-        <p>Eksploracja podwodnego świata uczy dostrzegania systemów, które na pierwszy rzut oka pozostają ukryte.</p>
+        <p>Eksploracja podwodnego świata uczy dostrzegania systemów, które na&nbsp;pierwszy rzut oka pozostają ukryte.</p>
     </div>
 </div>
 
-<span class="passions-header">Oczarowanie tajemnicą</span>
+<span class="cv-style-header">Oczarowanie tajemnicą</span>
 
 <p>Mam też inne pasje, ale...</p>
 
