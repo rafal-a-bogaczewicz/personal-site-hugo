@@ -1,10 +1,11 @@
 ---
 title: "Pasje"
+date: 2026-01-18
 slug: "passions"
 ---
 
 <style>
-  /* STYL SPÓJNY Z HOME ORAZ ABOUT - KLUCZOWA ZMIANA KOLORU TEKSTU */
+  /* STYL SPÓJNY Z HOME ORAZ ABOUT */
   .cv-style-header {
     display: block;
     border-bottom: 1px solid var(--gorska-zielen);
@@ -14,7 +15,7 @@ slug: "passions"
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    color: var(--text-color); /* TUTAJ JEST ZMIANA: kolor tekstu adaptuje się do trybu Dark/Light */
+    color: var(--text-color); /* Adaptacja do trybu Dark/Light */
   }
 
   /* Układ siatki dla zdjęć */
@@ -59,12 +60,9 @@ slug: "passions"
   }
 </style>
 
-<p style="text-align: center; font-size: 1.1em; margin-bottom: 15px; color: var(--text-color);">
-    Nie samą fizyką kwantową żyje <i>pasjonat odkrywania świata</i>. 
-</p>
-
-<p style="text-align: center; font-size: 1.05em; margin-bottom: 40px; color: var(--gray-quote); font-style: italic;">
-    Poniższe zainteresowania to inne ścieżki zgłębiania rzeczywistości i&nbsp;zachwytu nad&nbsp;jej pięknem.
+<!-- Scalone zdanie wyrównane do lewej, odniesienie do biogramu kursywą -->
+<p style="text-align: left; font-size: 1.1em; margin-bottom: 40px; color: var(--text-color);">
+    Nie samą fizyką kwantową żyje <i>pasjonat odkrywania świata</i> — poniższe zainteresowania to inne ścieżki zgłębiania rzeczywistości i&nbsp;zachwytu nad&nbsp;jej pięknem.
 </p>
 
 <span class="cv-style-header">Podróże do ciekawych miejsc</span>
@@ -76,10 +74,10 @@ slug: "passions"
 
 <div class="passions-grid">
     <div class="passion-item">
-        <img src="/images/sansebastian.webp" alt="San Sebastian" class="img-responsive">
+        <img src="/images/sansebastian.webp" alt="San Sebastián" class="img-responsive">
         <p class="img-caption">
-            San Sebastian — zwiedzanie miasta po 
-            <a href="/conferences/" class="pub-link">konferencji (nr 1)</a>.
+            Zwiedzanie San Sebastián po 
+            <a href="/conferences/#conf-2024-07-22" class="pub-link">konferencji</a>.
         </p>
     </div>
     <div class="passion-item">
