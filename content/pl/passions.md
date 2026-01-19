@@ -24,6 +24,8 @@
         height: auto;
         display: block;
         border-radius: 4px;
+        /* Dodano obramowanie nawiązujące do zdjęcia profilowego */
+        border: 2px solid var(--gorska-zielen);
     }
 
     .img-caption {
@@ -91,11 +93,11 @@
     </div>
     <div class="passion-item">
         <img src="/images/ryby.webp" alt="Ławica ryb" class="img-responsive">
-        <p class="img-caption">Ławica ryb <span class="roman"><i>Chromis chromis</i></span> jako przykład układu złożonego.</p>
+        <p class="img-caption">Ławica ryb <i>Chromis chromis</i> jako przykład układu złożonego.</p>
     </div>
     <div class="passion-item">
         <img src="/images/rozgwiazda.webp" alt="Rozgwiazda na dłoni" class="img-responsive">
-        <p class="img-caption">Spotkanie z&nbsp;rozgwiazdą <span class="roman"><i>Echinaster sepositus</i></span>.</p>
+        <p class="img-caption">Spotkanie z&nbsp;rozgwiazdą <i>Echinaster sepositus</i>.</p>
     </div>
 </div>
 
