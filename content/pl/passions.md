@@ -62,7 +62,7 @@
   </div>
   <div>
     <span class="cv-style-header" style="display: block; border-bottom: 1px solid var(--gorska-zielen); margin-top: 0; margin-bottom: 8px; font-size: 1.1em; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px;">Góry</span>
-    <p style="margin-bottom: 8px;">Tatrzańskie szlaki i&nbsp;wysokie partie gór to przestrzeń do&nbsp;porządkowania myśli i&nbsp;budowania charakteru.</p>
+    <p style="margin-bottom: 8px;">Tatrzańskie szlaki i&nbsp;szczyty to przestrzeń do&nbsp;porządkowania myśli i&nbsp;budowania charakteru.</p>
     <img src="/images/koscielec.webp" alt="Rafał na Kościelcu" class="img-responsive">
     <p class="img-caption">Widok z&nbsp;Kościelca na&nbsp;Kozi Wierch. Zdjęcie z&nbsp;czasów studenckich.</p>
   </div>
