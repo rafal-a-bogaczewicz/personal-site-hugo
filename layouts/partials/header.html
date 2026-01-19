@@ -39,13 +39,15 @@
         })();
     </script>
 
- <style>
+  <style>
+        /* --- BLOKADA TRANSLACJI --- */
         .skiptranslate, .goog-te-banner-frame, #goog-gt-tt, .goog-te-balloon-frame {
             display: none !important;
             visibility: hidden !important;
         }
         body { top: 0 !important; }
 
+        /* --- ZMIENNE I MOTYWY --- */
         :root { 
             --gorska-zielen: {{ .Site.Params.gorska_zielen | default "#4a674f" }}; 
             --bg-color: #ffffff;
@@ -55,6 +57,8 @@
             --gray-quote: #777777; 
             --gray-ref: #444444;   
         }
+        
+        /* Ciemny motyw aktywowany tylko przez [data-theme="dark"] */
         [data-theme="dark"] {
             --gorska-zielen: #769d7c; 
             --bg-color: #1a1a1a;
@@ -64,6 +68,8 @@
             --gray-quote: #999999;
             --gray-ref: #bbbbbb;
         }
+
+        /* --- UKŁAD GŁÓWNY --- */
         html { overflow-y: scroll; }
         body { 
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
@@ -111,6 +117,7 @@
         h1 { color: var(--gorska-zielen); margin: 0; font-size: 1.8rem; line-height: 1.2; }
         .bio { font-size: 1.1em; color: var(--bio-color); margin-top: 10px; font-style: italic; max-width: 550px; line-height: 1.5; }
         
+        /* --- NAWIGACJA (POPRAWIONA) --- */
         nav { 
             margin-top: 10px;
             padding: 15px 0;
@@ -133,27 +140,18 @@
             transition: opacity 0.2s, border-bottom 0.2s;
             border-bottom: 3px solid transparent;
             padding-bottom: 3px;
+            opacity: 0.7; /* Domyślnie przygaszone dla wszystkich nieaktywnych */
         }
 
-        /* 1. Home/Start ma zawsze pełny kolor (opacity 1) */
-        nav a.home-button {
+        /* Home/Start oraz Zakładka Aktualnie Przeglądana są zawsze w pełni widoczne */
+        nav a.home-button,
+        nav a.active-link {
             opacity: 1 !important;
         }
 
-        /* 2. Podkreślenie TYLKO dla faktycznie aktywnej zakładki */
+        /* Podkreślenie TYLKO dla zakładki, na której użytkownik się aktualnie znajduje */
         nav a.active-link {
             border-bottom: 3px solid var(--gorska-zielen) !important;
-            opacity: 1 !important;
-        }
-
-        /* 3. Jeśli jesteśmy na podstronie, usuwamy podkreślenie z Home/Start */
-        nav a.home-button:not(.active-link) {
-            border-bottom: 3px solid transparent !important;
-        }
-
-        /* Pozostałe nieaktywne linki są lekko przygaszone */
-        nav a:not(.active-link):not(.home-button) {
-            opacity: 0.7;
         }
 
         nav a:hover {
@@ -161,12 +159,11 @@
             border-bottom: 3px solid var(--gorska-zielen);
         }
 
+        /* --- ELEMENTY TREŚCI (PUBLIKACJE, KONFERENCJE, CYTATY) --- */
         .values-header { 
             border-left: 3px solid var(--gorska-zielen); 
             padding-left: 20px; 
-            margin-top: 20px;      
-            margin-left: 15px;     
-            margin-bottom: 40px; 
+            margin: 20px 0 40px 15px;
         }
         .quote-text {
             font-style: italic;
@@ -198,7 +195,6 @@
         .pub-link { 
             color: var(--gorska-zielen); 
             text-decoration: none; 
-            font-weight: normal; 
             transition: opacity 0.2s;
         }
         .pub-link:hover {
@@ -206,8 +202,8 @@
             opacity: 0.8;
         }
         .authors { margin-bottom: 4px; color: var(--text-color); }
-        .pub-title { font-weight: normal; }
-        
+
+        /* --- PRZEŁĄCZNIKI (SWITCHES) --- */
         .control-group { display: flex; align-items: center; gap: 8px; }
         .lang-label { font-size: 14px; font-weight: bold; color: var(--gorska-zielen); }
 
@@ -215,10 +211,12 @@
         .switch input { opacity: 0; width: 0; height: 0; }
         .slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: var(--slider-bg); transition: .3s; border-radius: 20px; }
         .slider:before { position: absolute; content: ""; height: 12px; width: 12px; left: 3px; bottom: 3px; background-color: white; transition: .3s; border-radius: 50%; }
+        
         input:checked + .slider { background-color: var(--gorska-zielen); }
         input:checked + .slider:before { transform: translateX(18px); }
         .icon { font-size: 1.2rem; }
 
+        /* --- RESPONSYWNOŚĆ --- */
         @media (max-width: 850px) {
             .controls-top { justify-content: flex-end; }
         }
