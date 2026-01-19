@@ -8,6 +8,7 @@
     <meta name="google" content="notranslate">
     <meta name="googlebot" content="notranslate">
     <meta name="robots" content="notranslate">
+    
     <!-- SEO Description -->
     <meta name="description" content="{{ .Language.Params.description }}">
 
@@ -17,7 +18,7 @@
     
     <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
 
-    <!-- Link kanoniczny dla Google -->
+    <!-- Link kanoniczny -->
     <link rel="canonical" href="{{ .Permalink }}">
     
     <script>
@@ -40,7 +41,7 @@
     </script>
 
     <style>
-        /* --- BLOKADA AUTOMATYCZNEGO TŁUMACZENIA --- */
+        /* --- BLOKADA TŁUMACZA --- */
         .skiptranslate, .goog-te-banner-frame, #goog-gt-tt, .goog-te-balloon-frame {
             display: none !important;
             visibility: hidden !important;
@@ -57,7 +58,7 @@
             --gray-quote: #777777; 
             --gray-ref: #444444;   
         }
-    
+        
         [data-theme="dark"] {
             --gorska-zielen: #769d7c; 
             --bg-color: #1a1a1a;
@@ -115,8 +116,8 @@
 
         h1 { color: var(--gorska-zielen); margin: 0; font-size: 1.8rem; line-height: 1.2; }
         .bio { font-size: 1.1em; color: var(--bio-color); margin-top: 10px; font-style: italic; max-width: 550px; line-height: 1.5; }
-    
-        /* --- NAWIGACJA (POPRAWIONA LOGIKA 2026) --- */
+        
+        /* --- NAWIGACJA (STABILNA LOGIKA) --- */
         nav { 
             margin-top: 10px;
             padding: 15px 0;
@@ -139,27 +140,27 @@
             transition: opacity 0.2s, border-bottom 0.2s;
             border-bottom: 3px solid transparent;
             padding-bottom: 3px;
-            opacity: 0.6; /* Nieaktywne zakładki są przygaszone */
+            opacity: 0.6; /* Domyślnie przygaszone */
         }
 
-        /* 1. AKTYWNA ZAKŁADKA: Ma absolutny priorytet (zawsze widoczna i podkreślona) */
+        /* AKTYWNA: Musi być nieprzezroczysta i podkreślona (zawsze) */
         nav a.active-link {
             opacity: 1 !important;
             border-bottom: 3px solid var(--gorska-zielen) !important;
         }
 
-        /* 2. PRZYCISK HOME: Zawsze 100% widoczności, ale podkreślenie tylko przez klasę active-link */
+        /* HOME: Zawsze 100% widoczności, ale kreska tylko gdy aktywny */
         nav a.home-button {
             opacity: 1 !important;
         }
 
-        /* 3. HOVER: Dla zakładek nieaktywnych */
+        /* HOVER: Pokazuje linię i jasność przy najechaniu */
         nav a:hover {
             opacity: 1;
             border-bottom: 3px solid var(--gorska-zielen);
         }
 
-        /* --- ELEMENTY TREŚCI --- */
+        /* --- TREŚĆ I UI --- */
         .values-header { border-left: 3px solid var(--gorska-zielen); padding-left: 20px; margin: 20px 0 40px 15px; }
         .quote-text { font-style: italic; color: var(--gray-quote); margin-bottom: 8px; line-height: 1.5; font-size: 1.05em; }
         .quote-ref { color: var(--gray-ref); font-weight: bold; font-size: 0.95em; }
@@ -169,8 +170,6 @@
         .pub-link { color: var(--gorska-zielen); text-decoration: none; transition: opacity 0.2s; }
         .pub-link:hover { text-decoration: underline; opacity: 0.8; }
         .authors { margin-bottom: 4px; color: var(--text-color); }
-
-        /* --- PRZEŁĄCZNIKI --- */
         .control-group { display: flex; align-items: center; gap: 8px; }
         .lang-label { font-size: 14px; font-weight: bold; color: var(--gorska-zielen); }
         .switch { position: relative; display: inline-block; width: 36px; height: 18px; }
@@ -181,7 +180,6 @@
         input:checked + .slider:before { transform: translateX(18px); }
         .icon { font-size: 1.2rem; }
 
-        /* --- RESPONSYWNOŚĆ --- */
         @media (max-width: 850px) { .controls-top { justify-content: flex-end; } }
         @media (max-width: 600px) {
             .header-main-box { flex-direction: column; align-items: center; text-align: center; }
@@ -226,19 +224,13 @@
             <ul>
                 {{ $currentPage := . }}
                 {{ range .Site.Menus.main }}
-                    {{/* 1. Sprawdzamy, czy ten konkretny element menu to link do strony głównej */}}
                     {{ $isHomeURL := eq .URL "/" }}
-                    
-                    {{/* 2. Logika aktywności (podkreślenia):
-                       - Jeśli to link Home: musi być na stronie głównej (IsHome).
-                       - Jeśli to inny link: Hugo sprawdza, czy strona pasuje do menu. */}}
                     {{ $isActive := false }}
                     {{ if $isHomeURL }}
                         {{ if $currentPage.IsHome }}{{ $isActive = true }}{{ end }}
                     {{ else }}
                         {{ $isActive = $currentPage.IsMenuCurrent "main" . }}
                     {{ end }}
-
                     <li>
                         <a href="{{ .URL | relLangURL }}" 
                            class="{{ if $isActive }}active-link{{ end }} {{ if $isHomeURL }}home-button{{ end }}">
