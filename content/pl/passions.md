@@ -3,14 +3,44 @@
     Nie samą fizyką kwantową żyje <i>pasjonat odkrywania świata</i> — poniższe zainteresowania to inne ścieżki zgłębiania rzeczywistości i&nbsp;zachwytu nad&nbsp;jej pięknem.
 </p>
 
-<span class="cv-style-header">Podróże do ciekawych miejsc</span>
+<span class="cv-style-header" style="display: block; border-bottom: 1px solid var(--gorska-zielen); margin-top: 35px; margin-bottom: 15px; font-size: 1.1em; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px;">Podróże do ciekawych miejsc</span>
 
 <div class="values-header" style="margin-top: 10px; margin-bottom: 25px;">
     <div class="quote-text">Kto podróżował, pełen jest zaradności, a&nbsp;kto ma wielkie doświadczenie, mądrze przemawiać będzie.</div>
     <div class="quote-ref">— <b>Syr 34, 9</b></div>
 </div>
 
-<div class="passions-grid">
+<style>
+    /* Układ dwukolumnowy dla zdjęć podróży */
+    .travel-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        margin-bottom: 30px;
+    }
+
+    .img-responsive {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 4px;
+    }
+
+    .img-caption {
+        font-size: 0.9em;
+        margin-top: 8px;
+        opacity: 0.8;
+    }
+
+    /* Responsywność: jedna kolumna na smartfonach i przy dużym zoomie */
+    @media (max-width: 600px) {
+        .travel-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+
+<div class="travel-grid">
     <div class="passion-item">
         <img src="/images/sansebastian.webp" alt="San Sebastián o zmierzchu" class="img-responsive">
         <p class="img-caption">
@@ -24,23 +54,35 @@
 </div>
 
 <!-- Sekcja dwukolumnowa: ROWER | GÓRY -->
-<div class="passion-split-grid">
+<div class="passion-split-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
   <div>
-    <span class="cv-style-header" style="margin-top: 0;">Rower</span>
+    <span class="cv-style-header" style="display: block; border-bottom: 1px solid var(--gorska-zielen); margin-top: 0; margin-bottom: 15px; font-size: 1.1em; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px;">Rower</span>
     <p>Długie trasy przez dolnośląskie niziny to trening samodyscypliny.</p>
     <img src="/images/wegry.webp" alt="Wyprawa rowerowa - tabliczka Węgry" class="img-responsive">
     <p class="img-caption">Wyprawa rowerowa na&nbsp;Węgry (dolnośląskie).</p>
   </div>
   <div>
-    <span class="cv-style-header" style="margin-top: 0;">Góry</span>
+    <span class="cv-style-header" style="display: block; border-bottom: 1px solid var(--gorska-zielen); margin-top: 0; margin-bottom: 15px; font-size: 1.1em; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px;">Góry</span>
     <p>Tatrzańskie szlaki i&nbsp;wysokie partie gór to przestrzeń do&nbsp;porządkowania myśli i&nbsp;budowania charakteru.</p>
     <img src="/images/koscielec.webp" alt="Rafał na Kościelcu" class="img-responsive">
     <p class="img-caption">Widok z&nbsp;Kościelca na&nbsp;Kozi Wierch. Zdjęcie z&nbsp;czasów studenckich.</p>
   </div>
 </div>
 
-<span class="cv-style-header">Pływanie</span>
+<span class="cv-style-header" style="display: block; border-bottom: 1px solid var(--gorska-zielen); margin-top: 35px; margin-bottom: 15px; font-size: 1.1em; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px;">Pływanie</span>
 <p>Odkrywanie złożoności podwodnego świata i&nbsp;zachwyt nad&nbsp;precyzją stworzenia.</p>
+
+<style>
+    .triple-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 15px;
+    }
+    @media (max-width: 600px) {
+        .triple-grid { grid-template-columns: 1fr; }
+        .passion-split-grid { grid-template-columns: 1fr !important; }
+    }
+</style>
 
 <div class="triple-grid">
     <div class="passion-item">
