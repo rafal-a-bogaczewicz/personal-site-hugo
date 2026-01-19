@@ -47,8 +47,8 @@
         </p>
     </div>
     <div class="passion-item">
-        <img src="/images/lot.webp" alt="Widok na Zatokę Biskajską z lotu ptaka" class="img-responsive">
-        <p class="img-caption">Widok na&nbsp;Zatokę Biskajską w&nbsp;drodze powrotnej.</p>
+        <img src="/images/lot.webp" alt="Francuskie niebo i czas na refleksję w drodze powrotnej." class="img-responsive">
+        <p class="img-caption">Widok na&nbsp;francuskie niebo w&nbsp;drodze powrotnej.</p>
     </div>
 </div>
 
