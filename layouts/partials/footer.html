@@ -3,29 +3,44 @@
             &copy; {{ now.Format "2006" }} {{ .Site.Title }}
         </p>
     </footer>
+
     <script>
-        // MOTYW
+        // --- MOTYW (DOMYŚLNIE JASNY) ---
         const themeToggle = document.getElementById("theme-toggle");
-        const currentTheme = localStorage.getItem("theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+        
+        // Sprawdzamy localStorage. Jeśli brak wpisu, ustawiamy 'light' (wymuszony tryb jasny)
+        const currentTheme = localStorage.getItem("theme") || "light";
+
         if (currentTheme === "dark") { 
             document.documentElement.setAttribute("data-theme", "dark"); 
             themeToggle.checked = true; 
+        } else {
+            // Wymuszamy atrybut light, aby CSS wiedział jak renderować zmienne
+            document.documentElement.setAttribute("data-theme", "light");
+            themeToggle.checked = false;
         }
+
         themeToggle.addEventListener("change", () => {
             const newMode = themeToggle.checked ? "dark" : "light";
             document.documentElement.setAttribute("data-theme", newMode);
             localStorage.setItem("theme", newMode);
         });
 
-        // JĘZYK
+        // --- JĘZYK ---
         const langToggle = document.getElementById("lang-toggle");
+        
+        // Mapa tłumaczeń aktualnej strony
         const translations = {
             {{ range .AllTranslations }}"{{ .Language.Lang }}": "{{ .Permalink }}",{{ end }}
             "{{ .Language.Lang }}": "{{ .Permalink }}"
         };
+
         langToggle.addEventListener("change", () => {
             const isChecked = langToggle.checked; // true = PL, false = EN
             const targetLang = isChecked ? "pl" : "en";
+            
+            // Jeśli istnieje tłumaczenie dla tej konkretnej podstrony, idź do niego.
+            // W przeciwnym razie wróć do strony głównej danego języka.
             const targetURL = translations[targetLang] || (targetLang === "pl" ? "/" : "/en/");
             window.location.href = targetURL;
         });
