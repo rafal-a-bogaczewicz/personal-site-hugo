@@ -20,7 +20,7 @@ theme = []
     description = "Rafał A. Bogaczewicz — fizyk teoretyk i pasjonat odkrywania świata. Doktorant w Instytucie Fizyki Teoretycznej PWr, badający optykę kwantową ciała stałego."
     [languages.pl.menu]
       [[languages.pl.menu.main]]
-        name = "Home"
+        name = "Start"
         url = "/"
         weight = 1
       [[languages.pl.menu.main]]
