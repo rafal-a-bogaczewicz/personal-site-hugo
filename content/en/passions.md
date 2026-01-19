@@ -56,9 +56,9 @@
 <div class="passion-split-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 0;">
   <div>
     <span class="cv-style-header" style="display: block; border-bottom: 1px solid var(--gorska-zielen); margin-top: 0; margin-bottom: 8px; font-size: 1.1em; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px;">Cycling</span>
-    <p style="margin-bottom: 8px;">Long routes through the Lower Silesian lowlands are a&nbsp;lesson in&nbsp;self-discipline.</p>
+    <p style="margin-bottom: 8px;">Long routes through the lowlands near Wrocław are a&nbsp;lesson in&nbsp;self-discipline.</p>
     <img src="/images/wegry.webp" alt="Cycling trip - Hungary sign" class="img-responsive">
-    <p class="img-caption">Cycling trip to&nbsp;Węgry (Lower Silesia, Poland).</p>
+    <p class="img-caption">Cycling trip to&nbsp;Węgry (the one in Lower Silesia, Poland ;) ).</p>
   </div>
   <div>
     <span class="cv-style-header" style="display: block; border-bottom: 1px solid var(--gorska-zielen); margin-top: 0; margin-bottom: 8px; font-size: 1.1em; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px;">Mountains</span>
