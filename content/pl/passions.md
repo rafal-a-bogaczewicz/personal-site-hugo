@@ -70,7 +70,7 @@
 
 <!-- Sekcja Pływanie - podciągnięta (margin-top: 10px) -->
 <span class="cv-style-header" style="display: block; border-bottom: 1px solid var(--gorska-zielen); margin-top: 10px; margin-bottom: 8px; font-size: 1.1em; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px;">Pływanie</span>
-<p style="margin-bottom: 10px;">Odkrywanie złożoności podwodnego świata i&nbsp;zachwyt nad&nbsp;precyzją stworzenia.</p>
+<p style="margin-bottom: 10px;">Odkrywanie złożoności podwodnego świata to zachwyt nad&nbsp;pięknem stworzenia.</p>
 
 <style>
     .triple-grid {
