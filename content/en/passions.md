@@ -1,74 +1,111 @@
----
-title: "Passions"
----
-
 <!-- Introduction -->
-<p style="text-align: left; font-size: 1.1em; margin-bottom: 40px; color: var(--text-color);">
-    <i>One passionate about discovery</i> shall not live by quantum physics alone — the interests below represent my other paths to exploring reality and marveling at its inherent beauty.
+<p style="text-align: left; font-size: 1.1em; margin-bottom: 20px; color: var(--text-color);">
+    <i>Passionate about discovery</i> does not live by quantum physics alone — the following interests are other paths of exploring reality and&nbsp;marvelling at&nbsp;its beauty.
 </p>
 
-<span class="cv-style-header">Traveling to Captivating Destinations</span>
+<span class="cv-style-header" style="display: block; border-bottom: 1px solid var(--gorska-zielen); margin-top: 0; margin-bottom: 10px; font-size: 1.1em; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px;">Traveling to Interesting Places</span>
 
-<div class="values-header" style="margin-top: 10px; margin-bottom: 25px;">
-    <div class="quote-text">A man who has traveled is full of resourcefulness, and he who has great experience will speak with wisdom.</div>
-    <div class="quote-ref">— <b>Sirach 34:9</b></div>
+<div class="values-header" style="margin-top: 5px; margin-bottom: 15px;">
+    <div class="quote-text">A traveled man knows many things, and&nbsp;one with much experience will speak with understanding.</div>
+    <div class="quote-ref">— <b>Sir 34, 9</b></div>
 </div>
 
-<div class="passions-grid">
+<style>
+    .travel-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        margin-bottom: 15px;
+    }
+
+    .img-responsive {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 4px;
+        border: 2px solid var(--gorska-zielen);
+    }
+
+    .img-caption {
+        font-size: 0.9em;
+        margin-top: 6px;
+        opacity: 0.8;
+        line-height: 1.4;
+    }
+
+    @media (max-width: 600px) {
+        .travel-grid { grid-template-columns: 1fr; }
+        .passion-split-grid { grid-template-columns: 1fr !important; gap: 15px !important; }
+    }
+</style>
+
+<div class="travel-grid">
     <div class="passion-item">
         <img src="/images/sansebastian.webp" alt="San Sebastián at dusk" class="img-responsive">
         <p class="img-caption">
-            Exploring San Sebastián following a scientific <a href="https://nanoqi-2024.dipc.org" class="pub-link" target="_blank" rel="noopener">conference</a>.
+            Exploring San Sebastián after the&nbsp;<a href="https://nanoqi-2024.dipc.org" class="pub-link" target="_blank" rel="noopener">conference</a>.
         </p>
     </div>
     <div class="passion-item">
-        <img src="/images/lot.webp" alt="View of the Bay of Biscay" class="img-responsive">
-        <p class="img-caption">A breathtaking view of the Bay of Biscay on the flight home.</p>
+        <img src="/images/lot.webp" alt="View of the Bay of Biscay from the air" class="img-responsive">
+        <p class="img-caption">View of&nbsp;the Bay of&nbsp;Biscay on&nbsp;the way back.</p>
     </div>
 </div>
 
-<!-- Two-column section: CYCLING | MOUNTAINS -->
-<div class="passion-split-grid">
+<!-- Cycling | Mountains section - vertically tightened -->
+<div class="passion-split-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 0;">
   <div>
-    <span class="cv-style-header" style="margin-top: 0;">Cycling</span>
-    <p>Long-distance rides through the lowlands of Lower Silesia serve as my ultimate training in self-discipline.</p>
+    <span class="cv-style-header" style="display: block; border-bottom: 1px solid var(--gorska-zielen); margin-top: 0; margin-bottom: 8px; font-size: 1.1em; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px;">Cycling</span>
+    <p style="margin-bottom: 8px;">Long routes through the Lower Silesian lowlands are a&nbsp;lesson in&nbsp;self-discipline.</p>
     <img src="/images/wegry.webp" alt="Cycling trip - Hungary sign" class="img-responsive">
-    <p class="img-caption">A cycling expedition to "Węgry" (Lower Silesia, Poland).</p>
+    <p class="img-caption">Cycling trip to&nbsp;Węgry (Lower Silesia, Poland).</p>
   </div>
   <div>
-    <span class="cv-style-header" style="margin-top: 0;">Mountains</span>
-    <p>The Tatra trails and high peaks provide the perfect space to organize my thoughts and build character.</p>
-    <img src="/images/koscielec.webp" alt="Rafał on Kościeliec" class="img-responsive">
-    <p class="img-caption">The view from Kościelec towards Kozi Wierch. A throwback to my university days.</p>
+    <span class="cv-style-header" style="display: block; border-bottom: 1px solid var(--gorska-zielen); margin-top: 0; margin-bottom: 8px; font-size: 1.1em; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px;">Mountains</span>
+    <p style="margin-bottom: 8px;">Tatra trails and&nbsp;high mountain peaks are a&nbsp;space for&nbsp;organizing thoughts and&nbsp;building character.</p>
+    <img src="/images/koscielec.webp" alt="Rafał on Kościelcu" class="img-responsive">
+    <p class="img-caption">View from Kościelec towards Kozi Wierch. Photo from student days.</p>
   </div>
 </div>
 
-<span class="cv-style-header">Swimming & Underwater Exploration</span>
-<p>Discovering the complexity of the underwater world and admiring the precision of creation.</p>
+<!-- Swimming section - tightened (margin-top: 10px) -->
+<span class="cv-style-header" style="display: block; border-bottom: 1px solid var(--gorska-zielen); margin-top: 10px; margin-bottom: 8px; font-size: 1.1em; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px;">Swimming</span>
+<p style="margin-bottom: 10px;">Discovering the&nbsp;complexity of&nbsp;the underwater world is an&nbsp;admiration for&nbsp;the beauty of&nbsp;creation.</p>
+
+<style>
+    .triple-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 12px;
+    }
+    @media (max-width: 600px) {
+        .triple-grid { grid-template-columns: 1fr; }
+    }
+</style>
 
 <div class="triple-grid">
     <div class="passion-item">
-        <img src="/images/skala.webp" alt="Rock in Brela" class="img-responsive">
-        <p class="img-caption">The Brela Stone (Croatia) — a landmark for underwater excursions.</p>
+        <img src="/images/skala.webp" alt="The Rock in Brela" class="img-responsive">
+        <p class="img-caption">The Rock in&nbsp;Brela (Croatia) — a&nbsp;landmark for&nbsp;underwater excursions.</p>
     </div>
     <div class="passion-item">
         <img src="/images/ryby.webp" alt="School of fish" class="img-responsive">
-        <p class="img-caption">A school of <span class="roman">Chromis chromis</span> as an example of a complex system.</p>
+        <p class="img-caption">A school of&nbsp;<i>Chromis chromis</i> as&nbsp;an example of&nbsp;a complex system.</p>
     </div>
     <div class="passion-item">
-        <img src="/images/rozgwiazda.webp" alt="Starfish on hand" class="img-responsive">
-        <p class="img-caption">A close encounter with a Mediterranean red starfish (<span class="roman">Echinaster sepositus</span>).</p>
+        <img src="/images/rozgwiazda.webp" alt="Starfish on a hand" class="img-responsive">
+        <p class="img-caption">An encounter with&nbsp;the starfish <i>Echinaster sepositus</i>.</p>
     </div>
 </div>
 
-<!-- Horizontal line separator -->
-<hr style="border: 0; border-top: 1px solid var(--gorska-zielen); margin: 60px 0 30px 0; opacity: 0.5;">
+<!-- Tightened separator and Einstein quote -->
+<hr style="border: 0; border-top: 1px solid var(--gorska-zielen); margin: 25px 0 15px 0; opacity: 0.5;">
 
-<p style="text-align: left; font-size: 1.1em; margin-bottom: 20px; color: var(--text-color);">
+<p style="text-align: left; font-size: 1.1em; margin-bottom: 10px; color: var(--text-color);">
     I have many other passions, but...
 </p>
 
-<div class="values-header" style="margin-bottom: 60px;">
+<div class="values-header" style="margin-bottom: 30px;">
     <div class="quote-text">The most beautiful thing we can experience is the mysterious.</div>
     <div class="quote-ref">— <b>Albert Einstein</b></div>
 </div>
