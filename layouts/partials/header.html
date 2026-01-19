@@ -239,11 +239,18 @@
             <ul>
                 {{ $currentPage := . }}
                 {{ range .Site.Menus.main }}
-                {{ $active := or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}
-                {{/* Dodatkowy warunek dla strony głównej, aby zawsze była wyróżniona na starcie */}}
-                {{ if and (eq .URL "/") (eq $currentPage.RelPermalink "/") }}
+                {{/* Czyścimy adresy z ukośników, aby porównanie było pewne */}}
+                {{ $menuURL := .URL | relLangURL | safeURL }}
+                {{ $currentURL := $currentPage.RelPermalink | safeURL }}
+            
+                {{/* Logika sprawdzania aktywności */}}
+                {{ $active := eq $menuURL $currentURL }}
+            
+                {{/* Specjalny warunek dla strony głównej */}}
+                {{ if and (eq .URL "/") (eq $currentPage.RelPermalink (absLangURL "/" | relURL)) }}
                     {{ $active = true }}
                 {{ end }}
+
                 <li>
                     <a href="{{ .URL | relLangURL }}" class="{{ if $active }}active-link{{ end }}">
                         {{ .Name }}
