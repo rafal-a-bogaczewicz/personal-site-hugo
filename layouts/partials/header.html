@@ -237,8 +237,18 @@
 
         <nav>
             <ul>
+                {{ $currentPage := . }}
                 {{ range .Site.Menus.main }}
-                <li><a href="{{ .URL | relLangURL }}">{{ .Name }}</a></li>
+                {{ $active := or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}
+                {{/* Dodatkowy warunek dla strony głównej, aby zawsze była wyróżniona na starcie */}}
+                {{ if and (eq .URL "/") (eq $currentPage.RelPermalink "/") }}
+                    {{ $active = true }}
+                {{ end }}
+                <li>
+                    <a href="{{ .URL | relLangURL }}" class="{{ if $active }}active-link{{ end }}">
+                        {{ .Name }}
+                    </a>
+                </li>
                 {{ end }}
             </ul>
         </nav>
