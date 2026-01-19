@@ -7,15 +7,17 @@ theme = []
 
 [params]
   gorska_zielen = "#4a674f"
-  # Twoje oryginalne treści z twardymi spacjami
-  bio_pl = "Pasjonat odkrywania świata\u00A0— zarówno naukowo, jak i\u00A0podczas wypraw."
-  bio_en = "Passionate about discovery\u00A0— both in\u00A0research and during exploration."
 
 [languages]
   [languages.pl]
     languageName = 'PL'
     contentDir = 'content/pl'
     weight = 1
+    # SEO Description PL - spójne z Twoją tożsamością
+    description = "Rafał A. Bogaczewicz — fizyk teoretyk i pasjonat odkrywania świata. Doktorant w Instytucie Fizyki Teoretycznej PWr, badający optykę kwantową ciała stałego."
+    # Twoje oryginalne treści z twardymi spacjami
+    bio_pl = "Pasjonat odkrywania świata\u00A0— zarówno naukowo, jak i\u00A0podczas wypraw."
+    
     [languages.pl.menu]
       [[languages.pl.menu.main]]
         name = "Home"
@@ -46,6 +48,11 @@ theme = []
     languageName = 'EN'
     contentDir = 'content/en'
     weight = 2
+    # SEO Description EN - spójne z Twoją tożsamością
+    description = "Rafał A. Bogaczewicz — theoretical physicist and passionate about discovery. PhD student at the Institute of Theoretical Physics (WUST), researching solid-state quantum optics."
+    # Twoje oryginalne treści z twardymi spacjami
+    bio_en = "Passionate about discovery\u00A0— both in\u00A0research and during exploration."
+    
     [languages.en.menu]
       [[languages.en.menu.main]]
         name = "Home"
