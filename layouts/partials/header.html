@@ -39,7 +39,7 @@
         })();
     </script>
 
-    <style>
+ <style>
         .skiptranslate, .goog-te-banner-frame, #goog-gt-tt, .goog-te-balloon-frame {
             display: none !important;
             visibility: hidden !important;
@@ -135,13 +135,24 @@
             padding-bottom: 3px;
         }
 
-        /* Wyróżnienie aktywnej zakładki */
+        /* 1. Home/Start ma zawsze pełny kolor (opacity 1) */
+        nav a.home-button {
+            opacity: 1 !important;
+        }
+
+        /* 2. Podkreślenie TYLKO dla faktycznie aktywnej zakładki */
         nav a.active-link {
             border-bottom: 3px solid var(--gorska-zielen) !important;
             opacity: 1 !important;
         }
 
-        nav a:not(.active-link) {
+        /* 3. Jeśli jesteśmy na podstronie, usuwamy podkreślenie z Home/Start */
+        nav a.home-button:not(.active-link) {
+            border-bottom: 3px solid transparent !important;
+        }
+
+        /* Pozostałe nieaktywne linki są lekko przygaszone */
+        nav a:not(.active-link):not(.home-button) {
             opacity: 0.7;
         }
 
