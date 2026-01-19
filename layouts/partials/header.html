@@ -224,13 +224,23 @@
             <ul>
                 {{ $currentPage := . }}
                 {{ range .Site.Menus.main }}
+                    {{/* Przygotowanie linków do porównania */}}
+                    {{ $menuURL := .URL | relLangURL }}
+                    {{ $currentURL := $currentPage.RelPermalink }}
+            
+                    {{/* Sprawdzamy czy to START/HOME */}}
                     {{ $isHomeURL := eq .URL "/" }}
+            
+                    {{/* Logika aktywności (Podkreślenie + Nieprzezroczystość) */}}
                     {{ $isActive := false }}
                     {{ if $isHomeURL }}
                         {{ if $currentPage.IsHome }}{{ $isActive = true }}{{ end }}
                     {{ else }}
-                        {{ $isActive = $currentPage.IsMenuCurrent "main" . }}
+                        {{ if eq (strings.TrimRight "/" $menuURL) (strings.TrimRight "/" $currentURL) }}
+                            {{ $isActive = true }}
+                        {{ end }}
                     {{ end }}
+
                     <li>
                         <a href="{{ .URL | relLangURL }}" 
                            class="{{ if $isActive }}active-link{{ end }} {{ if $isHomeURL }}home-button{{ end }}">
