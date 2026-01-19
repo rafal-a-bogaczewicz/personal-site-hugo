@@ -1,6 +1,6 @@
 <!-- Wprowadzenie -->
 <p style="text-align: left; font-size: 1.1em; margin-bottom: 40px; color: var(--text-color);">
-    Nie samą fizyką kwantową żyje <i>pasjonat odkrywania świata</i> — poniższe zainteresowania to inne ścieżki zgłębiania rzeczywistości i&nbsp;zachwytu nad&nbsp;jej pięknem.
+    Nie samą fizyką kwantową żyje <i>pasjonat odkrywania świata</i> — poniższe zainteresowania to inne ścieżki zgłębirania rzeczywistości i&nbsp;zachwytu nad&nbsp;jej pięknem.
 </p>
 
 <span class="cv-style-header" style="display: block; border-bottom: 1px solid var(--gorska-zielen); margin-top: 35px; margin-bottom: 15px; font-size: 1.1em; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px;">Podróże do ciekawych miejsc</span>
@@ -11,7 +11,6 @@
 </div>
 
 <style>
-    /* Układ dwukolumnowy dla zdjęć podróży */
     .travel-grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -24,7 +23,6 @@
         height: auto;
         display: block;
         border-radius: 4px;
-        /* Dodano obramowanie nawiązujące do zdjęcia profilowego */
         border: 2px solid var(--gorska-zielen);
     }
 
@@ -34,7 +32,6 @@
         opacity: 0.8;
     }
 
-    /* Responsywność: jedna kolumna na smartfonach i przy dużym zoomie */
     @media (max-width: 600px) {
         .travel-grid {
             grid-template-columns: 1fr;
@@ -55,8 +52,8 @@
     </div>
 </div>
 
-<!-- Sekcja dwukolumnowa: ROWER | GÓRY -->
-<div class="passion-split-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+<!-- Sekcja dwukolumnowa: ROWER | GÓRY - podciągnięta do góry (margin-top: 10px) -->
+<div class="passion-split-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 10px;">
   <div>
     <span class="cv-style-header" style="display: block; border-bottom: 1px solid var(--gorska-zielen); margin-top: 0; margin-bottom: 15px; font-size: 1.1em; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px;">Rower</span>
     <p>Długie trasy przez dolnośląskie niziny to trening samodyscypliny.</p>
@@ -71,7 +68,8 @@
   </div>
 </div>
 
-<span class="cv-style-header" style="display: block; border-bottom: 1px solid var(--gorska-zielen); margin-top: 35px; margin-bottom: 15px; font-size: 1.1em; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px;">Pływanie</span>
+<!-- Pływanie podciągnięte (margin-top: 20px zamiast 35px) -->
+<span class="cv-style-header" style="display: block; border-bottom: 1px solid var(--gorska-zielen); margin-top: 20px; margin-bottom: 15px; font-size: 1.1em; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px;">Pływanie</span>
 <p>Odkrywanie złożoności podwodnego świata i&nbsp;zachwyt nad&nbsp;precyzją stworzenia.</p>
 
 <style>
@@ -101,8 +99,8 @@
     </div>
 </div>
 
-<!-- Pozioma kreska oddzielająca -->
-<hr style="border: 0; border-top: 1px solid var(--gorska-zielen); margin: 60px 0 30px 0; opacity: 0.5;">
+<!-- Pozioma kreska oddzielająca - podciągnięta (margin-top: 40px zamiast 60px) -->
+<hr style="border: 0; border-top: 1px solid var(--gorska-zielen); margin: 40px 0 30px 0; opacity: 0.5;">
 
 <p style="text-align: left; font-size: 1.1em; margin-bottom: 20px; color: var(--text-color);">
     Mam jeszcze wiele innych pasji, ale...
