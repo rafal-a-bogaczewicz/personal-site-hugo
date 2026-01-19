@@ -5,9 +5,9 @@ quote: "Musicie od siebie wymagać, nawet gdyby inni od was nie wymagali."
 quote_ref: "św. Jan Paweł II"
 ---
 
-<span class="cv-style-header" style="display: block; border-bottom: 1px solid var(--gorska-zielen); margin-top: 10px; margin-bottom: 15px; font-size: 1.1em; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px;">Bieżący semestr</span>
+<span class="cv-style-header" style="display: block; border-bottom: 1px solid var(--gorska-zielen); margin-top: 10px; margin-bottom: 15px; font-size: 1.1em; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px;">Semestr zimowy 2025/2026</span>
 
-{{/* Tutaj Hugo wstawi dane z teaching.yaml */}}
+Przerwa dydaktyczna w&nbsp;związku z&nbsp;intensywną realizacją projektów naukowych i&nbsp;pracą badawczą.
 
 <span class="cv-style-header" style="display: block; border-bottom: 1px solid var(--gorska-zielen); margin-top: 35px; margin-bottom: 15px; font-size: 1.1em; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px;">Doświadczenie</span>
 
