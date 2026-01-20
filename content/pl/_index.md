@@ -79,9 +79,7 @@ title: ""
   </div>
 
   <div class="intro-text">
-    Cześć! Jestem fizykiem teoretykiem, doktorantem w&nbsp;<a href="https://www.kft.pwr.edu.pl" class="pub-link" target="_blank">Instytucie Fizyki Teoretycznej PWr</a>.
-    <br><br>
-    Pracuję w&nbsp;grupie naukowej <span class="no-wrap"><a href="https://pm.kft.pwr.edu.pl" class="pub-link" target="_blank">prof.&nbsp;Pawła Machnikowskiego</a></span>.
+    Fizyk teoretyk na w&nbsp;<a href="https://pwr.edu.pl" class="pub-link" target="_blank">Politechnice Wrocławskiej</a>. Jako doktorant pracuję w zespole naukowym <a href="https://www.pm.kft.pwr.edu.pl" class="pub-link" target="_blank">prof.&nbsp;Pawła Machnikowskiego</a>, zajmując się optyką kwantową ciała stałego - badaniem rezonansowej fluorescencji z emiterów kwantowych. 
   </div>
 </div>
 
