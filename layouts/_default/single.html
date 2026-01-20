@@ -43,7 +43,7 @@
         </div>
         {{ end }}
 
-        {{/* SEKCJA KONFERENCJI - ZMIANA: id oparty na dacie dla bezpiecznego linkowania */}}
+        {{/* SEKCJA KONFERENCJI */}}
         {{ if eq .Type "conferences" }}
         <div class="conferences-list">
             {{ if .Site.Data.confs }}
@@ -60,9 +60,9 @@
                             {{ else }}
                                 <span class="pub-title">
                                     {{ if $element.link }}
-                                        <a href="{{ $element.link }}" class="pub-link" target="_blank" rel="noopener"><b><i>{{ $element.event }}</i></b></a>
+                                        <a href="{{ $element.link }}" class="pub-link" target="_blank" rel="noopener"><b><i>{{ $element.event | safeHTML }}</i></b></a>
                                     {{ else }}
-                                        <b><i>{{ $element.event }}</i></b>
+                                        <b><i>{{ $element.event | safeHTML }}</i></b>
                                     {{ end }}
                                 </span>
                             {{ end }}
@@ -70,9 +70,9 @@
                         <div class="title-line">
                             {{ if $element.title }}
                                 {{ if $element.link }}
-                                    <a href="{{ $element.link }}" class="pub-link" target="_blank" rel="noopener"><b><i>{{ $element.event }}</i></b></a>,
+                                    <a href="{{ $element.link }}" class="pub-link" target="_blank" rel="noopener"><b><i>{{ $element.event | safeHTML }}</i></b></a>,
                                 {{ else }}
-                                    <b><i>{{ $element.event }}</i></b>,
+                                    <b><i>{{ $element.event | safeHTML }}</i></b>,
                                 {{ end }}
                             {{ end }}
 
