@@ -75,8 +75,8 @@ title: ""
   </div>
 
   <div class="intro-text">
-    <p>Theoretical physicist at <a href="https://pwr.edu.pl/en/" class="pub-link" target="_blank">Wrocław University of Science and Technology</a>.</p>
-    <p>Within <a href="https://www.pm.kft.pwr.edu.pl" class="pub-link" target="_blank">Prof.&nbsp;Paweł Machnikowski's</a> group, I&nbsp;research resonance fluorescence from&nbsp;quantum emitters.</p>
+    Theoretical physicist at <a href="https://pwr.edu.pl/en/" class="pub-link" target="_blank">Wrocław University of Science and Technology</a>.<br>
+    Within <a href="https://www.pm.kft.pwr.edu.pl" class="pub-link" target="_blank">Prof.&nbsp;Paweł Machnikowski's</a> group, I&nbsp;research resonance fluorescence from&nbsp;quantum emitters.
   </div>
 </div>
 
