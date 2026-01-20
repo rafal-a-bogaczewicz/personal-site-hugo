@@ -58,7 +58,7 @@
     <span class="cv-style-header" style="display: block; border-bottom: 1px solid var(--gorska-zielen); margin-top: 0; margin-bottom: 8px; font-size: 1.1em; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px;">Rower</span>
     <p style="margin-bottom: 8px;">Długie trasy przez podwrocławskie niziny to trening samodyscypliny.</p>
     <img src="/images/wegry.webp" alt="Wyprawa rowerowa - tabliczka Węgry" class="img-responsive">
-    <p class="img-caption">Wyprawa rowerowa na&nbsp;Węgry (te dolnośląskie ;) ).</p>
+    <p class="img-caption">Wyprawa rowerowa na&nbsp;Węgry (dolnośląskie) ;).</p>
   </div>
   <div>
     <span class="cv-style-header" style="display: block; border-bottom: 1px solid var(--gorska-zielen); margin-top: 0; margin-bottom: 8px; font-size: 1.1em; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px;">Góry</span>
