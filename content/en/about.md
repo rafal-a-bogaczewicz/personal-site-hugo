@@ -66,7 +66,7 @@ title: "About Me"
     </div>
   </li>
   <li>7 January 2026 — <a href="https://bip.pwr.edu.pl/strona-glowna/postepowania-o-nadanie-stopnia-doktora---publikowane-od-2023-r/rafal-bogaczewicz" class="pub-link" target="_blank">doctoral dissertation submitted</a></li>
-  <li>thesis title: <strong><em>Resonance fluorescence of a&nbsp;solid-state quantum emitter with fluctuating transition energy</em></strong></li>
+  <li>thesis title: <strong><em>Resonance fluorescence of a&nbsp;solid-state quantum emitter with fluctuating transition&nbsp;energy</em></strong></li>
   <li>supervisor: <a href="https://pm.kft.pwr.edu.pl" class="pub-link" target="_blank"><strong>Prof. Paweł Machnikowski</strong></a></li>
 </ul>
 
