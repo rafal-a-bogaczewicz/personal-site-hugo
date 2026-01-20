@@ -67,7 +67,7 @@ title: "About Me"
   </li>
   <li>7 January 2026 — <a href="https://bip.pwr.edu.pl/strona-glowna/postepowania-o-nadanie-stopnia-doktora---publikowane-od-2023-r/rafal-bogaczewicz" class="pub-link" target="_blank">doctoral dissertation submitted</a></li>
   <li>thesis title: <strong><em>Resonance fluorescence of a&nbsp;solid-state quantum emitter with fluctuating transition energy</em></strong></li>
-  <li>supervisor: <a href="https://pm.kft.pwr.edu.pl" class="pub-link" target="_blank"><strong>prof. Paweł Machnikowski</strong></a></li>
+  <li>supervisor: <a href="https://pm.kft.pwr.edu.pl" class="pub-link" target="_blank"><strong>Prof. Paweł Machnikowski</strong></a></li>
 </ul>
 
 <div class="flex-row">
@@ -81,7 +81,7 @@ title: "About Me"
     </div>
   </li>
   <li>thesis title: <strong><em>Resonance fluorescence of noisy systems</em></strong></li>
-  <li>supervisor: <strong>prof. Paweł Machnikowski</strong></li>
+  <li>supervisor: <strong>Prof. Paweł Machnikowski</strong></li>
 </ul>
 
 <div class="flex-row">
@@ -95,7 +95,7 @@ title: "About Me"
     </div>
   </li>
   <li>thesis title: <strong><em>Charge noise influence on the resonance fluorescence spectrum from a&nbsp;quantum dot</em></strong></li>
-  <li>supervisor: <strong>prof. Paweł Machnikowski</strong></li>
+  <li>supervisor: <strong>Prof. Paweł Machnikowski</strong></li>
 </ul>
 
 <div class="flex-row">
@@ -109,7 +109,7 @@ title: "About Me"
     </div>
   </li>
   <li>thesis title: <strong><em>Determination of the band structure diagram of semiconductor heterostructures applied in photovoltaics</em></strong></li>
-  <li>supervisor: <a href="https://www.popko.wppt.pwr.edu.pl" class="pub-link" target="_blank"><strong>prof. Ewa Płaczek-Popko</strong></a></li>
+  <li>supervisor: <a href="https://www.popko.wppt.pwr.edu.pl" class="pub-link" target="_blank"><strong>Prof. Ewa Płaczek-Popko</strong></a></li>
 </ul>
 
 <span class="cv-style-header">Experience</span>
@@ -119,14 +119,14 @@ title: "About Me"
 </div>
 <ul class="cv-list">
   <li>research internship — theoretical studies on quantum entanglement</li>
-  <li>mentor: <a href="https://raugusiak.weebly.com" class="pub-link" target="_blank"><strong>prof. Remigiusz Augusiak</strong></a></li>
+  <li>mentor: <a href="https://raugusiak.weebly.com" class="pub-link" target="_blank"><strong>Prof. Remigiusz Augusiak</strong></a></li>
 </ul>
 
 <div class="flex-row">
   <a href="https://www.ift.pwr.edu.pl" class="pub-link" target="_blank"><strong>Institute of Theoretical Physics (WUST)</strong></a> <span class="no-wrap">| March 2019 – present</span>
 </div>
 <ul class="cv-list">
-  <li>research collaboration with <strong>prof. Paweł Machnikowski</strong> in the field of solid-state quantum optics</li>
+  <li>research collaboration with <strong>Prof. Paweł Machnikowski</strong> in the field of solid-state quantum optics</li>
 </ul>
 
 <span class="cv-style-header">Grants & Funding</span>
