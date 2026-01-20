@@ -126,7 +126,7 @@ title: "O mnie"
   <a href="https://www.ift.pwr.edu.pl" class="pub-link" target="_blank"><strong>Instytut Fizyki Teoretycznej PWr</strong></a> <span class="no-wrap">| marzec 2019 – obecnie</span>
 </div>
 <ul class="cv-list">
-  <li>współpraca badawcza z <strong>prof. dr hab. inż. Pawłem Machnikowskim</strong> w&nbsp;dziedzinie optyki kwantowej ciała stałego</li>
+  <li>współpraca badawcza z <strong>prof. dr. hab. inż. Pawłem Machnikowskim</strong> w&nbsp;dziedzinie optyki kwantowej ciała stałego</li>
 </ul>
 
 <span class="cv-style-header">Granty</span>
