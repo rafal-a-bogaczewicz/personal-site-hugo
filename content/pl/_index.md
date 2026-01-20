@@ -80,7 +80,7 @@ title: ""
 
   <div class="intro-text">
     Fizyk teoretyk na&nbsp;<a href="https://pwr.edu.pl" class="pub-link" target="_blank">Politechnice Wrocławskiej</a>.<br>
-    W zespole <a href="https://www.pm.kft.pwr.edu.pl" class="pub-link" target="_blank">prof.&nbsp;Pawła Machnikowskiego</a> badam rezonansową fluorescencję emiterów kwantowych.
+    W zespole <a href="https://www.pm.kft.pwr.edu.pl" class="pub-link" target="_blank">prof.&nbsp;Pawła Machnikowskiego</a> badam rezonansową&nbsp;fluorescencję emiterów&nbsp;kwantowych.
   </div>
 </div>
 
