@@ -75,9 +75,9 @@ title: ""
   </div>
 
   <div class="intro-text">
-    Hey! I am a theoretical physicist, a PhD student at the <a href="https://www.kft.pwr.edu.pl" class="pub-link" target="_blank">Institute of Theoretical Physics (WUST)</a>.
-    <br><br>
-    I work in the scientific group of <span class="no-wrap"><a href="https://pm.kft.pwr.edu.pl" class="pub-link" target="_blank">prof.&nbsp;Paweł Machnikowski</a></span>.
+    Theoretical physicist at <a href="https://pwr.edu.pl/en/" class="pub-link" target="_blank">Wrocław University of Science and Technology</a>.
+    <br>
+    Within <a href="https://www.pm.kft.pwr.edu.pl" class="pub-link" target="_blank">prof.&nbsp;Pawła Machnikowskiego</a> group, I&nbsp;research resonance fluorescence from the&nbsp;quantum emitters.
   </div>
 </div>
 
