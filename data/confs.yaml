@@ -1,4 +1,4 @@
-- event: "AGH International Student Conference - Knowledge, Technology and Society"
+- event: "AGH International Student Conference - Knowledge, Technology and Society (AGH&nbsp;ISC&nbsp;2018)"
   link: "https://perspektywy.pl/portal/index.php?option=com_content&view=article&id=3847&catid=22&Itemid=119"
   date: "2018-10-10"
   end_date: "2018-10-12"
@@ -14,7 +14,7 @@
   country_pl: "Polska"
   country_en: "Poland"
   
-- event: "15th International Conference on Nonlinear Optics and Excitation Kinetics in&nbsp;Semiconductors (NOEKS 15)"
+- event: "15th International Conference on Nonlinear Optics and Excitation Kinetics in&nbsp;Semiconductors (NOEKS&nbsp;15)"
   link: "https://www.uni-muenster.de/NOEKS15/"
   date: "2020-09-13"
   end_date: "2020-09-17"
@@ -23,7 +23,7 @@
   country_en: "Germany"
   online: true  # To aktywuje dopisek (on-line) / (held on-line)
 
-- event: "49th International School & Conference on the Physics of Semiconductors (Jaszowiec 2021)"
+- event: "49th International School & Conference on the Physics of Semiconductors (Jaszowiec&nbsp;2021)"
   link: "https://www.jaszowiec.edu.pl/2021/"
   date: "2021-09-01"
   end_date: "2021-09-10"
@@ -40,7 +40,7 @@
   country_pl: "Polska"
   country_en: "Poland"
   
-- event: "51st International School & Conference on the Physics of Semiconductors (Jaszowiec 2023)"
+- event: "51st International School & Conference on the Physics of Semiconductors (Jaszowiec&nbsp;2023)"
   link: "https://www.jaszowiec.edu.pl/2023/"
   date: "2023-06-17"
   end_date: "2023-06-23"
@@ -48,7 +48,7 @@
   country_pl: "Polska"
   country_en: "Poland"
   
-- event: "22nd International Conference on Electron Dynamics in Semiconductors, Optoelectronics and Nanostructures (EDISON 22)"
+- event: "22nd International Conference on Electron Dynamics in Semiconductors, Optoelectronics and Nanostructures (EDISON&nbsp;22)"
   link: "https://www.uni-muenster.de/EDISON22/"
   date: "2023-08-14"
   end_date: "2023-08-18"
@@ -64,7 +64,7 @@
   country_pl: "Polska"
   country_en: "Poland"
   
-- event: "Nanotechnology meets Quantum Information (NanoQI 2024)"
+- event: "Nanotechnology meets Quantum Information (NanoQI&nbsp;2024)"
   link: "https://nanoqi-2024.dipc.org/"
   date: "2024-07-22"
   end_date: "2024-07-25"
@@ -80,7 +80,7 @@
   country_pl: "Niemcy"
   country_en: "Germany"
   
-- event: "53rd International School & Conference on the Physics of Semiconductors (Jaszowiec 2025)"
+- event: "53rd International School & Conference on the Physics of Semiconductors (Jaszowiec&nbsp;2025)"
   link: "https://www.jaszowiec.edu.pl/2025/"
   date: "2025-06-07"
   end_date: "2025-06-13"
@@ -96,7 +96,7 @@
   country_pl: "Polska"
   country_en: "Poland"
 
-- event: "17th International Conference on Nonlinear Optics and Excitation Kinetics in&nbsp;Semiconductors (NOEKS 17)"
+- event: "17th International Conference on Nonlinear Optics and Excitation Kinetics in&nbsp;Semiconductors (NOEKS&nbsp;17)"
   link: "https://www.uni-marburg.de/en/fb13/semiconductor-photonics/prfolder/copy_of_news/noeks-17"
   date: "2025-09-08"
   end_date: "2025-09-12"
