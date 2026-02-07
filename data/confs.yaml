@@ -2,7 +2,8 @@
   link: "https://perspektywy.pl/portal/index.php?option=com_content&view=article&id=3847&catid=22&Itemid=119"
   date: "2018-10-10"
   end_date: "2018-10-12"
-  city: "Kraków"
+  city_pl: "Kraków"
+  city_en: "Krakow"
   country_pl: "Polska"
   country_en: "Poland"
   
@@ -10,7 +11,8 @@
   link: "http://opon.fuw.edu.pl/"
   date: "2020-02-12"
   end_date: "2020-02-14"
-  city: "Warsaw"
+  city_pl: "Warszawa"
+  city_en: "Warsaw"
   country_pl: "Polska"
   country_en: "Poland"
   
@@ -18,7 +20,8 @@
   link: "https://www.uni-muenster.de/NOEKS15/"
   date: "2020-09-13"
   end_date: "2020-09-17"
-  city: "Münster"
+  city_pl: "Münster"
+  city_en: "Münster"
   country_pl: "Niemcy"
   country_en: "Germany"
   online: true  # To aktywuje dopisek (on-line) / (held on-line)
@@ -36,7 +39,8 @@
   link: "https://nanophotonics.faj.org.pl/"
   date: "2022-09-18"
   end_date: "2022-09-21"
-  city: "Toruń"
+  city_pl: "Toruń"
+  city_en: "Torun"
   country_pl: "Polska"
   country_en: "Poland"
   
@@ -60,7 +64,8 @@
   link: "https://opon2024.pwr.edu.pl/"
   date: "2024-02-14"
   end_date: "2024-02-16"
-  city: "Wrocław"
+  city_pl: "Wrocław"
+  city_en: "Wroclaw"  
   country_pl: "Polska"
   country_en: "Poland"
   
@@ -92,7 +97,8 @@
   link: "https://quantumoptics11.confer.uj.edu.pl/"
   date: "2025-09-01"
   end_date: "2025-09-05"
-  city: "Kraków"
+  city_pl: "Kraków"
+  city_en: "Krakow"
   country_pl: "Polska"
   country_en: "Poland"
 
@@ -108,6 +114,7 @@
   link: "https://n2d-2025.faj.org.pl/"
   date: "2025-10-06"
   end_date: "2025-10-09"
-  city: "Toruń"
+  city_pl: "Toruń"
+  city_en: "Torun"
   country_pl: "Polska"
   country_en: "Poland"
